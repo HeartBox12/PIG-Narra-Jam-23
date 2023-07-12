@@ -1,0 +1,21 @@
+[gd_scene load_steps=4 format=3 uid="uid://d06xdtwo0agha"]
+
+[ext_resource type="Script" path="res://Player/Player.gd" id="1_navel"]
+[ext_resource type="PackedScene" uid="uid://bjlq5lqy0sdu0" path="res://player.glb" id="1_wrflt"]
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_vmbjt"]
+radius = 1.09986
+
+[node name="Node3D" type="CharacterBody3D"]
+script = ExtResource("1_navel")
+speed = null
+fall_acceleration = null
+
+[node name="Pivot" type="Node3D" parent="."]
+
+[node name="player" parent="Pivot" instance=ExtResource("1_wrflt")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.470971, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.08899, 0)
+shape = SubResource("SphereShape3D_vmbjt")
