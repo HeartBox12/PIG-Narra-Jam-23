@@ -9,6 +9,7 @@ var target_velocity = Vector3.ZERO
 
 func _physics_process(delta):
 	var direction = Vector3.ZERO
+	animation_player.play()
 
 #Standard input detection.
 #NOTE: does not allow for joystick analog inputs.
@@ -16,28 +17,28 @@ func _physics_process(delta):
 	if Input.is_action_pressed("move_right"):
 		direction.x += 1
 		animation_player.flip_h = false
-		animation_player.play()
+		animation_player.animation = "moving"
 	if Input.is_action_just_released("move_right"):
-		animation_player.stop()
+		animation_player.animation = "standing"
 #---------------------------------------------------------
 	if Input.is_action_pressed("move_left"):
 		direction.x -= 1
 		animation_player.flip_h = true
-		animation_player.play()
+		animation_player.animation = "moving"
 	if Input.is_action_just_released("move_left"):
-		animation_player.stop()
+		animation_player.animation = "standing"
 #---------------------------------------------------------
 	if Input.is_action_pressed("move_down"):
 		direction.z += 1
-		animation_player.play()
+		animation_player.animation = "moving"
 	if Input.is_action_just_released("move_down"):
-		animation_player.stop()
+		animation_player.animation = "standing"
 #---------------------------------------------------------
 	if Input.is_action_pressed("move_up"):
 		direction.z -= 1
-		animation_player.play()
+		animation_player.animation = "moving"
 	if Input.is_action_just_released("move_up"):
-		animation_player.stop()
+		animation_player.animation = "standing"
 #---------------------------------------------------------
 
 	if direction != Vector3.ZERO:
