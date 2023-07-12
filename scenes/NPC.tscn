@@ -1,0 +1,17 @@
+[gd_scene load_steps=3 format=3 uid="uid://mpydbc355a5"]
+
+[ext_resource type="Texture2D" uid="uid://bnhtllnwt1qnf" path="res://icon.svg" id="1_7k81c"]
+
+[sub_resource type="CylinderShape3D" id="CylinderShape3D_2o6co"]
+radius = 1.0
+
+[node name="Node3D" type="StaticBody3D"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
+shape = SubResource("CylinderShape3D_2o6co")
+
+[node name="Sprite3D" type="Sprite3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
+billboard = 1
+texture = ExtResource("1_7k81c")
