@@ -1,0 +1,8 @@
+[voice]
+* You've recieved a [i]lot[/i] of mail after you sent word you'd be coming home. [pause]It's all in a heap.
+* Begin sorting through?
+- No [if "" == ""]
+- Yes
+	* You find a flier looking for volunteer workers. [pause]Gardening. [pause]It comes with a sign-up form. [pause]You enter your name.
+	[text_input text="In other words, you enter: " var="Name" placeholder="Aaron"]
+	You wrote down {Name}
