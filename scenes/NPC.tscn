@@ -5,7 +5,7 @@
 [sub_resource type="CylinderShape3D" id="CylinderShape3D_2o6co"]
 radius = 1.0
 
-[node name="Node3D" type="StaticBody3D"]
+[node name="NPC" type="StaticBody3D"]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
@@ -15,3 +15,9 @@ shape = SubResource("CylinderShape3D_2o6co")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
 billboard = 1
 texture = ExtResource("1_7k81c")
+
+[node name="Area3D" type="Area3D" parent="."]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
+shape = SubResource("CylinderShape3D_2o6co")

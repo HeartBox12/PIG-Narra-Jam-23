@@ -53,3 +53,7 @@ func _physics_process(delta):
 		
 	velocity = target_velocity
 	move_and_slide()
+	
+	if Input.is_action_just_pressed("ui_accept"):
+		if $Pivot/NPCDetector.get_collision_count() != 0:
+			print("Found it!")

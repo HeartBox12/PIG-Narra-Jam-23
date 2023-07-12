@@ -11,5 +11,4 @@ func _process(delta):
 	pass
 
 func _unhandled_input(event):
-	if event.is_action_pressed("ui_up"):
-		Dialogic.start("res://timelines/TEST.dtl")
+	pass
