@@ -1,3 +1,118 @@
-[gd_resource type="ProjectCache" format=3 uid="uid://dn5wvjaqbiidp"]
+[gd_resource type="ProjectCache" load_steps=10 format=3 uid="uid://dn5wvjaqbiidp"]
+
+[sub_resource type="BankAsset" id="BankAsset_rg5u3"]
+file_path = "res://FMODBanks/Master.bank"
+modified_time = 1689262903
+path = "bank:/Master"
+guid = "{2267751d-f017-41eb-879e-e95a50110ada}"
+name = "Master"
+
+[sub_resource type="BankAsset" id="BankAsset_liu15"]
+file_path = "res://FMODBanks/Master.strings.bank"
+modified_time = 1689262903
+path = "bank:/Master.strings"
+guid = "{ba7a55c9-816c-0da9-01d7-63a4a1e20c42}"
+name = "Master.strings"
+
+[sub_resource type="BankAsset" id="BankAsset_xgltr"]
+file_path = "res://FMODBanks/Music Bank.bank"
+modified_time = 1689262903
+path = "bank:/Music Bank"
+guid = "{b0ba6919-05c3-45f0-85de-1df04344a1f6}"
+name = "Music Bank"
+
+[sub_resource type="BusAsset" id="BusAsset_xrjd5"]
+path = "bus:/Reverb"
+guid = "{ce02a196-5f1c-4e61-9e08-59ebadebd06f}"
+name = "Reverb"
+
+[sub_resource type="BusAsset" id="BusAsset_36gdh"]
+path = "bus:/"
+guid = "{9badfc66-5ffb-4db1-9db6-677086dabb99}"
+name = "Master"
+
+[sub_resource type="FMOD_STUDIO_PARAMETER_ID" id="FMOD_STUDIO_PARAMETER_ID_i0mpu"]
+data1 = 4079771244
+data2 = 3797763104
+
+[sub_resource type="FMOD_STUDIO_PARAMETER_DESCRIPTION" id="FMOD_STUDIO_PARAMETER_DESCRIPTION_c52u0"]
+name = "Sadness"
+id = SubResource("FMOD_STUDIO_PARAMETER_ID_i0mpu")
+maximum = 1.0
+guid = "{3af12872-65c7-4b4b-b428-37536b1ac9aa}"
+
+[sub_resource type="ParameterAsset" id="ParameterAsset_r0bb6"]
+parameter_description = SubResource("FMOD_STUDIO_PARAMETER_DESCRIPTION_c52u0")
+path = "parameter:/Sadness"
+guid = "{3af12872-65c7-4b4b-b428-37536b1ac9aa}"
+name = "Sadness"
+
+[sub_resource type="EventAsset" id="EventAsset_arqgv"]
+is_3d = true
+min_distance = 1.0
+max_distance = 20.0
+parameters = {
+"{3af12872-65c7-4b4b-b428-37536b1ac9aa}": SubResource("ParameterAsset_r0bb6")
+}
+path = "event:/Music/Music"
+guid = "{e59cb033-d553-4494-ac47-0116f9d65bdd}"
+name = "Music"
 
 [resource]
+banks = {
+"{2267751d-f017-41eb-879e-e95a50110ada}": SubResource("BankAsset_rg5u3"),
+"{b0ba6919-05c3-45f0-85de-1df04344a1f6}": SubResource("BankAsset_xgltr"),
+"{ba7a55c9-816c-0da9-01d7-63a4a1e20c42}": SubResource("BankAsset_liu15")
+}
+events = {
+"{e59cb033-d553-4494-ac47-0116f9d65bdd}": SubResource("EventAsset_arqgv")
+}
+busses = {
+"{9badfc66-5ffb-4db1-9db6-677086dabb99}": SubResource("BusAsset_36gdh"),
+"{ce02a196-5f1c-4e61-9e08-59ebadebd06f}": SubResource("BusAsset_xrjd5")
+}
+bank_tree = [{
+"children": [],
+"item_type": 3,
+"node_name": "Master",
+"path": "bank:/Master",
+"resource": SubResource("BankAsset_rg5u3")
+}, {
+"children": [],
+"item_type": 3,
+"node_name": "Master.strings",
+"path": "bank:/Master.strings",
+"resource": SubResource("BankAsset_liu15")
+}, {
+"children": [],
+"item_type": 3,
+"node_name": "Music Bank",
+"path": "bank:/Music Bank",
+"resource": SubResource("BankAsset_xgltr")
+}]
+event_tree = [{
+"children": [{
+"children": [],
+"item_type": 1,
+"node_name": "Music",
+"path": "event:/Music/Music",
+"resource": SubResource("EventAsset_arqgv")
+}],
+"item_type": 7,
+"node_name": "Music",
+"path": "",
+"resource": null
+}]
+bus_tree = [{
+"children": [{
+"children": [],
+"item_type": 4,
+"node_name": "Reverb",
+"path": "bus:/Reverb",
+"resource": SubResource("BusAsset_xrjd5")
+}],
+"item_type": 4,
+"node_name": "bus:",
+"path": "bus:/",
+"resource": SubResource("BusAsset_36gdh")
+}]

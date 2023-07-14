@@ -1,0 +1,28 @@
+[gd_resource type="EventAsset" load_steps=4 format=3 uid="uid://dq5ur0rpbkt3k"]
+
+[sub_resource type="FMOD_STUDIO_PARAMETER_ID" id="FMOD_STUDIO_PARAMETER_ID_i0mpu"]
+data1 = 4079771244
+data2 = 3797763104
+
+[sub_resource type="FMOD_STUDIO_PARAMETER_DESCRIPTION" id="FMOD_STUDIO_PARAMETER_DESCRIPTION_c52u0"]
+name = "Sadness"
+id = SubResource("FMOD_STUDIO_PARAMETER_ID_i0mpu")
+maximum = 1.0
+guid = "{3af12872-65c7-4b4b-b428-37536b1ac9aa}"
+
+[sub_resource type="ParameterAsset" id="ParameterAsset_r0bb6"]
+parameter_description = SubResource("FMOD_STUDIO_PARAMETER_DESCRIPTION_c52u0")
+path = "parameter:/Sadness"
+guid = "{3af12872-65c7-4b4b-b428-37536b1ac9aa}"
+name = "Sadness"
+
+[resource]
+is_3d = true
+min_distance = 1.0
+max_distance = 20.0
+parameters = {
+"{3af12872-65c7-4b4b-b428-37536b1ac9aa}": SubResource("ParameterAsset_r0bb6")
+}
+path = "event:/Music/Music"
+guid = "{e59cb033-d553-4494-ac47-0116f9d65bdd}"
+name = "Music"

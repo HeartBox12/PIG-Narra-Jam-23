@@ -1,8 +1,9 @@
-[gd_scene load_steps=6 format=3 uid="uid://d0fatpj1xblfe"]
+[gd_scene load_steps=12 format=3 uid="uid://d0fatpj1xblfe"]
 
 [ext_resource type="Script" path="res://scripts/Main.gd" id="1_1ygro"]
 [ext_resource type="PackedScene" uid="uid://d06xdtwo0agha" path="res://Player/Player.tscn" id="2_uy44t"]
 [ext_resource type="PackedScene" uid="uid://mpydbc355a5" path="res://scenes/NPC.tscn" id="3_a5knq"]
+[ext_resource type="Script" path="res://scripts/FMODLoader.gd" id="4_dlxyh"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_t5y6s"]
 size = Vector3(60, 2, 60)
@@ -10,23 +11,51 @@ size = Vector3(60, 2, 60)
 [sub_resource type="BoxMesh" id="BoxMesh_sc2gv"]
 size = Vector3(60, 2, 60)
 
+[sub_resource type="BankAsset" id="BankAsset_rg5u3"]
+file_path = "res://FMODBanks/Master.bank"
+modified_time = 1689262903
+path = "bank:/Master"
+guid = "{2267751d-f017-41eb-879e-e95a50110ada}"
+name = "Master"
+
+[sub_resource type="FMOD_STUDIO_PARAMETER_ID" id="FMOD_STUDIO_PARAMETER_ID_i0mpu"]
+data1 = 4079771244
+data2 = 3797763104
+
+[sub_resource type="FMOD_STUDIO_PARAMETER_DESCRIPTION" id="FMOD_STUDIO_PARAMETER_DESCRIPTION_c52u0"]
+name = "Sadness"
+id = SubResource("FMOD_STUDIO_PARAMETER_ID_i0mpu")
+maximum = 1.0
+guid = "{3af12872-65c7-4b4b-b428-37536b1ac9aa}"
+
+[sub_resource type="ParameterAsset" id="ParameterAsset_r0bb6"]
+parameter_description = SubResource("FMOD_STUDIO_PARAMETER_DESCRIPTION_c52u0")
+path = "parameter:/Sadness"
+guid = "{3af12872-65c7-4b4b-b428-37536b1ac9aa}"
+name = "Sadness"
+
+[sub_resource type="EventAsset" id="EventAsset_arqgv"]
+is_3d = true
+min_distance = 1.0
+max_distance = 20.0
+parameters = {
+"{3af12872-65c7-4b4b-b428-37536b1ac9aa}": SubResource("ParameterAsset_r0bb6")
+}
+path = "event:/Music/Music"
+guid = "{e59cb033-d553-4494-ac47-0116f9d65bdd}"
+name = "Music"
+
 [node name="Main" type="Node3D"]
 script = ExtResource("1_1ygro")
 
-[node name="Camera3D" type="Camera3D" parent="."]
-transform = Transform3D(0.707107, -0.353553, 0.612372, 0, 0.866026, 0.5, -0.707107, -0.353553, 0.612372, 30, 10, 30)
-visible = false
+[node name="The Camera" type="Camera3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 0.707107, 0.707107, 0, -0.707107, 0.707107, 0, 30, 29)
 projection = 1
 current = true
-size = 100.0
-
-[node name="Camera3D2" type="Camera3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 0.707107, 0.707107, 0, -0.707107, 0.707107, 0, 30, 50)
-projection = 1
-size = 100.0
+size = 70.0
 
 [node name="StaticBody3D" type="StaticBody3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1, 0)
+transform = Transform3D(0.707107, 0, 0.707107, 0, 1, 0, -0.707107, 0, 0.707107, 0, -1, 0)
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D"]
 shape = SubResource("BoxShape3D_t5y6s")
@@ -38,6 +67,12 @@ mesh = SubResource("BoxMesh_sc2gv")
 transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 0, 11, 0)
 
 [node name="Player" parent="." instance=ExtResource("2_uy44t")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)
 
 [node name="NPC" parent="." instance=ExtResource("3_a5knq")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 5)
+
+[node name="StudioBankLoader" type="StudioBankLoader" parent="."]
+script = ExtResource("4_dlxyh")
+bank_asset = SubResource("BankAsset_rg5u3")
+event_asset = SubResource("EventAsset_arqgv")
