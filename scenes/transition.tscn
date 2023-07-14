@@ -1,0 +1,15 @@
+[gd_scene load_steps=3 format=3 uid="uid://ckny7hpmgtnci"]
+
+[ext_resource type="Script" path="res://scripts/Transition.gd" id="1_r5lw6"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_lf714"]
+
+[node name="Transition" type="Area3D"]
+collision_layer = 0
+collision_mask = 4
+script = ExtResource("1_r5lw6")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+shape = SubResource("BoxShape3D_lf714")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

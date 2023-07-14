@@ -1,12 +1,11 @@
-[gd_scene load_steps=14 format=3 uid="uid://d0fatpj1xblfe"]
+[gd_scene load_steps=14 format=3 uid="uid://bo7urwsoretov"]
 
-[ext_resource type="Script" path="res://scripts/Main.gd" id="1_1ygro"]
-[ext_resource type="PackedScene" uid="uid://d06xdtwo0agha" path="res://Player/Player.tscn" id="2_uy44t"]
-[ext_resource type="PackedScene" uid="uid://mpydbc355a5" path="res://scenes/NPC.tscn" id="3_a5knq"]
-[ext_resource type="BankAsset" uid="uid://n8jsn6wxqeli" path="res://addons/FMOD/editor/resources/banks/{2267751d-f017-41eb-879e-e95a50110ada}.tres" id="4_hdh7m"]
-[ext_resource type="BankAsset" uid="uid://bhuwdawstrdo6" path="res://addons/FMOD/editor/resources/banks/{b0ba6919-05c3-45f0-85de-1df04344a1f6}.tres" id="5_7pt1u"]
-[ext_resource type="PackedScene" uid="uid://ckny7hpmgtnci" path="res://scenes/transition.tscn" id="6_w4pot"]
-[ext_resource type="PackedScene" uid="uid://bo7urwsoretov" path="res://scenes/TEST.tscn" id="7_eo5nh"]
+[ext_resource type="Script" path="res://scripts/Main.gd" id="1_wlk2w"]
+[ext_resource type="PackedScene" uid="uid://d06xdtwo0agha" path="res://Player/Player.tscn" id="2_c5385"]
+[ext_resource type="PackedScene" uid="uid://mpydbc355a5" path="res://scenes/NPC.tscn" id="3_6w068"]
+[ext_resource type="BankAsset" uid="uid://n8jsn6wxqeli" path="res://addons/FMOD/editor/resources/banks/{2267751d-f017-41eb-879e-e95a50110ada}.tres" id="4_ew3u1"]
+[ext_resource type="BankAsset" uid="uid://bhuwdawstrdo6" path="res://addons/FMOD/editor/resources/banks/{b0ba6919-05c3-45f0-85de-1df04344a1f6}.tres" id="5_2vg1d"]
+[ext_resource type="PackedScene" uid="uid://ckny7hpmgtnci" path="res://scenes/transition.tscn" id="6_3juna"]
 
 [sub_resource type="FMOD_STUDIO_PARAMETER_ID" id="FMOD_STUDIO_PARAMETER_ID_i0mpu"]
 data1 = 4079771244
@@ -41,8 +40,10 @@ size = Vector3(60, 2, 60)
 [sub_resource type="BoxMesh" id="BoxMesh_sc2gv"]
 size = Vector3(60, 2, 60)
 
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_n1uvw"]
+
 [node name="Main" type="Node3D"]
-script = ExtResource("1_1ygro")
+script = ExtResource("1_wlk2w")
 FMODEvent = SubResource("EventAsset_arqgv")
 
 [node name="The Camera" type="Camera3D" parent="."]
@@ -60,13 +61,14 @@ shape = SubResource("BoxShape3D_t5y6s")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="StaticBody3D"]
 mesh = SubResource("BoxMesh_sc2gv")
+surface_material_override/0 = SubResource("StandardMaterial3D_n1uvw")
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 0, 11, 0)
 
-[node name="Player" parent="." instance=ExtResource("2_uy44t")]
+[node name="Player" parent="." instance=ExtResource("2_c5385")]
 
-[node name="NPC" parent="." instance=ExtResource("3_a5knq")]
+[node name="NPC" parent="." instance=ExtResource("3_6w068")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 5)
 
 [node name="StudioBankLoader" type="StudioBankLoader" parent="."]
@@ -74,9 +76,8 @@ load_on = 1
 unload_on = 3
 preload_sample_data = true
 num_banks = 2
-bank_0 = ExtResource("4_hdh7m")
-bank_1 = ExtResource("5_7pt1u")
+bank_0 = ExtResource("4_ew3u1")
+bank_1 = ExtResource("5_2vg1d")
 
-[node name="Transition" parent="." instance=ExtResource("6_w4pot")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 40.72, 1, 0)
-dest = ExtResource("7_eo5nh")
+[node name="Transition" parent="." instance=ExtResource("6_3juna")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 35, 1, 0)
