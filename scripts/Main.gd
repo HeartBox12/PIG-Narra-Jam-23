@@ -1,6 +1,6 @@
 extends Node3D
 
-
+@export var FMODEvent:EventAsset
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	pass # Replace with function body.
@@ -11,4 +11,6 @@ func _process(delta):
 	pass
 
 func _unhandled_input(event):
-	pass
+	if event.is_action_pressed("ui_accept"):
+		RuntimeManager.play_one_shot(FMODEvent)
+		print("Meant to be playing")
