@@ -41,6 +41,8 @@ func _physics_process(delta):
 		animation_player.animation = "standing"
 #---------------------------------------------------------
 
+	#RIGHT HERE
+
 	if direction != Vector3.ZERO:
 		direction = direction.normalized()
 		$Pivot.look_at(position + direction, Vector3.UP)

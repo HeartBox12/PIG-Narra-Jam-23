@@ -1,4 +1,4 @@
-[voice]
+[voice path="res://Dialogue/Assets/sfx_menu_click.wav"]
 * You've recieved a [i]lot[/i] of mail after you sent word you'd be coming home. [pause]It's all in a heap.
 * Begin sorting through?
 - No [if "" == ""]

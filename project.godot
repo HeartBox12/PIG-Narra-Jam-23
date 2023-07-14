@@ -26,6 +26,20 @@ variables={
 "Name": ""
 }
 layout/mode=0
+animations/join_default_length=0.5
+animations/leave_default_length=0.5
+animations/leave_default_wait=true
+animations/join_default_wait=true
+choices/autofocus_first=true
+choices/delay=0.2
+save/autosave_delay=60.0
+text/speed=0.01
+text/skippable=true
+text/autoadvance_delay=1.0
+text/hide_empty_textbox=true
+text/autopauses={}
+glossary/default_case_sensitive=true
+layout/layout_scene="res://addons/dialogic/Modules/DefaultStyles/Default/DialogicDefaultLayout.tscn"
 
 [editor_plugins]
 
@@ -92,6 +106,12 @@ move_down={
 , Object(InputEventJoypadMotion,"resource_local_to_scene":false,"resource_name":"","device":-1,"axis":1,"axis_value":1.0,"script":null)
 ]
 }
+
+[layer_names]
+
+3d_physics/layer_1="Static Props"
+3d_physics/layer_2="NPC"
+3d_physics/layer_3="Player"
 
 [rendering]
 

@@ -1,9 +1,10 @@
-[gd_scene load_steps=16 format=3 uid="uid://d0fatpj1xblfe"]
+[gd_scene load_steps=12 format=3 uid="uid://d0fatpj1xblfe"]
 
 [ext_resource type="Script" path="res://scripts/Main.gd" id="1_1ygro"]
 [ext_resource type="PackedScene" uid="uid://d06xdtwo0agha" path="res://Player/Player.tscn" id="2_uy44t"]
 [ext_resource type="PackedScene" uid="uid://mpydbc355a5" path="res://scenes/NPC.tscn" id="3_a5knq"]
-[ext_resource type="Script" path="res://scripts/FMODLoader.gd" id="4_dlxyh"]
+[ext_resource type="BankAsset" uid="uid://n8jsn6wxqeli" path="res://addons/FMOD/editor/resources/banks/{2267751d-f017-41eb-879e-e95a50110ada}.tres" id="4_hdh7m"]
+[ext_resource type="BankAsset" uid="uid://bhuwdawstrdo6" path="res://addons/FMOD/editor/resources/banks/{b0ba6919-05c3-45f0-85de-1df04344a1f6}.tres" id="5_7pt1u"]
 
 [sub_resource type="FMOD_STUDIO_PARAMETER_ID" id="FMOD_STUDIO_PARAMETER_ID_i0mpu"]
 data1 = 4079771244
@@ -38,40 +39,6 @@ size = Vector3(60, 2, 60)
 [sub_resource type="BoxMesh" id="BoxMesh_sc2gv"]
 size = Vector3(60, 2, 60)
 
-[sub_resource type="BankAsset" id="BankAsset_rg5u3"]
-file_path = "res://FMODBanks/Master.bank"
-modified_time = 1689262903
-path = "bank:/Master"
-guid = "{2267751d-f017-41eb-879e-e95a50110ada}"
-name = "Master"
-
-[sub_resource type="FMOD_STUDIO_PARAMETER_ID" id="FMOD_STUDIO_PARAMETER_ID_arqvs"]
-data1 = 4079771244
-data2 = 3797763104
-
-[sub_resource type="FMOD_STUDIO_PARAMETER_DESCRIPTION" id="FMOD_STUDIO_PARAMETER_DESCRIPTION_ynq2o"]
-name = "Sadness"
-id = SubResource("FMOD_STUDIO_PARAMETER_ID_arqvs")
-maximum = 1.0
-guid = "{3af12872-65c7-4b4b-b428-37536b1ac9aa}"
-
-[sub_resource type="ParameterAsset" id="ParameterAsset_82lyq"]
-parameter_description = SubResource("FMOD_STUDIO_PARAMETER_DESCRIPTION_ynq2o")
-path = "parameter:/Sadness"
-guid = "{3af12872-65c7-4b4b-b428-37536b1ac9aa}"
-name = "Sadness"
-
-[sub_resource type="EventAsset" id="EventAsset_hwi3a"]
-is_3d = true
-min_distance = 1.0
-max_distance = 20.0
-parameters = {
-"{3af12872-65c7-4b4b-b428-37536b1ac9aa}": SubResource("ParameterAsset_82lyq")
-}
-path = "event:/Music/Music"
-guid = "{e59cb033-d553-4494-ac47-0116f9d65bdd}"
-name = "Music"
-
 [node name="Main" type="Node3D"]
 script = ExtResource("1_1ygro")
 FMODEvent = SubResource("EventAsset_arqgv")
@@ -84,6 +51,7 @@ size = 70.0
 
 [node name="StaticBody3D" type="StaticBody3D" parent="."]
 transform = Transform3D(0.707107, 0, 0.707107, 0, 1, 0, -0.707107, 0, 0.707107, 0, -1, 0)
+collision_mask = 7
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D"]
 shape = SubResource("BoxShape3D_t5y6s")
@@ -100,6 +68,9 @@ transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 0, 11,
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 5)
 
 [node name="StudioBankLoader" type="StudioBankLoader" parent="."]
-script = ExtResource("4_dlxyh")
-bank_asset = SubResource("BankAsset_rg5u3")
-event_asset = SubResource("EventAsset_hwi3a")
+load_on = 1
+unload_on = 3
+preload_sample_data = true
+num_banks = 2
+bank_0 = ExtResource("4_hdh7m")
+bank_1 = ExtResource("5_7pt1u")
