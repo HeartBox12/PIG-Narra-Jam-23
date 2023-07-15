@@ -1,4 +1,4 @@
-[gd_scene load_steps=31 format=3 uid="uid://uan2wdyuprb6"]
+[gd_scene load_steps=33 format=3 uid="uid://uan2wdyuprb6"]
 
 [ext_resource type="Script" path="res://addons/dialogic/Modules/DefaultStyles/Default/DialogicDefaultLayout.gd" id="1"]
 [ext_resource type="Script" path="res://addons/dialogic/Modules/Text/node_dialog_text.gd" id="2"]
@@ -11,9 +11,11 @@
 [ext_resource type="Script" path="res://addons/dialogic/Modules/Style/node_style.gd" id="12"]
 [ext_resource type="AudioStream" uid="uid://dwcre3fjf3cj8" path="res://addons/dialogic/Example Assets/sound-effects/typing5.wav" id="13"]
 [ext_resource type="AudioStream" uid="uid://b6c1p14bc20p1" path="res://addons/dialogic/Example Assets/sound-effects/typing1.wav" id="14"]
+[ext_resource type="Texture2D" uid="uid://v70o35yxm0rs" path="res://Dialogue/Assets/next_dialogue_button.png" id="14_2gflj"]
 [ext_resource type="Script" path="res://addons/dialogic/Modules/DefaultStyles/Default/autoadvance_indicator.gd" id="15_ptoy3"]
 [ext_resource type="Script" path="res://addons/dialogic/Modules/DefaultStyles/Default/animations.gd" id="16_07l6b"]
 [ext_resource type="Script" path="res://addons/dialogic/Modules/Choice/node_button_sound.gd" id="18"]
+[ext_resource type="Texture2D" uid="uid://btdam2d1fl2sa" path="res://Dialogue/Assets/textbox.png" id="18_54wmk"]
 [ext_resource type="Script" path="res://addons/dialogic/Modules/Text/node_next_indicator.gd" id="20_ljcq2"]
 [ext_resource type="Script" path="res://addons/dialogic/Modules/DefaultStyles/Default/ExampleGlossaryPopup.gd" id="20_vmnp2"]
 [ext_resource type="PackedScene" path="res://addons/dialogic/Modules/DefaultStyles/ExampleHistoryScene.tscn" id="22_854kg"]
@@ -395,11 +397,15 @@ anchor_left = 0.5
 anchor_top = 1.0
 anchor_right = 0.5
 anchor_bottom = 1.0
+offset_left = 576.0
+offset_top = 648.0
+offset_right = 576.0
+offset_bottom = 648.0
 grow_horizontal = 2
 grow_vertical = 0
 
 [node name="DialogTextPanel" type="PanelContainer" parent="DefaultStyle/DialogTextAnimationParent"]
-unique_name_in_owner = true
+modulate = Color(1, 1, 1, 0.952941)
 self_modulate = Color(0.00784314, 0.00784314, 0.00784314, 0.843137)
 custom_minimum_size = Vector2(550, 110)
 layout_mode = 1
@@ -436,12 +442,13 @@ script = ExtResource("10")
 play_every_character = 0
 
 [node name="DNextIndicator" type="Control" parent="DefaultStyle/DialogTextAnimationParent/DialogTextPanel"]
-visible = false
+top_level = true
 layout_mode = 2
 size_flags_horizontal = 8
 size_flags_vertical = 8
 script = ExtResource("20_ljcq2")
 show_on_questions = true
+texture = ExtResource("14_2gflj")
 metadata/_edit_layout_mode = 1
 
 [node name="AutoAdvanceProgressbar" type="ProgressBar" parent="DefaultStyle/DialogTextAnimationParent/DialogTextPanel"]
@@ -479,6 +486,11 @@ theme_override_colors/font_color = Color(1, 1, 1, 1)
 theme_override_font_sizes/font_size = 15
 text = "S"
 script = ExtResource("3")
+
+[node name="TextureRect" type="TextureRect" parent="DefaultStyle/DialogTextAnimationParent/DialogTextPanel"]
+layout_mode = 2
+texture = ExtResource("18_54wmk")
+expand_mode = 5
 
 [node name="Something" type="Control" parent="DefaultStyle"]
 layout_mode = 1
