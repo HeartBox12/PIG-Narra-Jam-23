@@ -1,0 +1,26 @@
+{
+"@path": "res://addons/dialogic/Resources/character.gd",
+"@subpath": NodePath(""),
+"color": Color(0.207843, 0.921569, 0.921569, 1),
+"custom_info": {
+"sound_mood_default": "",
+"sound_moods": {},
+"style": ""
+},
+"default_portrait": "Placeholder",
+"description": "Solo mother. Reported to you. Feels a lot of guilt.",
+"display_name": "Kat",
+"mirror": false,
+"nicknames": ["Katrina"],
+"offset": Vector2(0, 0),
+"portraits": {
+"Placeholder": {
+"image": "res://icon.svg",
+"mirror": false,
+"offset": Vector2(0, 0),
+"scale": 1,
+"scene": ""
+}
+},
+"scale": 1.0
+}
