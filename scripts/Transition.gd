@@ -1,8 +1,8 @@
 extends Area3D
 
-@export var dest:PackedScene
-
+@export var dest:String
+@export var destId:int #int matching the dest Id of the marker where the player will end up in the next room.
 
 func _on_body_entered(body):
-	print("Transing")
-	get_tree().change_scene_to_packed(dest)
+	Singleton.destId = destId
+	get_tree().change_scene_to_file(dest)

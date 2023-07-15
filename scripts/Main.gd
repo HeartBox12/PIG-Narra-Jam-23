@@ -1,9 +1,14 @@
 extends Node3D
 
 @export var FMODEvent:EventAsset
+
+
 var instance:EventInstance
 # Called when the node enters the scene tree for the first time.
 func _ready():
+	var dests = [$dest0, $dest1, $dest2,]
+	$Player.position = dests[Singleton.destId].position
+	
 	instance = RuntimeManager.create_instance(FMODEvent)
 
 
