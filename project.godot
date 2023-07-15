@@ -17,7 +17,7 @@ config/icon="res://icon.svg"
 
 [autoload]
 
-Dialogic="*res://addons/dialogic/Other/DialogicGameHandler.gd"
+Singleton="*res://scripts/singleton.gd"
 RuntimeManager="*res://addons/FMOD/runtime/runtime_manager.gd"
 
 [dialogic]
@@ -49,7 +49,7 @@ window/size/mode=3
 
 [editor_plugins]
 
-enabled=PackedStringArray("res://addons/dialogic/plugin.cfg", "res://addons/FMOD/plugin.cfg")
+enabled=PackedStringArray("res://addons/FMOD/plugin.cfg")
 
 [fmod]
 
