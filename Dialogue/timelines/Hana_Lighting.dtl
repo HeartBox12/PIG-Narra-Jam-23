@@ -1,0 +1,19 @@
+Hana_Lighting (Placeholder): STOP RIGHT THERE!
+Join Hana_Lighting 4 [animation="Bounce In" length="1"]
+Hana_Lighting: Where do you think you're going?[pause] Huh?
+Join PC 0 [animation="Bounce In" length="1"]
+PC (Placeholder): Uh...[pause] I was just gonna slip out while-
+Hana_Lighting: While nobody was paying attention?
+PC: Well...[pause] yeah, I guess so.
+Hana_Lighting: What about all your stuff?
+PC: It's already in the car.
+Hana_Lighting: And you weren't even gonna say goodbye to me?[pause] I'll be crying over my controls all night.
+[wait]
+PC: We're[pause] literally hanging out this weekend.
+Hana_Lighting: Look.[pause] You walk out that door and it's over.[pause] This whole insane ride.
+PC: I don't want to get in anyone's way. You all have work to do. It's a big day.
+Hana_Lighting: I know how much this place means to you.[pause] Don't let it end like this.
+[wait]
+Hana_Lighting: I need to go up to the box and adjust a few levels. I'll see you on Sunday.
+Leave Hana_Lighting
+[wait time="1.5"]
