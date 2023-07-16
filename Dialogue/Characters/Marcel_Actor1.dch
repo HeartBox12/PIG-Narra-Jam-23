@@ -9,9 +9,9 @@
 },
 "default_portrait": "Placeholder",
 "description": "Egotistical. Hollywood wannabe. Playing the lead role.",
-"display_name": "Benoit",
+"display_name": "Marcel",
 "mirror": false,
-"nicknames": ["Ben"],
+"nicknames": [""],
 "offset": Vector2(0, 0),
 "portraits": {
 "Placeholder": {
