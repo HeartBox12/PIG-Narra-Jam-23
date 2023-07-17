@@ -4,8 +4,10 @@ extends CharacterBody3D
 @export var fall_acceleration = 75
 
 @onready var animation_player = get_node("AnimatedSprite3D")
+@onready var origin = get_node("/root/Main/Origin")
 
 var target_velocity = Vector3.ZERO
+var fall_timer = 0
 
 func _physics_process(delta):
 	
@@ -58,6 +60,11 @@ func _physics_process(delta):
 	
 	if not is_on_floor():
 		target_velocity.y = target_velocity.y - (fall_acceleration * delta)
+		fall_timer += 1
+		if fall_timer >= 60:
+			global_position = origin.position
+			fall_timer = 0
+			target_velocity.y = 0
 		
 	velocity = target_velocity
 	move_and_slide()

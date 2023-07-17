@@ -1,0 +1,26 @@
+Join Benoit_Actor1 4
+Benoit_Actor1 (Placeholder): ...and of course, I couldn't do any of it without my beautiful wife! She's given up so much to support me-
+Join PC
+Benoit_Actor1: AH! Oh Jesus, Mary and Joseph, you startled me.
+Benoit_Actor1: Aren't you supposed to be selling tickets and refreshments? What are you doing walking the boards?
+PC: I could ask the same of you. Why aren't you running lines with your co-stars?
+Benoit_Actor1: Well, we've done so much of that, you see. I thought I'd come out here to practice under the lights.
+Join Hana_Lighting 0
+Hana_Lighting (Placeholder): YOU'RE WELCOME!
+Leave Hana_Lighting
+PC: Practice what? The line you just said isn't even in the script.
+Benoit_Actor1: I'm practicing my acceptance speech.[pause] For the awards.
+PC: Benoit, that makes even less sense.[pause] You don't even have a wife.
+Benoit_Actor1: Well not yet, but by the time I win my Oscars I'll be happily betrothed to another A-lister. [pause]Like, [pause]uh, [pause]Saoirse Ronan.[pause] For example.
+[wait time="1.5"]
+PC: Right.
+Benoit_Actor1: But you need to go and sell some tickets first, or nobody will see me give the performance of a LIFETIME!
+PC: Do you not talk to anyone around here?[pause] I thought everyone knew by now.
+PC: I am[pause] no longer an employee of Doomsday Stagecraft.
+Benoit_Actor1: Oh. Did you get a gig in LA or something?
+PC: Nope.
+Benoit_Actor1: Oh.[pause] Well.[pause] All the more reason for you to leave me to practice then, hmm?
+PC: You know...[pause] I guess you're right.
+Benoit_Actor1: Cheerio!
+Leave Benoit_Actor1
+[wait]
