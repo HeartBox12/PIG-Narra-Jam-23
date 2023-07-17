@@ -20,6 +20,6 @@ func _process(delta):
 func _unhandled_input(event):
 	if event.is_action_pressed("ui_accept"): #DEBUG
 		instance.set_parameter_by_name("Sadness", 1, false)
-		instance.start()
-		instance.release()
-		print("Meant to be playing")
+		#instance.start()
+		#instance.release()
+		#print("Meant to be playing")

@@ -71,4 +71,5 @@ func _physics_process(delta):
 	
 	if Input.is_action_just_pressed("ui_accept"):
 		if $Pivot/NPCDetector.get_collision_count() != 0:
+			print("playing")
 			Dialogic.start($Pivot/NPCDetector.get_collider(0).get_parent().timeline) # Reference target's timeline
