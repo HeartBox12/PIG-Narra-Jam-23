@@ -1,29 +1,29 @@
-[gd_scene load_steps=33 format=3 uid="uid://dklrafcco1e6x"]
+[gd_scene load_steps=33 format=3 uid="uid://4va8vckrhdse"]
 
-[ext_resource type="Script" path="res://addons/dialogic/Modules/DefaultStyles/Default/DialogicDefaultLayout.gd" id="1_6v001"]
-[ext_resource type="Script" path="res://addons/dialogic/Modules/Background/node_background_holder.gd" id="2_ftd2x"]
-[ext_resource type="Script" path="res://addons/dialogic/Modules/Character/node_portrait_container.gd" id="3_rqa7a"]
-[ext_resource type="Script" path="res://addons/dialogic/Modules/Style/node_style.gd" id="4_77psc"]
-[ext_resource type="Script" path="res://addons/dialogic/Modules/DefaultStyles/Default/animations.gd" id="5_g7wex"]
-[ext_resource type="Script" path="res://addons/dialogic/Modules/Choice/node_choice_button.gd" id="6_s10wu"]
-[ext_resource type="Script" path="res://addons/dialogic/Modules/Choice/node_button_sound.gd" id="7_flbvh"]
-[ext_resource type="AudioStream" uid="uid://b6c1p14bc20p1" path="res://addons/dialogic/Example Assets/sound-effects/typing1.wav" id="8_a2kqd"]
-[ext_resource type="AudioStream" uid="uid://c2viukvbub6v6" path="res://addons/dialogic/Example Assets/sound-effects/typing4.wav" id="9_htf2x"]
-[ext_resource type="AudioStream" uid="uid://dwcre3fjf3cj8" path="res://addons/dialogic/Example Assets/sound-effects/typing5.wav" id="10_kdabq"]
-[ext_resource type="Script" path="res://addons/dialogic/Modules/Text/node_dialog_text.gd" id="11_18pow"]
-[ext_resource type="Texture2D" uid="uid://ci5uf1ictd2b4" path="res://Dialogue/Assets/textbox.png" id="11_inves"]
-[ext_resource type="Script" path="res://addons/dialogic/Modules/Text/node_type_sound.gd" id="12_8sipc"]
-[ext_resource type="Script" path="res://addons/dialogic/Modules/Text/node_next_indicator.gd" id="13_acscs"]
-[ext_resource type="Script" path="res://addons/dialogic/Modules/DefaultStyles/Default/autoadvance_indicator.gd" id="14_qfans"]
-[ext_resource type="Script" path="res://addons/dialogic/Modules/DefaultStyles/HideWithChild.gd" id="15_1a6cy"]
-[ext_resource type="Texture2D" uid="uid://b5y4gbggkqsly" path="res://Dialogue/Assets/next_dialogue_button.png" id="15_wfenq"]
-[ext_resource type="Script" path="res://addons/dialogic/Modules/Text/node_name_label.gd" id="16_5yj6a"]
-[ext_resource type="Script" path="res://addons/dialogic/Modules/TextInput/node_text_input.gd" id="17_admt4"]
-[ext_resource type="Script" path="res://addons/dialogic/Modules/DefaultStyles/Default/ExampleGlossaryPopup.gd" id="18_4ovpk"]
-[ext_resource type="PackedScene" path="res://addons/dialogic/Modules/DefaultStyles/ExampleHistoryScene.tscn" id="19_7ck3n"]
-[ext_resource type="FontFile" uid="uid://vrrmdx83skor" path="res://addons/dialogic/Example Assets/Fonts/Roboto-Regular.ttf" id="20_eh3le"]
-[ext_resource type="FontFile" uid="uid://cc4xli25271fd" path="res://addons/dialogic/Example Assets/Fonts/Roboto-Bold.ttf" id="21_jh3fm"]
-[ext_resource type="FontFile" uid="uid://b5c0p00x6g6u5" path="res://addons/dialogic/Example Assets/Fonts/Roboto-Italic.ttf" id="22_6t0xx"]
+[ext_resource type="Script" path="res://addons/dialogic/Modules/DefaultStyles/Default/DialogicDefaultLayout.gd" id="1_orgxg"]
+[ext_resource type="Script" path="res://addons/dialogic/Modules/Background/node_background_holder.gd" id="2_83h3p"]
+[ext_resource type="Script" path="res://addons/dialogic/Modules/Character/node_portrait_container.gd" id="3_jnitx"]
+[ext_resource type="Script" path="res://addons/dialogic/Modules/Style/node_style.gd" id="4_qh78s"]
+[ext_resource type="Script" path="res://addons/dialogic/Modules/DefaultStyles/Default/animations.gd" id="5_7kkou"]
+[ext_resource type="Script" path="res://addons/dialogic/Modules/Choice/node_choice_button.gd" id="6_xsoek"]
+[ext_resource type="Script" path="res://addons/dialogic/Modules/Choice/node_button_sound.gd" id="7_ytoos"]
+[ext_resource type="AudioStream" uid="uid://b6c1p14bc20p1" path="res://addons/dialogic/Example Assets/sound-effects/typing1.wav" id="8_6oj4i"]
+[ext_resource type="AudioStream" uid="uid://c2viukvbub6v6" path="res://addons/dialogic/Example Assets/sound-effects/typing4.wav" id="9_6fak1"]
+[ext_resource type="AudioStream" uid="uid://dwcre3fjf3cj8" path="res://addons/dialogic/Example Assets/sound-effects/typing5.wav" id="10_yucrq"]
+[ext_resource type="Texture2D" uid="uid://ci5uf1ictd2b4" path="res://Dialogue/Assets/textbox.png" id="11_ww0mx"]
+[ext_resource type="Script" path="res://addons/dialogic/Modules/Text/node_dialog_text.gd" id="12_nja60"]
+[ext_resource type="Script" path="res://addons/dialogic/Modules/Text/node_type_sound.gd" id="13_xijpd"]
+[ext_resource type="Script" path="res://addons/dialogic/Modules/Text/node_next_indicator.gd" id="14_qtsoq"]
+[ext_resource type="Texture2D" uid="uid://b5y4gbggkqsly" path="res://Dialogue/Assets/next_dialogue_button.png" id="15_fpt8d"]
+[ext_resource type="Script" path="res://addons/dialogic/Modules/DefaultStyles/Default/autoadvance_indicator.gd" id="16_6sc5w"]
+[ext_resource type="Script" path="res://addons/dialogic/Modules/DefaultStyles/HideWithChild.gd" id="17_p12wn"]
+[ext_resource type="Script" path="res://addons/dialogic/Modules/Text/node_name_label.gd" id="18_4augn"]
+[ext_resource type="Script" path="res://addons/dialogic/Modules/TextInput/node_text_input.gd" id="19_tn7hc"]
+[ext_resource type="Script" path="res://addons/dialogic/Modules/DefaultStyles/Default/ExampleGlossaryPopup.gd" id="20_ya48r"]
+[ext_resource type="PackedScene" path="res://addons/dialogic/Modules/DefaultStyles/ExampleHistoryScene.tscn" id="21_5so1j"]
+[ext_resource type="FontFile" uid="uid://vrrmdx83skor" path="res://addons/dialogic/Example Assets/Fonts/Roboto-Regular.ttf" id="22_lvva4"]
+[ext_resource type="FontFile" uid="uid://cc4xli25271fd" path="res://addons/dialogic/Example Assets/Fonts/Roboto-Bold.ttf" id="23_4bvwm"]
+[ext_resource type="FontFile" uid="uid://b5c0p00x6g6u5" path="res://addons/dialogic/Example Assets/Fonts/Roboto-Italic.ttf" id="24_qnd3c"]
 
 [sub_resource type="Animation" id="Animation_au0a2"]
 length = 0.001
@@ -37,7 +37,7 @@ tracks/0/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 0,
-"values": [Vector2(576, 648)]
+"values": [Vector2(0, 0)]
 }
 tracks/1/type = "value"
 tracks/1/imported = false
@@ -129,7 +129,7 @@ tracks/0/keys = {
 "times": PackedFloat32Array(0, 0.2, 0.3),
 "transitions": PackedFloat32Array(1, 1, 1),
 "update": 0,
-"values": [Vector2(577, 700), Vector2(582, 647), Vector2(576, 648)]
+"values": [Vector2(1, 52), Vector2(6, 1), Vector2(0, 0)]
 }
 tracks/1/type = "value"
 tracks/1/imported = false
@@ -232,14 +232,14 @@ shadow_color = Color(0.823529, 0.803922, 0.756863, 1)
 shadow_size = 5
 
 [node name="DefaultDialogNode" type="CanvasLayer"]
-script = ExtResource("1_6v001")
+script = ExtResource("1_orgxg")
 text_alignment = 1
 text_color = Color(0, 0, 0, 1)
 name_label_box_modulate = Color(0.00784314, 0.00784314, 0.00784314, 0.843137)
 
 [node name="DialogicNode_BackgroundHolder" type="CanvasLayer" parent="."]
 layer = -1
-script = ExtResource("2_ftd2x")
+script = ExtResource("2_83h3p")
 
 [node name="Portraits" type="CanvasLayer" parent="."]
 layer = 0
@@ -263,7 +263,7 @@ offset_right = -901.0
 grow_horizontal = 2
 grow_vertical = 2
 mouse_filter = 2
-script = ExtResource("3_rqa7a")
+script = ExtResource("3_jnitx")
 size_mode = 0
 
 [node name="DialogicNode_PortraitContainer2" type="Control" parent="Portraits/Control"]
@@ -276,7 +276,7 @@ offset_right = -690.0
 grow_horizontal = 2
 grow_vertical = 2
 mouse_filter = 2
-script = ExtResource("3_rqa7a")
+script = ExtResource("3_jnitx")
 position_index = 1
 size_mode = 0
 
@@ -290,7 +290,7 @@ offset_right = -431.0
 grow_horizontal = 2
 grow_vertical = 2
 mouse_filter = 2
-script = ExtResource("3_rqa7a")
+script = ExtResource("3_jnitx")
 position_index = 2
 size_mode = 0
 
@@ -304,7 +304,7 @@ offset_right = -224.0
 grow_horizontal = 2
 grow_vertical = 2
 mouse_filter = 2
-script = ExtResource("3_rqa7a")
+script = ExtResource("3_jnitx")
 position_index = 3
 size_mode = 0
 
@@ -319,7 +319,7 @@ offset_right = 5.0
 grow_horizontal = 2
 grow_vertical = 2
 mouse_filter = 2
-script = ExtResource("3_rqa7a")
+script = ExtResource("3_jnitx")
 position_index = 4
 size_mode = 0
 
@@ -331,14 +331,14 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 mouse_filter = 2
-script = ExtResource("4_77psc")
+script = ExtResource("4_qh78s")
 
 [node name="Animations" type="AnimationPlayer" parent="DefaultStyle"]
 autoplay = "RESET"
 libraries = {
 "": SubResource("AnimationLibrary_c14kh")
 }
-script = ExtResource("5_g7wex")
+script = ExtResource("5_7kkou")
 
 [node name="Choices" type="VBoxContainer" parent="DefaultStyle"]
 layout_mode = 1
@@ -359,46 +359,44 @@ metadata/_edit_layout_mode = 1
 [node name="DialogicNode_ChoiceButton1" type="Button" parent="DefaultStyle/Choices"]
 layout_mode = 2
 text = "Some text"
-script = ExtResource("6_s10wu")
+script = ExtResource("6_xsoek")
 
 [node name="DialogicNode_ChoiceButton2" type="Button" parent="DefaultStyle/Choices"]
 layout_mode = 2
 text = "Some text"
-script = ExtResource("6_s10wu")
+script = ExtResource("6_xsoek")
 
 [node name="DialogicNode_ChoiceButton3" type="Button" parent="DefaultStyle/Choices"]
 layout_mode = 2
 text = "Some text"
-script = ExtResource("6_s10wu")
+script = ExtResource("6_xsoek")
 
 [node name="DialogicNode_ChoiceButton4" type="Button" parent="DefaultStyle/Choices"]
 layout_mode = 2
 text = "Some text"
-script = ExtResource("6_s10wu")
+script = ExtResource("6_xsoek")
 
 [node name="DialogicNode_ChoiceButton5" type="Button" parent="DefaultStyle/Choices"]
 layout_mode = 2
 text = "Some text"
-script = ExtResource("6_s10wu")
+script = ExtResource("6_xsoek")
 
 [node name="DialogicNode_ChoiceButton6" type="Button" parent="DefaultStyle/Choices"]
 layout_mode = 2
 text = "Some text"
-script = ExtResource("6_s10wu")
+script = ExtResource("6_xsoek")
 
 [node name="DialogicNode_ButtonSound" type="AudioStreamPlayer" parent="DefaultStyle/Choices"]
-script = ExtResource("7_flbvh")
-sound_pressed = ExtResource("8_a2kqd")
-sound_hover = ExtResource("9_htf2x")
-sound_focus = ExtResource("10_kdabq")
+script = ExtResource("7_ytoos")
+sound_pressed = ExtResource("8_6oj4i")
+sound_hover = ExtResource("9_6fak1")
+sound_focus = ExtResource("10_yucrq")
 
 [node name="DialogTextAnimationParent" type="Control" parent="DefaultStyle"]
 layout_mode = 1
 anchors_preset = 0
-offset_left = 576.0
-offset_top = 648.0
-offset_right = 2496.0
-offset_bottom = 1728.0
+offset_right = 1920.0
+offset_bottom = 1080.0
 metadata/_edit_use_anchors_ = true
 
 [node name="DialogTextPanel" type="NinePatchRect" parent="DefaultStyle/DialogTextAnimationParent"]
@@ -417,7 +415,7 @@ offset_right = 275.0
 grow_horizontal = 2
 grow_vertical = 0
 pivot_offset = Vector2(275, 60)
-texture = ExtResource("11_inves")
+texture = ExtResource("11_ww0mx")
 region_rect = Rect2(0, 0, 917, 350)
 patch_margin_left = 100
 patch_margin_top = 90
@@ -444,11 +442,11 @@ theme_override_font_sizes/bold_italics_font_size = 15
 bbcode_enabled = true
 text = "Some default text"
 visible_characters_behavior = 1
-script = ExtResource("11_18pow")
+script = ExtResource("12_nja60")
 alignment = 1
 
 [node name="DialogicNode_TypeSounds" type="AudioStreamPlayer" parent="DefaultStyle/DialogTextAnimationParent/DialogTextPanel/DialogicNode_DialogText"]
-script = ExtResource("12_8sipc")
+script = ExtResource("13_xijpd")
 play_every_character = 0
 
 [node name="DNextIndicator" type="Control" parent="DefaultStyle/DialogTextAnimationParent/DialogTextPanel"]
@@ -456,9 +454,9 @@ layout_mode = 2
 anchors_preset = 0
 size_flags_horizontal = 8
 size_flags_vertical = 8
-script = ExtResource("13_acscs")
+script = ExtResource("14_qtsoq")
 show_on_questions = true
-texture = ExtResource("15_wfenq")
+texture = ExtResource("15_fpt8d")
 metadata/_edit_layout_mode = 1
 
 [node name="AutoAdvanceProgressbar" type="ProgressBar" parent="DefaultStyle/DialogTextAnimationParent/DialogTextPanel"]
@@ -473,7 +471,7 @@ max_value = 1.0
 step = 0.001
 value = 0.5
 show_percentage = false
-script = ExtResource("14_qfans")
+script = ExtResource("16_6sc5w")
 
 [node name="NameLabelHolder" type="Control" parent="DefaultStyle/DialogTextAnimationParent/DialogTextPanel"]
 layout_mode = 2
@@ -491,7 +489,7 @@ offset_top = -49.0
 offset_right = 1.0
 offset_bottom = -24.0
 theme_override_styles/panel = SubResource("StyleBoxFlat_wpkyg")
-script = ExtResource("15_1a6cy")
+script = ExtResource("17_p12wn")
 metadata/_edit_layout_mode = 1
 metadata/_edit_use_custom_anchors = true
 metadata/_edit_group_ = true
@@ -502,7 +500,7 @@ layout_mode = 2
 theme_override_colors/font_color = Color(1, 1, 1, 1)
 theme_override_font_sizes/font_size = 15
 text = "S"
-script = ExtResource("16_5yj6a")
+script = ExtResource("18_4augn")
 
 [node name="Something" type="Control" parent="DefaultStyle"]
 layout_mode = 1
@@ -529,7 +527,7 @@ offset_right = 210.0
 offset_bottom = 50.0
 grow_horizontal = 2
 grow_vertical = 2
-script = ExtResource("17_admt4")
+script = ExtResource("19_tn7hc")
 input_line_edit = NodePath("TextInputPanel/VBoxContainer/InputField")
 text_label = NodePath("TextInputPanel/VBoxContainer/TextLabel")
 confirmation_button = NodePath("TextInputPanel/VBoxContainer/ConfirmationButton")
@@ -565,7 +563,7 @@ text = "Confirm"
 [node name="Glossary" type="Control" parent="DefaultStyle"]
 layout_mode = 1
 anchors_preset = 0
-script = ExtResource("18_4ovpk")
+script = ExtResource("20_ya48r")
 
 [node name="Panel" type="PanelContainer" parent="DefaultStyle/Glossary"]
 layout_mode = 1
@@ -634,7 +632,7 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 mouse_filter = 2
-script = ExtResource("4_77psc")
+script = ExtResource("4_qh78s")
 style_name = "Special"
 metadata/_edit_lock_ = true
 
@@ -658,37 +656,37 @@ metadata/_edit_layout_mode = 1
 layout_mode = 2
 size_flags_horizontal = 8
 text = "Text"
-script = ExtResource("6_s10wu")
+script = ExtResource("6_xsoek")
 
 [node name="DialogicNode_ChoiceButton2" type="Button" parent="SpecialStyle/Choices"]
 layout_mode = 2
 size_flags_horizontal = 8
 text = "Text"
-script = ExtResource("6_s10wu")
+script = ExtResource("6_xsoek")
 
 [node name="DialogicNode_ChoiceButton3" type="Button" parent="SpecialStyle/Choices"]
 layout_mode = 2
 size_flags_horizontal = 8
 text = "Text"
-script = ExtResource("6_s10wu")
+script = ExtResource("6_xsoek")
 
 [node name="DialogicNode_ChoiceButton4" type="Button" parent="SpecialStyle/Choices"]
 layout_mode = 2
 size_flags_horizontal = 8
 text = "Text"
-script = ExtResource("6_s10wu")
+script = ExtResource("6_xsoek")
 
 [node name="DialogicNode_ChoiceButton5" type="Button" parent="SpecialStyle/Choices"]
 layout_mode = 2
 size_flags_horizontal = 8
 text = "Text"
-script = ExtResource("6_s10wu")
+script = ExtResource("6_xsoek")
 
 [node name="DialogicNode_ChoiceButton6" type="Button" parent="SpecialStyle/Choices"]
 layout_mode = 2
 size_flags_horizontal = 8
 text = "Text"
-script = ExtResource("6_s10wu")
+script = ExtResource("6_xsoek")
 
 [node name="PanelContainer" type="PanelContainer" parent="SpecialStyle"]
 layout_mode = 1
@@ -715,18 +713,18 @@ alignment = 1
 layout_mode = 2
 text = "Name"
 horizontal_alignment = 1
-script = ExtResource("16_5yj6a")
+script = ExtResource("18_4augn")
 use_character_color = false
 
 [node name="DialogicNode_DialogText" type="RichTextLabel" parent="SpecialStyle/PanelContainer/MarginContainer/VBoxContainer"]
 layout_mode = 2
 text = "Some default text"
-script = ExtResource("11_18pow")
+script = ExtResource("12_nja60")
 
-[node name="ExampleHistoryScene" parent="." instance=ExtResource("19_7ck3n")]
-history_font_normal = ExtResource("20_eh3le")
-history_font_bold = ExtResource("21_jh3fm")
-history_font_italics = ExtResource("22_6t0xx")
+[node name="ExampleHistoryScene" parent="." instance=ExtResource("21_5so1j")]
+history_font_normal = ExtResource("22_lvva4")
+history_font_bold = ExtResource("23_4bvwm")
+history_font_italics = ExtResource("24_qnd3c")
 metadata/_edit_lock_ = true
 
 [connection signal="meta_hover_ended" from="DefaultStyle/DialogTextAnimationParent/DialogTextPanel/DialogicNode_DialogText" to="DefaultStyle/Glossary" method="_on_dialogic_display_dialog_text_meta_hover_ended"]

@@ -40,7 +40,7 @@ text/autoadvance_delay=1.0
 text/hide_empty_textbox=true
 text/autopauses={}
 glossary/default_case_sensitive=true
-layout/layout_scene="res://Dialogue/Assets/CustomLayout.tscn"
+layout/layout_scene="res://Dialogue/Assets/Cus2mLayout.tscn"
 
 [display]
 
