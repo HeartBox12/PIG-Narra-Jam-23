@@ -18,7 +18,7 @@ func _process(delta):
 	pass
 
 func _unhandled_input(event):
-	if event.is_action_pressed("ui_accept"):
+	if event.is_action_pressed("ui_accept"): #DEBUG
 		instance.set_parameter_by_name("Sadness", 1, false)
 		instance.start()
 		instance.release()

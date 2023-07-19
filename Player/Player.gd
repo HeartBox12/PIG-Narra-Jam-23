@@ -10,6 +10,12 @@ var target_velocity = Vector3.ZERO
 var fall_timer = 0
 
 func _physics_process(delta):
+	
+	#NO PLAYER INPUT OR MOVEMENT WHILE IN DIALOGUE
+	if Dialogic.current_timeline != null:
+		
+		return
+	
 	var direction = Vector3.ZERO
 	animation_player.play()
 
@@ -65,5 +71,4 @@ func _physics_process(delta):
 	
 	if Input.is_action_just_pressed("ui_accept"):
 		if $Pivot/NPCDetector.get_collision_count() != 0:
-			pass
-			#Dialogic.start($Pivot/NPCDetector.get_collider(0).get_parent().timeline) # Reference target's timeline
+			Dialogic.start($Pivot/NPCDetector.get_collider(0).get_parent().timeline) # Reference target's timeline
