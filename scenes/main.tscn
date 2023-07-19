@@ -7,6 +7,7 @@
 [ext_resource type="BankAsset" uid="uid://bhuwdawstrdo6" path="res://addons/FMOD/editor/resources/banks/{b0ba6919-05c3-45f0-85de-1df04344a1f6}.tres" id="5_7pt1u"]
 [ext_resource type="PackedScene" uid="uid://ckny7hpmgtnci" path="res://scenes/transition.tscn" id="6_w4pot"]
 [ext_resource type="Script" path="res://scripts/The Camera.gd" id="7_okfvl"]
+[ext_resource type="PackedScene" uid="uid://dtghyukax8egj" path="res://foyerdress.gltf" id="8_ygy3r"]
 
 [sub_resource type="FMOD_STUDIO_PARAMETER_ID" id="FMOD_STUDIO_PARAMETER_ID_i0mpu"]
 data1 = 4079771244
@@ -38,9 +39,6 @@ name = "Music"
 [sub_resource type="BoxShape3D" id="BoxShape3D_t5y6s"]
 size = Vector3(60, 2, 60)
 
-[sub_resource type="BoxMesh" id="BoxMesh_sc2gv"]
-size = Vector3(60, 2, 60)
-
 [node name="Main" type="Node3D"]
 script = ExtResource("1_1ygro")
 FMODEvent = SubResource("EventAsset_arqgv")
@@ -51,9 +49,6 @@ collision_mask = 7
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D"]
 shape = SubResource("BoxShape3D_t5y6s")
-
-[node name="MeshInstance3D" type="MeshInstance3D" parent="StaticBody3D"]
-mesh = SubResource("BoxMesh_sc2gv")
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 0, 11, 0)
@@ -92,3 +87,6 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 38, 0, 0)
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -16)
 
 [node name="Origin" type="Marker3D" parent="."]
+
+[node name="foyerdress" parent="." instance=ExtResource("8_ygy3r")]
+transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, 0, 0, 0)
