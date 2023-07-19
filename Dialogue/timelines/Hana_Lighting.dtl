@@ -1,7 +1,7 @@
 Hana_Lighting (Placeholder): STOP RIGHT THERE!
-Join Hana_Lighting 4 [animation="Bounce In" length="1" wait="true"]
+Join Hana_Lighting 4
 Hana_Lighting: Where do you think you're going?[pause] Huh?
-Join PC 0 [animation="Bounce In" length="1" wait="true"]
+Join PC 0
 PC (Placeholder): Uh...[pause] I was just gonna slip out while-
 Hana_Lighting: While nobody was paying attention?
 PC: Well...[pause] yeah, I guess so.
