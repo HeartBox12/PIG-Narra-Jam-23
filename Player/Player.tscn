@@ -1,7 +1,6 @@
-[gd_scene load_steps=28 format=3 uid="uid://d06xdtwo0agha"]
+[gd_scene load_steps=27 format=3 uid="uid://d06xdtwo0agha"]
 
 [ext_resource type="Script" path="res://Player/Player.gd" id="1_navel"]
-[ext_resource type="PackedScene" uid="uid://bjlq5lqy0sdu0" path="res://player.glb" id="1_wrflt"]
 [ext_resource type="Texture2D" uid="uid://dpc2r674bs887" path="res://sprites/run.png" id="3_pxecp"]
 [ext_resource type="Texture2D" uid="uid://cdcgqkgvef47a" path="res://sprites/idle.png" id="4_pbahb"]
 
@@ -170,9 +169,6 @@ script = ExtResource("1_navel")
 
 [node name="Pivot" type="Node3D" parent="."]
 
-[node name="player" parent="Pivot" instance=ExtResource("1_wrflt")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.470971, 0)
-
 [node name="NPCDetector" type="ShapeCast3D" parent="Pivot"]
 shape = SubResource("BoxShape3D_8gi1q")
 target_position = Vector3(0, 1, -1)
@@ -186,6 +182,6 @@ shape = SubResource("SphereShape3D_vmbjt")
 
 [node name="AnimatedSprite3D" type="AnimatedSprite3D" parent="."]
 transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0, 1.25, 0)
-visible = false
+billboard = 1
 sprite_frames = SubResource("SpriteFrames_od21x")
 animation = &"moving"

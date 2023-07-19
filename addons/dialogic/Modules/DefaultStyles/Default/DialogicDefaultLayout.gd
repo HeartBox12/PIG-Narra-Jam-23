@@ -50,7 +50,7 @@ func _ready():
 		%DialogicNode_DialogText.add_theme_font_override("bold_italics_font", load(bold_italic_font))
 	
 	## BOX SETTINGS
-	#%DialogTextPanel.self_modulate = box_modulate
+	%DialogTextPanel.self_modulate = box_modulate
 	%DialogTextPanel.custom_minimum_size = box_size
 	%TextInputPanel.self_modulate = box_modulate
 	

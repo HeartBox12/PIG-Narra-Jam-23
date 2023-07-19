@@ -23,7 +23,7 @@ func _ready():
 		var icon := TextureRect.new()
 		icon.ignore_texture_size = true
 		icon.stretch_mode = TextureRect.STRETCH_KEEP_ASPECT_CENTERED
-		icon.size = Vector2(32,32)
+		icon.size = Vector2(57,84)
 		icon.position -= icon.size
 		add_child(icon)
 		icon.texture = texture
