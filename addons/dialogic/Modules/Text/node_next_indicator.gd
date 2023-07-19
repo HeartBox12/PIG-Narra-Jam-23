@@ -21,10 +21,11 @@ func _ready():
 	# Creating texture
 	if texture:
 		var icon := TextureRect.new()
-		icon.ignore_texture_size = true
+		#icon.ignore_texture_size = true
 		icon.stretch_mode = TextureRect.STRETCH_KEEP_ASPECT_CENTERED
 		icon.size = Vector2(57,84)
-		icon.position -= icon.size
+		icon.position.y -= icon.size.y
+		icon.position.x -= icon.size.x / 2
 		add_child(icon)
 		icon.texture = texture
 	

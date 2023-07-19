@@ -403,6 +403,7 @@ metadata/_edit_use_anchors_ = true
 
 [node name="DialogTextPanel" type="NinePatchRect" parent="DefaultStyle/DialogTextAnimationParent"]
 unique_name_in_owner = true
+self_modulate = Color(0.00784314, 0.00784314, 0.00784314, 0.843137)
 clip_contents = true
 custom_minimum_size = Vector2(550, 110)
 layout_mode = 1
