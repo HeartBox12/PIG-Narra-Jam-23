@@ -9,6 +9,7 @@
 [ext_resource type="PackedScene" uid="uid://ckny7hpmgtnci" path="res://scenes/transition.tscn" id="6_w4pot"]
 [ext_resource type="Script" path="res://scripts/The Camera.gd" id="7_okfvl"]
 
+
 [sub_resource type="FMOD_STUDIO_PARAMETER_ID" id="FMOD_STUDIO_PARAMETER_ID_i0mpu"]
 data1 = 4079771244
 data2 = 3797763104
