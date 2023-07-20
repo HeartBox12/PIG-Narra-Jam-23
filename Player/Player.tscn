@@ -1,7 +1,7 @@
 [gd_scene load_steps=87 format=3 uid="uid://d06xdtwo0agha"]
 
 [ext_resource type="Script" path="res://Player/Player.gd" id="1_navel"]
-[ext_resource type="PackedScene" uid="uid://bjlq5lqy0sdu0" path="res://player.glb" id="1_wrflt"]
+[ext_resource type="PackedScene" uid="uid://bjlq5lqy0sdu0" path="res://Player/player.glb" id="1_wrflt"]
 [ext_resource type="Texture2D" uid="uid://df752u8ivu4wy" path="res://sprites/blue_8direction_standing-Sheet.png" id="3_vumga"]
 [ext_resource type="Texture2D" uid="uid://dvsh0l7gvspqh" path="res://sprites/blue_walk_NORTH-Sheet.png" id="4_bnqvi"]
 [ext_resource type="Texture2D" uid="uid://dxcjaq7udx3ds" path="res://sprites/blue_walk_NORTH-EAST-Sheet.png" id="5_c08m8"]
