@@ -1,15 +1,15 @@
 {
 "@path": "res://addons/dialogic/Resources/character.gd",
 "@subpath": NodePath(""),
-"color": Color(1, 0.0980392, 0.945098, 1),
+"color": Color(0.211765, 0, 0.627451, 1),
 "custom_info": {
 "sound_mood_default": "",
 "sound_moods": {},
 "style": ""
 },
 "default_portrait": "Placeholder",
-"description": "Costume designer. Company flirt. You may or may not have history with him.",
-"display_name": "Adnan",
+"description": "Intense, introspective method actor. Drama theorist. Playing the antagonist.",
+"display_name": "Leigh",
 "mirror": false,
 "nicknames": [""],
 "offset": Vector2(0, 0),
