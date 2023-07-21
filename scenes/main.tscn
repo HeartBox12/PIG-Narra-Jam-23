@@ -1,16 +1,9 @@
-[gd_scene load_steps=8 format=3 uid="uid://d0fatpj1xblfe"]
+[gd_scene load_steps=7 format=3 uid="uid://d0fatpj1xblfe"]
 
 [ext_resource type="Script" path="res://scripts/Main.gd" id="1_1ygro"]
 [ext_resource type="PackedScene" uid="uid://mpydbc355a5" path="res://scenes/NPC.tscn" id="3_a5knq"]
 [ext_resource type="Resource" path="res://Dialogue/timelines/Hana_Lighting.dtl" id="5_7ndrm"]
 [ext_resource type="PackedScene" uid="uid://ckny7hpmgtnci" path="res://scenes/transition.tscn" id="6_w4pot"]
-
-[sub_resource type="EventAsset" id="EventAsset_j80ek"]
-min_distance = 1.0
-max_distance = 20.0
-path = "event:/Music/Music"
-guid = "{f1a5ab77-b127-473b-a04a-a0203c84df46}"
-name = "Music"
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_t5y6s"]
 size = Vector3(60, 2, 60)
@@ -20,7 +13,6 @@ size = Vector3(60, 2, 60)
 
 [node name="Main" type="Node3D"]
 script = ExtResource("1_1ygro")
-FMODEvent = SubResource("EventAsset_j80ek")
 
 [node name="StaticBody3D" type="StaticBody3D" parent="."]
 transform = Transform3D(0.707107, 0, 0.707107, 0, 1, 0, -0.707107, 0, 0.707107, 0, -1, 0)
@@ -39,14 +31,6 @@ transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 0, 11,
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 5)
 timeline = ExtResource("5_7ndrm")
 FMODEvent = 1
-
-[node name="StudioBankLoader" type="StudioBankLoader" parent="."]
-load_on = 1
-unload_on = 3
-preload_sample_data = true
-num_banks = 2
-bank_0 = null
-bank_1 = null
 
 [node name="Transition" parent="." instance=ExtResource("6_w4pot")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 40.72, 1, 0)

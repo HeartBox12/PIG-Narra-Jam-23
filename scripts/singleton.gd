@@ -3,5 +3,6 @@ extends Node
 var destId = 0 #Used to track player position between scenes.
 var FMODInstance
 
-func _unhandled_input(event):
-	RuntimeManager.play_one_shot_path("event:/Music/Music")
+func _ready():
+	
+	RuntimeManager.play_one_shot_id(FMODGuids.Events.MUSIC_MUSIC)
