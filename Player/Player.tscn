@@ -1,12 +1,132 @@
-[gd_scene load_steps=4 format=3 uid="uid://cgdnc42xanwqm"]
+[gd_scene load_steps=23 format=3 uid="uid://cgdnc42xanwqm"]
 
 [ext_resource type="Script" path="res://Player/Player.gd" id="1_vuqkh"]
+[ext_resource type="Texture2D" uid="uid://bqqish2o16ptk" path="res://sprites/PC_idle_front.png" id="2_0176y"]
+[ext_resource type="Texture2D" uid="uid://bnhtllnwt1qnf" path="res://icon.svg" id="2_gvc4v"]
+[ext_resource type="Texture2D" uid="uid://byh34mbg4wts" path="res://sprites/PC_idle_right.png" id="3_355dx"]
+[ext_resource type="Texture2D" uid="uid://3pyqhxf0os7h" path="res://sprites/PC_walk_right.png" id="4_q06m7"]
 
 [sub_resource type="SphereShape3D" id="SphereShape3D_1qhxu"]
 radius = 1.0
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_ekore"]
 size = Vector3(2, 2, 2)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5ruhw"]
+atlas = ExtResource("2_0176y")
+region = Rect2(0, 0, 250, 400)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_o7kuf"]
+atlas = ExtResource("2_0176y")
+region = Rect2(250, 0, 250, 400)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_smfed"]
+atlas = ExtResource("2_0176y")
+region = Rect2(500, 0, 250, 400)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1e48k"]
+atlas = ExtResource("3_355dx")
+region = Rect2(0, 0, 250, 400)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_cvvkl"]
+atlas = ExtResource("3_355dx")
+region = Rect2(250, 0, 250, 400)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_yb27i"]
+atlas = ExtResource("3_355dx")
+region = Rect2(500, 0, 250, 400)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vtdwi"]
+atlas = ExtResource("4_q06m7")
+region = Rect2(0, 0, 250, 400)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_pdhx4"]
+atlas = ExtResource("4_q06m7")
+region = Rect2(250, 0, 250, 400)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_mgewq"]
+atlas = ExtResource("4_q06m7")
+region = Rect2(500, 0, 250, 400)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_abnhh"]
+atlas = ExtResource("4_q06m7")
+region = Rect2(750, 0, 250, 400)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_afkmx"]
+atlas = ExtResource("4_q06m7")
+region = Rect2(1000, 0, 250, 400)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0xeoj"]
+atlas = ExtResource("4_q06m7")
+region = Rect2(1250, 0, 250, 400)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_pi7vq"]
+atlas = ExtResource("4_q06m7")
+region = Rect2(1500, 0, 250, 400)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_dll3w"]
+atlas = ExtResource("4_q06m7")
+region = Rect2(1750, 0, 250, 400)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_b0l80"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5ruhw")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_o7kuf")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_smfed")
+}],
+"loop": true,
+"name": &"idle0",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1e48k")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_cvvkl")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_yb27i")
+}],
+"loop": true,
+"name": &"idle1",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_vtdwi")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_pdhx4")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_mgewq")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_abnhh")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_afkmx")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_0xeoj")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_pi7vq")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_dll3w")
+}],
+"loop": true,
+"name": &"walk1",
+"speed": 5.0
+}]
 
 [node name="player" type="CharacterBody3D"]
 script = ExtResource("1_vuqkh")
@@ -18,7 +138,15 @@ shape = SubResource("SphereShape3D_1qhxu")
 [node name="NPCDetector" type="ShapeCast3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
 shape = SubResource("BoxShape3D_ekore")
-target_position = Vector3(2, 0, 0)
+target_position = Vector3(0, 0, 2)
+
+[node name="Sprite3D" type="Sprite3D" parent="NPCDetector"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 2)
+billboard = 1
+texture = ExtResource("2_gvc4v")
 
 [node name="AnimatedSprite3D" type="AnimatedSprite3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
+billboard = 1
+sprite_frames = SubResource("SpriteFrames_b0l80")
+animation = &"walk1"

@@ -30,9 +30,9 @@ func _physics_process(delta):
 		a = input_dir.angle() / (PI/4)
 		a = wrapi(int(a), 0, 8)
 		current_animation = "move"
-		$NPCDetector.rotation = input_dir.angle()#pivot the detector to face as player does.
 	target_velocity.x = input_dir.x * speed
 	target_velocity.z = input_dir.y * speed
+	$NPCDetector.look_at(position - target_velocity, Vector3.UP)#pivot the detector to face as player does.
 	velocity = target_velocity
 	move_and_slide()
 	

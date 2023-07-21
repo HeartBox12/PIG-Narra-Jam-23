@@ -1,8 +1,9 @@
-[gd_scene load_steps=7 format=3 uid="uid://d0fatpj1xblfe"]
+[gd_scene load_steps=8 format=3 uid="uid://d0fatpj1xblfe"]
 
 [ext_resource type="Script" path="res://scripts/Main.gd" id="1_1ygro"]
 [ext_resource type="PackedScene" uid="uid://mpydbc355a5" path="res://scenes/NPC.tscn" id="3_a5knq"]
 [ext_resource type="Resource" path="res://Dialogue/timelines/Hana_Lighting.dtl" id="5_7ndrm"]
+[ext_resource type="PackedScene" uid="uid://cgdnc42xanwqm" path="res://Player/player.tscn" id="5_62vt8"]
 [ext_resource type="PackedScene" uid="uid://ckny7hpmgtnci" path="res://scenes/transition.tscn" id="6_w4pot"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_t5y6s"]
@@ -46,3 +47,11 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 38, 0, 0)
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -16)
 
 [node name="Origin" type="Marker3D" parent="."]
+
+[node name="Camera3D" type="Camera3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 0.707107, 0.707107, 0, -0.707107, 0.707107, 0, 25, 25)
+projection = 1
+current = true
+size = 50.0
+
+[node name="player" parent="." instance=ExtResource("5_62vt8")]

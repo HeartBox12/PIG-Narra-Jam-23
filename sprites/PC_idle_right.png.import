@@ -2,8 +2,8 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dvsh0l7gvspqh"
-path.s3tc="res://.godot/imported/blue_walk_NORTH-Sheet.png-951eb44f0ba62e08ddeeabf60c369627.s3tc.ctex"
+uid="uid://byh34mbg4wts"
+path.s3tc="res://.godot/imported/PC_idle_right.png-ca82a2fb3030af7516dbe9626ea128e4.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
@@ -11,8 +11,8 @@ metadata={
 
 [deps]
 
-source_file="res://sprites/blue_walk_NORTH-Sheet.png"
-dest_files=["res://.godot/imported/blue_walk_NORTH-Sheet.png-951eb44f0ba62e08ddeeabf60c369627.s3tc.ctex"]
+source_file="res://sprites/PC_idle_right.png"
+dest_files=["res://.godot/imported/PC_idle_right.png-ca82a2fb3030af7516dbe9626ea128e4.s3tc.ctex"]
 
 [params]
 
