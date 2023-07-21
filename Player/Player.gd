@@ -32,11 +32,13 @@ func _physics_process(delta):
 		current_animation = "move"
 	target_velocity.x = input_dir.x * speed
 	target_velocity.z = input_dir.y * speed
-	$NPCDetector.look_at(position - target_velocity, Vector3.UP)#pivot the detector to face as player does.
+	
+	if target_velocity.length() != 0:
+		$NPCDetector.look_at(position - target_velocity, Vector3.UP)#pivot the detector to face as player does.
 	velocity = target_velocity
 	move_and_slide()
 	
-	animation_player.animation = current_animation + str(a)
+	#animation_player.animation = current_animation + str(a) #FOR LATER
 	
 	if not is_on_floor():
 		target_velocity.y = target_velocity.y - (fall_acceleration * delta)
@@ -48,5 +50,7 @@ func _physics_process(delta):
 	
 	if Input.is_action_just_pressed("ui_accept"):
 		if $NPCDetector.get_collision_count() != 0:
-			Dialogic.start($NPCDetector.get_collider(0).get_parent().timeline) # Reference target's timeline
+			var speaker = $NPCDetector.get_collider(0)
+			FMODStudioModule.get_studio_system().set_parameter_by_name("character", 2, false)
+			Dialogic.start(speaker.timeline) # Reference target's timeline
 			

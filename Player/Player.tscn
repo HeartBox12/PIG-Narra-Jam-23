@@ -139,6 +139,7 @@ shape = SubResource("SphereShape3D_1qhxu")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
 shape = SubResource("BoxShape3D_ekore")
 target_position = Vector3(0, 0, 2)
+collision_mask = 2
 
 [node name="Sprite3D" type="Sprite3D" parent="NPCDetector"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 2)
