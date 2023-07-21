@@ -15,7 +15,7 @@ script = ExtResource("1_vuqkh")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
 shape = SubResource("SphereShape3D_1qhxu")
 
-[node name="ShapeCast3D" type="ShapeCast3D" parent="."]
+[node name="NPCDetector" type="ShapeCast3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
 shape = SubResource("BoxShape3D_ekore")
 target_position = Vector3(2, 0, 0)
