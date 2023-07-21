@@ -30,6 +30,7 @@ func _physics_process(delta):
 		a = input_dir.angle() / (PI/4)
 		a = wrapi(int(a), 0, 8)
 		current_animation = "move"
+		$NPCDetector.rotation = input_dir.angle()#pivot the detector to face as player does.
 	target_velocity.x = input_dir.x * speed
 	target_velocity.z = input_dir.y * speed
 	velocity = target_velocity
@@ -46,6 +47,6 @@ func _physics_process(delta):
 			target_velocity.y = 0
 	
 	if Input.is_action_just_pressed("ui_accept"):
-		if $Pivot/NPCDetector.get_collision_count() != 0:
-			print("playing")
-			Dialogic.start($Pivot/NPCDetector.get_collider(0).get_parent().timeline) # Reference target's timeline
+		if $NPCDetector.get_collision_count() != 0:
+			Dialogic.start($NPCDetector.get_collider(0).get_parent().timeline) # Reference target's timeline
+			

@@ -30,6 +30,7 @@ func _notification(what: int) -> void:
 
 
 func path_to_guid(path: String) -> String:
+	print(RuntimeManager.studio_system)
 	return RuntimeManager.studio_system.lookup_id(path)
 
 

@@ -1,43 +1,113 @@
-[gd_resource type="ProjectCache" load_steps=7 format=3 uid="uid://dn5wvjaqbiidp"]
+[gd_resource type="ProjectCache" load_steps=13 format=3 uid="uid://3r6iu54tqhj4"]
 
-[ext_resource type="BankAsset" uid="uid://n8jsn6wxqeli" path="res://addons/FMOD/editor/resources/banks/{2267751d-f017-41eb-879e-e95a50110ada}.tres" id="1_kgkw0"]
-[ext_resource type="BankAsset" uid="uid://dvqw2it0tmxdo" path="res://addons/FMOD/editor/resources/banks/{ba7a55c9-816c-0da9-01d7-63a4a1e20c42}.tres" id="2_j6m7c"]
-[ext_resource type="BankAsset" uid="uid://bhuwdawstrdo6" path="res://addons/FMOD/editor/resources/banks/{b0ba6919-05c3-45f0-85de-1df04344a1f6}.tres" id="3_50b8h"]
-[ext_resource type="BusAsset" uid="uid://b7rqu8c80bpum" path="res://addons/FMOD/editor/resources/busses/{9badfc66-5ffb-4db1-9db6-677086dabb99}.tres" id="4_u8h7a"]
-[ext_resource type="BusAsset" uid="uid://c4dqso2jmo3li" path="res://addons/FMOD/editor/resources/busses/{ce02a196-5f1c-4e61-9e08-59ebadebd06f}.tres" id="5_qty6c"]
-[ext_resource type="EventAsset" uid="uid://dq5ur0rpbkt3k" path="res://addons/FMOD/editor/resources/events/{e59cb033-d553-4494-ac47-0116f9d65bdd}.tres" id="6_54ueb"]
+[sub_resource type="BankAsset" id="BankAsset_ssy6l"]
+file_path = "res://FMODBanks/Master.bank"
+modified_time = 1689910939
+path = "bank:/Master"
+guid = "{91d6e2dc-7a18-43ba-ac47-0d48b26e86de}"
+name = "Master"
+
+[sub_resource type="BankAsset" id="BankAsset_0iylv"]
+file_path = "res://FMODBanks/Master.strings.bank"
+modified_time = 1689910938
+path = "bank:/Master.strings"
+guid = "{09cbc208-0b63-0ff8-2a0e-87b6439d8046}"
+name = "Master.strings"
+
+[sub_resource type="BankAsset" id="BankAsset_acp1k"]
+file_path = "res://FMODBanks/Music Bank.bank"
+modified_time = 1689910939
+path = "bank:/Music Bank"
+guid = "{f3f3abc1-4516-45dd-bd5d-a690dcec9401}"
+name = "Music Bank"
+
+[sub_resource type="BusAsset" id="BusAsset_lxyrb"]
+path = "bus:/Reverb"
+guid = "{00da4684-8870-4fcd-8e7d-e2559e5ac6cc}"
+name = "Reverb"
+
+[sub_resource type="BusAsset" id="BusAsset_kv2eq"]
+path = "bus:/"
+guid = "{9adf7eed-0fcb-40fc-9273-c2e931e41b0e}"
+name = "Master"
+
+[sub_resource type="EventAsset" id="EventAsset_ubqta"]
+min_distance = 1.0
+max_distance = 20.0
+path = "event:/Music/Music"
+guid = "{f1a5ab77-b127-473b-a04a-a0203c84df46}"
+name = "Music"
+
+[sub_resource type="FMOD_STUDIO_PARAMETER_ID" id="FMOD_STUDIO_PARAMETER_ID_1eyfg"]
+data1 = 1495653246
+data2 = 3697042335
+
+[sub_resource type="FMOD_STUDIO_PARAMETER_DESCRIPTION" id="FMOD_STUDIO_PARAMETER_DESCRIPTION_qshns"]
+name = "Character"
+id = SubResource("FMOD_STUDIO_PARAMETER_ID_1eyfg")
+maximum = 5.0
+flags = 28
+guid = "{6f83db57-d86d-4e47-80c4-dd993a06aefa}"
+
+[sub_resource type="ParameterAsset" id="ParameterAsset_4pi5r"]
+parameter_description = SubResource("FMOD_STUDIO_PARAMETER_DESCRIPTION_qshns")
+labels = ["None", "Marcel", "Flute", "Cello", "Chip", "Drumset"]
+path = "parameter:/Character"
+guid = "{6f83db57-d86d-4e47-80c4-dd993a06aefa}"
+name = "Character"
+
+[sub_resource type="FMOD_STUDIO_PARAMETER_ID" id="FMOD_STUDIO_PARAMETER_ID_8e1fe"]
+data1 = 2985287018
+data2 = 3309176953
+
+[sub_resource type="FMOD_STUDIO_PARAMETER_DESCRIPTION" id="FMOD_STUDIO_PARAMETER_DESCRIPTION_tpuye"]
+name = "Paused"
+id = SubResource("FMOD_STUDIO_PARAMETER_ID_8e1fe")
+maximum = 1.0
+flags = 4
+guid = "{2c6df641-ee4c-459d-87a7-cd0f35951a18}"
+
+[sub_resource type="ParameterAsset" id="ParameterAsset_j6pog"]
+parameter_description = SubResource("FMOD_STUDIO_PARAMETER_DESCRIPTION_tpuye")
+path = "parameter:/Paused"
+guid = "{2c6df641-ee4c-459d-87a7-cd0f35951a18}"
+name = "Paused"
 
 [resource]
 banks = {
-"{2267751d-f017-41eb-879e-e95a50110ada}": ExtResource("1_kgkw0"),
-"{b0ba6919-05c3-45f0-85de-1df04344a1f6}": ExtResource("3_50b8h"),
-"{ba7a55c9-816c-0da9-01d7-63a4a1e20c42}": ExtResource("2_j6m7c")
+"{09cbc208-0b63-0ff8-2a0e-87b6439d8046}": SubResource("BankAsset_0iylv"),
+"{91d6e2dc-7a18-43ba-ac47-0d48b26e86de}": SubResource("BankAsset_ssy6l"),
+"{f3f3abc1-4516-45dd-bd5d-a690dcec9401}": SubResource("BankAsset_acp1k")
 }
 events = {
-"{e59cb033-d553-4494-ac47-0116f9d65bdd}": ExtResource("6_54ueb")
+"{f1a5ab77-b127-473b-a04a-a0203c84df46}": SubResource("EventAsset_ubqta")
 }
 busses = {
-"{9badfc66-5ffb-4db1-9db6-677086dabb99}": ExtResource("4_u8h7a"),
-"{ce02a196-5f1c-4e61-9e08-59ebadebd06f}": ExtResource("5_qty6c")
+"{00da4684-8870-4fcd-8e7d-e2559e5ac6cc}": SubResource("BusAsset_lxyrb"),
+"{9adf7eed-0fcb-40fc-9273-c2e931e41b0e}": SubResource("BusAsset_kv2eq")
+}
+parameters = {
+"{2c6df641-ee4c-459d-87a7-cd0f35951a18}": SubResource("ParameterAsset_j6pog"),
+"{6f83db57-d86d-4e47-80c4-dd993a06aefa}": SubResource("ParameterAsset_4pi5r")
 }
 bank_tree = [{
 "children": [],
 "item_type": 3,
 "node_name": "Master",
 "path": "bank:/Master",
-"resource": ExtResource("1_kgkw0")
+"resource": SubResource("BankAsset_ssy6l")
 }, {
 "children": [],
 "item_type": 3,
 "node_name": "Master.strings",
 "path": "bank:/Master.strings",
-"resource": ExtResource("2_j6m7c")
+"resource": SubResource("BankAsset_0iylv")
 }, {
 "children": [],
 "item_type": 3,
 "node_name": "Music Bank",
 "path": "bank:/Music Bank",
-"resource": ExtResource("3_50b8h")
+"resource": SubResource("BankAsset_acp1k")
 }]
 event_tree = [{
 "children": [{
@@ -45,7 +115,7 @@ event_tree = [{
 "item_type": 1,
 "node_name": "Music",
 "path": "event:/Music/Music",
-"resource": ExtResource("6_54ueb")
+"resource": SubResource("EventAsset_ubqta")
 }],
 "item_type": 7,
 "node_name": "Music",
@@ -58,10 +128,23 @@ bus_tree = [{
 "item_type": 4,
 "node_name": "Reverb",
 "path": "bus:/Reverb",
-"resource": ExtResource("5_qty6c")
+"resource": SubResource("BusAsset_lxyrb")
 }],
 "item_type": 4,
 "node_name": "bus:",
 "path": "bus:/",
-"resource": ExtResource("4_u8h7a")
+"resource": SubResource("BusAsset_kv2eq")
+}]
+parameter_tree = [{
+"children": [],
+"item_type": 6,
+"node_name": "Character",
+"path": "parameter:/Character",
+"resource": SubResource("ParameterAsset_4pi5r")
+}, {
+"children": [],
+"item_type": 6,
+"node_name": "Paused",
+"path": "parameter:/Paused",
+"resource": SubResource("ParameterAsset_j6pog")
 }]

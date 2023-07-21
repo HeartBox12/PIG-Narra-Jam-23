@@ -17,9 +17,9 @@ config/icon="res://icon.svg"
 
 [autoload]
 
-Singleton="*res://scripts/singleton.gd"
 RuntimeManager="*res://addons/FMOD/runtime/runtime_manager.gd"
 Dialogic="*res://addons/dialogic/Other/DialogicGameHandler.gd"
+Singleton="*res://scripts/singleton.gd"
 
 [dialogic]
 
@@ -46,7 +46,6 @@ layout/layout_scene="res://Dialogue/Assets/Cus2mLayout.tscn"
 
 window/size/viewport_width=1920
 window/size/viewport_height=1080
-window/size/mode=3
 
 [editor_plugins]
 
