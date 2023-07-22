@@ -38,7 +38,7 @@ func _physics_process(delta):
 	velocity = target_velocity
 	move_and_slide()
 	
-	#animation_player.animation = current_animation + str(a) #FOR LATER
+	animation_player.animation = current_animation + str(a) #FOR LATER
 	
 	if not is_on_floor():
 		target_velocity.y = target_velocity.y - (fall_acceleration * delta)
@@ -54,3 +54,8 @@ func _physics_process(delta):
 			FMODStudioModule.get_studio_system().set_parameter_by_name("character", 2, false)
 			Dialogic.start(speaker.timeline) # Reference target's timeline
 			
+
+
+func _on_frame_changed():
+	if (($AnimatedSprite3D.frame == 4 || $AnimatedSprite3D.frame == 7) && $AnimatedSprite3D.animation.find("Move")):
+		print("Step")

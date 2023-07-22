@@ -1,10 +1,12 @@
-[gd_scene load_steps=23 format=3 uid="uid://cgdnc42xanwqm"]
+[gd_scene load_steps=36 format=3 uid="uid://cgdnc42xanwqm"]
 
 [ext_resource type="Script" path="res://Player/Player.gd" id="1_vuqkh"]
 [ext_resource type="Texture2D" uid="uid://bqqish2o16ptk" path="res://sprites/PC_idle_front.png" id="2_0176y"]
 [ext_resource type="Texture2D" uid="uid://bnhtllnwt1qnf" path="res://icon.svg" id="2_gvc4v"]
 [ext_resource type="Texture2D" uid="uid://byh34mbg4wts" path="res://sprites/PC_idle_right.png" id="3_355dx"]
 [ext_resource type="Texture2D" uid="uid://3pyqhxf0os7h" path="res://sprites/PC_walk_right.png" id="4_q06m7"]
+[ext_resource type="Texture2D" path="res://sprites/PC_idle_left.png" id="5_xoxkb"]
+[ext_resource type="Texture2D" uid="uid://dp46u1nfj0b5k" path="res://sprites/PC_walk_left.png" id="7_aioft"]
 
 [sub_resource type="SphereShape3D" id="SphereShape3D_1qhxu"]
 radius = 1.0
@@ -34,6 +36,18 @@ region = Rect2(250, 0, 250, 400)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_yb27i"]
 atlas = ExtResource("3_355dx")
+region = Rect2(500, 0, 250, 400)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vcg5w"]
+atlas = ExtResource("5_xoxkb")
+region = Rect2(0, 0, 250, 400)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_e0otu"]
+atlas = ExtResource("5_xoxkb")
+region = Rect2(250, 0, 250, 400)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_l3nrr"]
+atlas = ExtResource("5_xoxkb")
 region = Rect2(500, 0, 250, 400)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_vtdwi"]
@@ -68,6 +82,38 @@ region = Rect2(1500, 0, 250, 400)
 atlas = ExtResource("4_q06m7")
 region = Rect2(1750, 0, 250, 400)
 
+[sub_resource type="AtlasTexture" id="AtlasTexture_n2o2n"]
+atlas = ExtResource("7_aioft")
+region = Rect2(0, 0, 250, 400)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_65pch"]
+atlas = ExtResource("7_aioft")
+region = Rect2(250, 0, 250, 400)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6eyio"]
+atlas = ExtResource("7_aioft")
+region = Rect2(500, 0, 250, 400)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ks14h"]
+atlas = ExtResource("7_aioft")
+region = Rect2(750, 0, 250, 400)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6vwkt"]
+atlas = ExtResource("7_aioft")
+region = Rect2(1000, 0, 250, 400)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6ajuo"]
+atlas = ExtResource("7_aioft")
+region = Rect2(1250, 0, 250, 400)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3as4j"]
+atlas = ExtResource("7_aioft")
+region = Rect2(1500, 0, 250, 400)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_e8uqy"]
+atlas = ExtResource("7_aioft")
+region = Rect2(1750, 0, 250, 400)
+
 [sub_resource type="SpriteFrames" id="SpriteFrames_b0l80"]
 animations = [{
 "frames": [{
@@ -100,6 +146,20 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
+"texture": SubResource("AtlasTexture_vcg5w")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_e0otu")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_l3nrr")
+}],
+"loop": true,
+"name": &"idle4",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
 "texture": SubResource("AtlasTexture_vtdwi")
 }, {
 "duration": 1.0,
@@ -126,6 +186,35 @@ animations = [{
 "loop": true,
 "name": &"move1",
 "speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_n2o2n")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_65pch")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_6eyio")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ks14h")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_6vwkt")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_6ajuo")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_3as4j")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_e8uqy")
+}],
+"loop": true,
+"name": &"move4",
+"speed": 5.0
 }]
 
 [node name="player" type="CharacterBody3D"]
@@ -150,4 +239,8 @@ texture = ExtResource("2_gvc4v")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
 billboard = 1
 sprite_frames = SubResource("SpriteFrames_b0l80")
-animation = &"move1"
+animation = &"move4"
+frame = 7
+frame_progress = 0.481363
+
+[connection signal="frame_changed" from="AnimatedSprite3D" to="." method="_on_frame_changed"]
