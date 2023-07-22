@@ -3,81 +3,33 @@
 [ext_resource type="BankAsset" uid="uid://clwojs20djyrm" path="res://addons/FMOD/editor/resources/banks/{91d6e2dc-7a18-43ba-ac47-0d48b26e86de}.tres" id="1_p2sq7"]
 [ext_resource type="BankAsset" uid="uid://c2geuw58pniln" path="res://addons/FMOD/editor/resources/banks/{09cbc208-0b63-0ff8-2a0e-87b6439d8046}.tres" id="2_5ossd"]
 [ext_resource type="BankAsset" uid="uid://be7ucifl5iccj" path="res://addons/FMOD/editor/resources/banks/{f3f3abc1-4516-45dd-bd5d-a690dcec9401}.tres" id="3_p1rd1"]
+[ext_resource type="BankAsset" uid="uid://crfea5cf0ga7a" path="res://addons/FMOD/editor/resources/banks/{9c4cf937-3557-4b33-abb4-8e300f3b14e8}.tres" id="4_agshj"]
 [ext_resource type="BusAsset" uid="uid://bjtbx0mk3s15s" path="res://addons/FMOD/editor/resources/busses/{9adf7eed-0fcb-40fc-9273-c2e931e41b0e}.tres" id="4_wqu31"]
 [ext_resource type="BusAsset" uid="uid://dtwfqicu2cexr" path="res://addons/FMOD/editor/resources/busses/{00da4684-8870-4fcd-8e7d-e2559e5ac6cc}.tres" id="5_s4s8r"]
 [ext_resource type="EventAsset" uid="uid://cpcx7dqsykq02" path="res://addons/FMOD/editor/resources/events/{f1a5ab77-b127-473b-a04a-a0203c84df46}.tres" id="6_ejcpn"]
 [ext_resource type="ParameterAsset" uid="uid://dhlnl36dwerjq" path="res://addons/FMOD/editor/resources/parameters/{6f83db57-d86d-4e47-80c4-dd993a06aefa}.tres" id="7_mqub1"]
+[ext_resource type="EventAsset" uid="uid://g76u1e6vq1tq" path="res://addons/FMOD/editor/resources/events/{666343d0-ae1a-4f75-95de-777f7c3a53b9}.tres" id="8_grpty"]
 [ext_resource type="ParameterAsset" uid="uid://c30bn7ftnj2co" path="res://addons/FMOD/editor/resources/parameters/{2c6df641-ee4c-459d-87a7-cd0f35951a18}.tres" id="8_pcrk2"]
-
-[sub_resource type="BankAsset" id="BankAsset_a5d4v"]
-file_path = "res://FMODBanks/Sounds Bank.bank"
-modified_time = 1689996381
-path = "bank:/Sounds Bank"
-guid = "{9c4cf937-3557-4b33-abb4-8e300f3b14e8}"
-name = "Sounds Bank"
-
-[sub_resource type="EventAsset" id="EventAsset_154oj"]
-is_3d = true
-is_oneshot = true
-min_distance = 1.0
-max_distance = 20.0
-path = "event:/Sounds/Door Close"
-guid = "{666343d0-ae1a-4f75-95de-777f7c3a53b9}"
-name = "Door Close"
-
-[sub_resource type="EventAsset" id="EventAsset_4207i"]
-is_3d = true
-is_oneshot = true
-min_distance = 1.0
-max_distance = 20.0
-path = "event:/Sounds/Door Open"
-guid = "{b6e63a4b-0520-4b37-9abc-892caa3038fd}"
-name = "Door Open"
-
-[sub_resource type="EventAsset" id="EventAsset_mehc8"]
-is_3d = true
-min_distance = 1.0
-max_distance = 20.0
-path = "event:/Sounds/Electric Hum"
-guid = "{0085bd8c-c25f-4d51-a489-2d43c7ba6f00}"
-name = "Electric Hum"
-
-[sub_resource type="EventAsset" id="EventAsset_376dg"]
-is_oneshot = true
-min_distance = 1.0
-max_distance = 20.0
-path = "event:/Sounds/Footstep"
-guid = "{a487f7af-bd88-494b-a857-2876c3c10ef6}"
-name = "Footstep"
-
-[sub_resource type="EventAsset" id="EventAsset_5o81t"]
-min_distance = 1.0
-max_distance = 20.0
-path = "event:/Sounds/Room Tone"
-guid = "{628c977a-f06c-4d96-b40c-10b51bf99aa7}"
-name = "Room Tone"
-
-[sub_resource type="EventAsset" id="EventAsset_kdw74"]
-min_distance = 1.0
-max_distance = 20.0
-path = "event:/Sounds/Street"
-guid = "{d0000d6d-3c88-4969-bd73-782fd8d68200}"
-name = "Street"
+[ext_resource type="EventAsset" uid="uid://d28jarhwpj0aa" path="res://addons/FMOD/editor/resources/events/{b6e63a4b-0520-4b37-9abc-892caa3038fd}.tres" id="9_547m0"]
+[ext_resource type="EventAsset" uid="uid://3ay2n52ug2db" path="res://addons/FMOD/editor/resources/events/{0085bd8c-c25f-4d51-a489-2d43c7ba6f00}.tres" id="10_jtylc"]
+[ext_resource type="EventAsset" uid="uid://bf7ic50418ubv" path="res://addons/FMOD/editor/resources/events/{a487f7af-bd88-494b-a857-2876c3c10ef6}.tres" id="11_304oa"]
+[ext_resource type="EventAsset" uid="uid://b2wtiua8s4urb" path="res://addons/FMOD/editor/resources/events/{628c977a-f06c-4d96-b40c-10b51bf99aa7}.tres" id="12_mje20"]
+[ext_resource type="EventAsset" uid="uid://vqft41fbd8jb" path="res://addons/FMOD/editor/resources/events/{d0000d6d-3c88-4969-bd73-782fd8d68200}.tres" id="13_7uriw"]
 
 [resource]
 banks = {
 "{09cbc208-0b63-0ff8-2a0e-87b6439d8046}": ExtResource("2_5ossd"),
 "{91d6e2dc-7a18-43ba-ac47-0d48b26e86de}": ExtResource("1_p2sq7"),
-"{9c4cf937-3557-4b33-abb4-8e300f3b14e8}": SubResource("BankAsset_a5d4v"),
+"{9c4cf937-3557-4b33-abb4-8e300f3b14e8}": ExtResource("4_agshj"),
 "{f3f3abc1-4516-45dd-bd5d-a690dcec9401}": ExtResource("3_p1rd1")
 }
 events = {
-"{0085bd8c-c25f-4d51-a489-2d43c7ba6f00}": SubResource("EventAsset_mehc8"),
-"{628c977a-f06c-4d96-b40c-10b51bf99aa7}": SubResource("EventAsset_5o81t"),
-"{666343d0-ae1a-4f75-95de-777f7c3a53b9}": SubResource("EventAsset_154oj"),
-"{a487f7af-bd88-494b-a857-2876c3c10ef6}": SubResource("EventAsset_376dg"),
-"{b6e63a4b-0520-4b37-9abc-892caa3038fd}": SubResource("EventAsset_4207i"),
-"{d0000d6d-3c88-4969-bd73-782fd8d68200}": SubResource("EventAsset_kdw74"),
+"{0085bd8c-c25f-4d51-a489-2d43c7ba6f00}": ExtResource("10_jtylc"),
+"{628c977a-f06c-4d96-b40c-10b51bf99aa7}": ExtResource("12_mje20"),
+"{666343d0-ae1a-4f75-95de-777f7c3a53b9}": ExtResource("8_grpty"),
+"{a487f7af-bd88-494b-a857-2876c3c10ef6}": ExtResource("11_304oa"),
+"{b6e63a4b-0520-4b37-9abc-892caa3038fd}": ExtResource("9_547m0"),
+"{d0000d6d-3c88-4969-bd73-782fd8d68200}": ExtResource("13_7uriw"),
 "{f1a5ab77-b127-473b-a04a-a0203c84df46}": ExtResource("6_ejcpn")
 }
 busses = {
@@ -111,7 +63,7 @@ bank_tree = [{
 "item_type": 3,
 "node_name": "Sounds Bank",
 "path": "bank:/Sounds Bank",
-"resource": SubResource("BankAsset_a5d4v")
+"resource": ExtResource("4_agshj")
 }]
 event_tree = [{
 "children": [{
@@ -131,37 +83,37 @@ event_tree = [{
 "item_type": 1,
 "node_name": "Door Close",
 "path": "event:/Sounds/Door Close",
-"resource": SubResource("EventAsset_154oj")
+"resource": ExtResource("8_grpty")
 }, {
 "children": [],
 "item_type": 1,
 "node_name": "Door Open",
 "path": "event:/Sounds/Door Open",
-"resource": SubResource("EventAsset_4207i")
+"resource": ExtResource("9_547m0")
 }, {
 "children": [],
 "item_type": 1,
 "node_name": "Electric Hum",
 "path": "event:/Sounds/Electric Hum",
-"resource": SubResource("EventAsset_mehc8")
+"resource": ExtResource("10_jtylc")
 }, {
 "children": [],
 "item_type": 1,
 "node_name": "Footstep",
 "path": "event:/Sounds/Footstep",
-"resource": SubResource("EventAsset_376dg")
+"resource": ExtResource("11_304oa")
 }, {
 "children": [],
 "item_type": 1,
 "node_name": "Room Tone",
 "path": "event:/Sounds/Room Tone",
-"resource": SubResource("EventAsset_5o81t")
+"resource": ExtResource("12_mje20")
 }, {
 "children": [],
 "item_type": 1,
 "node_name": "Street",
 "path": "event:/Sounds/Street",
-"resource": SubResource("EventAsset_kdw74")
+"resource": ExtResource("13_7uriw")
 }],
 "item_type": 7,
 "node_name": "Sounds",

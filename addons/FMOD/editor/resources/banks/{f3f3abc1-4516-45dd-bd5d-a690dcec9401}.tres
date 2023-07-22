@@ -2,7 +2,7 @@
 
 [resource]
 file_path = "res://FMODBanks/Music Bank.bank"
-modified_time = 1689996380
+modified_time = 1689998204
 path = "bank:/Music Bank"
 guid = "{f3f3abc1-4516-45dd-bd5d-a690dcec9401}"
 name = "Music Bank"
