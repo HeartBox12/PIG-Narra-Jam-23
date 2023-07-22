@@ -1,0 +1,10 @@
+[gd_resource type="EventAsset" format=3 uid="uid://g76u1e6vq1tq"]
+
+[resource]
+is_3d = true
+is_oneshot = true
+min_distance = 1.0
+max_distance = 20.0
+path = "event:/Sounds/Door Close"
+guid = "{666343d0-ae1a-4f75-95de-777f7c3a53b9}"
+name = "Door Close"

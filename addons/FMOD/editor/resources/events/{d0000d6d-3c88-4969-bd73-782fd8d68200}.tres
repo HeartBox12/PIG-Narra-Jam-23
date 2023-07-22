@@ -1,0 +1,8 @@
+[gd_resource type="EventAsset" format=3 uid="uid://vqft41fbd8jb"]
+
+[resource]
+min_distance = 1.0
+max_distance = 20.0
+path = "event:/Sounds/Street"
+guid = "{d0000d6d-3c88-4969-bd73-782fd8d68200}"
+name = "Street"

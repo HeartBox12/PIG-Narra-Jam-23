@@ -1,0 +1,8 @@
+[gd_resource type="EventAsset" format=3 uid="uid://b2wtiua8s4urb"]
+
+[resource]
+min_distance = 1.0
+max_distance = 20.0
+path = "event:/Sounds/Room Tone"
+guid = "{628c977a-f06c-4d96-b40c-10b51bf99aa7}"
+name = "Room Tone"
