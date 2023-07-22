@@ -124,7 +124,7 @@ animations = [{
 "texture": SubResource("AtlasTexture_dll3w")
 }],
 "loop": true,
-"name": &"walk1",
+"name": &"move1",
 "speed": 5.0
 }]
 
@@ -150,4 +150,4 @@ texture = ExtResource("2_gvc4v")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
 billboard = 1
 sprite_frames = SubResource("SpriteFrames_b0l80")
-animation = &"walk1"
+animation = &"move1"
