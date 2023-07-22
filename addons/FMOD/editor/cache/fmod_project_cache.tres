@@ -1,43 +1,49 @@
-[gd_resource type="ProjectCache" load_steps=7 format=3 uid="uid://dn5wvjaqbiidp"]
+[gd_resource type="ProjectCache" load_steps=9 format=3 uid="uid://3r6iu54tqhj4"]
 
-[ext_resource type="BankAsset" uid="uid://n8jsn6wxqeli" path="res://addons/FMOD/editor/resources/banks/{2267751d-f017-41eb-879e-e95a50110ada}.tres" id="1_kgkw0"]
-[ext_resource type="BankAsset" uid="uid://dvqw2it0tmxdo" path="res://addons/FMOD/editor/resources/banks/{ba7a55c9-816c-0da9-01d7-63a4a1e20c42}.tres" id="2_j6m7c"]
-[ext_resource type="BankAsset" uid="uid://bhuwdawstrdo6" path="res://addons/FMOD/editor/resources/banks/{b0ba6919-05c3-45f0-85de-1df04344a1f6}.tres" id="3_50b8h"]
-[ext_resource type="BusAsset" uid="uid://b7rqu8c80bpum" path="res://addons/FMOD/editor/resources/busses/{9badfc66-5ffb-4db1-9db6-677086dabb99}.tres" id="4_u8h7a"]
-[ext_resource type="BusAsset" uid="uid://c4dqso2jmo3li" path="res://addons/FMOD/editor/resources/busses/{ce02a196-5f1c-4e61-9e08-59ebadebd06f}.tres" id="5_qty6c"]
-[ext_resource type="EventAsset" uid="uid://dq5ur0rpbkt3k" path="res://addons/FMOD/editor/resources/events/{e59cb033-d553-4494-ac47-0116f9d65bdd}.tres" id="6_54ueb"]
+[ext_resource type="BankAsset" uid="uid://clwojs20djyrm" path="res://addons/FMOD/editor/resources/banks/{91d6e2dc-7a18-43ba-ac47-0d48b26e86de}.tres" id="1_p2sq7"]
+[ext_resource type="BankAsset" uid="uid://c2geuw58pniln" path="res://addons/FMOD/editor/resources/banks/{09cbc208-0b63-0ff8-2a0e-87b6439d8046}.tres" id="2_5ossd"]
+[ext_resource type="BankAsset" uid="uid://be7ucifl5iccj" path="res://addons/FMOD/editor/resources/banks/{f3f3abc1-4516-45dd-bd5d-a690dcec9401}.tres" id="3_p1rd1"]
+[ext_resource type="BusAsset" uid="uid://bjtbx0mk3s15s" path="res://addons/FMOD/editor/resources/busses/{9adf7eed-0fcb-40fc-9273-c2e931e41b0e}.tres" id="4_wqu31"]
+[ext_resource type="BusAsset" uid="uid://dtwfqicu2cexr" path="res://addons/FMOD/editor/resources/busses/{00da4684-8870-4fcd-8e7d-e2559e5ac6cc}.tres" id="5_s4s8r"]
+[ext_resource type="EventAsset" uid="uid://cpcx7dqsykq02" path="res://addons/FMOD/editor/resources/events/{f1a5ab77-b127-473b-a04a-a0203c84df46}.tres" id="6_ejcpn"]
+[ext_resource type="ParameterAsset" uid="uid://dhlnl36dwerjq" path="res://addons/FMOD/editor/resources/parameters/{6f83db57-d86d-4e47-80c4-dd993a06aefa}.tres" id="7_mqub1"]
+[ext_resource type="ParameterAsset" uid="uid://c30bn7ftnj2co" path="res://addons/FMOD/editor/resources/parameters/{2c6df641-ee4c-459d-87a7-cd0f35951a18}.tres" id="8_pcrk2"]
 
 [resource]
 banks = {
-"{2267751d-f017-41eb-879e-e95a50110ada}": ExtResource("1_kgkw0"),
-"{b0ba6919-05c3-45f0-85de-1df04344a1f6}": ExtResource("3_50b8h"),
-"{ba7a55c9-816c-0da9-01d7-63a4a1e20c42}": ExtResource("2_j6m7c")
+"{09cbc208-0b63-0ff8-2a0e-87b6439d8046}": ExtResource("2_5ossd"),
+"{91d6e2dc-7a18-43ba-ac47-0d48b26e86de}": ExtResource("1_p2sq7"),
+"{f3f3abc1-4516-45dd-bd5d-a690dcec9401}": ExtResource("3_p1rd1")
 }
 events = {
-"{e59cb033-d553-4494-ac47-0116f9d65bdd}": ExtResource("6_54ueb")
+"{f1a5ab77-b127-473b-a04a-a0203c84df46}": ExtResource("6_ejcpn")
 }
 busses = {
-"{9badfc66-5ffb-4db1-9db6-677086dabb99}": ExtResource("4_u8h7a"),
-"{ce02a196-5f1c-4e61-9e08-59ebadebd06f}": ExtResource("5_qty6c")
+"{00da4684-8870-4fcd-8e7d-e2559e5ac6cc}": ExtResource("5_s4s8r"),
+"{9adf7eed-0fcb-40fc-9273-c2e931e41b0e}": ExtResource("4_wqu31")
+}
+parameters = {
+"{2c6df641-ee4c-459d-87a7-cd0f35951a18}": ExtResource("8_pcrk2"),
+"{6f83db57-d86d-4e47-80c4-dd993a06aefa}": ExtResource("7_mqub1")
 }
 bank_tree = [{
 "children": [],
 "item_type": 3,
 "node_name": "Master",
 "path": "bank:/Master",
-"resource": ExtResource("1_kgkw0")
+"resource": ExtResource("1_p2sq7")
 }, {
 "children": [],
 "item_type": 3,
 "node_name": "Master.strings",
 "path": "bank:/Master.strings",
-"resource": ExtResource("2_j6m7c")
+"resource": ExtResource("2_5ossd")
 }, {
 "children": [],
 "item_type": 3,
 "node_name": "Music Bank",
 "path": "bank:/Music Bank",
-"resource": ExtResource("3_50b8h")
+"resource": ExtResource("3_p1rd1")
 }]
 event_tree = [{
 "children": [{
@@ -45,7 +51,7 @@ event_tree = [{
 "item_type": 1,
 "node_name": "Music",
 "path": "event:/Music/Music",
-"resource": ExtResource("6_54ueb")
+"resource": ExtResource("6_ejcpn")
 }],
 "item_type": 7,
 "node_name": "Music",
@@ -58,10 +64,23 @@ bus_tree = [{
 "item_type": 4,
 "node_name": "Reverb",
 "path": "bus:/Reverb",
-"resource": ExtResource("5_qty6c")
+"resource": ExtResource("5_s4s8r")
 }],
 "item_type": 4,
 "node_name": "bus:",
 "path": "bus:/",
-"resource": ExtResource("4_u8h7a")
+"resource": ExtResource("4_wqu31")
+}]
+parameter_tree = [{
+"children": [],
+"item_type": 6,
+"node_name": "Character",
+"path": "parameter:/Character",
+"resource": ExtResource("7_mqub1")
+}, {
+"children": [],
+"item_type": 6,
+"node_name": "Paused",
+"path": "parameter:/Paused",
+"resource": ExtResource("8_pcrk2")
 }]

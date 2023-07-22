@@ -1,0 +1,8 @@
+[gd_resource type="EventAsset" format=3 uid="uid://cpcx7dqsykq02"]
+
+[resource]
+min_distance = 1.0
+max_distance = 20.0
+path = "event:/Music/Music"
+guid = "{f1a5ab77-b127-473b-a04a-a0203c84df46}"
+name = "Music"

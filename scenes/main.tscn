@@ -1,39 +1,10 @@
-[gd_scene load_steps=14 format=3 uid="uid://d0fatpj1xblfe"]
+[gd_scene load_steps=8 format=3 uid="uid://d0fatpj1xblfe"]
 
 [ext_resource type="Script" path="res://scripts/Main.gd" id="1_1ygro"]
-[ext_resource type="PackedScene" uid="uid://d06xdtwo0agha" path="res://Player/Player.tscn" id="2_uy44t"]
 [ext_resource type="PackedScene" uid="uid://mpydbc355a5" path="res://scenes/NPC.tscn" id="3_a5knq"]
-[ext_resource type="BankAsset" uid="uid://n8jsn6wxqeli" path="res://addons/FMOD/editor/resources/banks/{2267751d-f017-41eb-879e-e95a50110ada}.tres" id="4_hdh7m"]
-[ext_resource type="BankAsset" uid="uid://bhuwdawstrdo6" path="res://addons/FMOD/editor/resources/banks/{b0ba6919-05c3-45f0-85de-1df04344a1f6}.tres" id="5_7pt1u"]
+[ext_resource type="Resource" path="res://Dialogue/timelines/Hana_Lighting.dtl" id="5_7ndrm"]
+[ext_resource type="PackedScene" uid="uid://cgdnc42xanwqm" path="res://Player/player.tscn" id="5_62vt8"]
 [ext_resource type="PackedScene" uid="uid://ckny7hpmgtnci" path="res://scenes/transition.tscn" id="6_w4pot"]
-[ext_resource type="Script" path="res://scripts/The Camera.gd" id="7_okfvl"]
-
-[sub_resource type="FMOD_STUDIO_PARAMETER_ID" id="FMOD_STUDIO_PARAMETER_ID_i0mpu"]
-data1 = 4079771244
-data2 = 3797763104
-
-[sub_resource type="FMOD_STUDIO_PARAMETER_DESCRIPTION" id="FMOD_STUDIO_PARAMETER_DESCRIPTION_c52u0"]
-name = "Sadness"
-id = SubResource("FMOD_STUDIO_PARAMETER_ID_i0mpu")
-maximum = 1.0
-guid = "{3af12872-65c7-4b4b-b428-37536b1ac9aa}"
-
-[sub_resource type="ParameterAsset" id="ParameterAsset_r0bb6"]
-parameter_description = SubResource("FMOD_STUDIO_PARAMETER_DESCRIPTION_c52u0")
-path = "parameter:/Sadness"
-guid = "{3af12872-65c7-4b4b-b428-37536b1ac9aa}"
-name = "Sadness"
-
-[sub_resource type="EventAsset" id="EventAsset_arqgv"]
-is_3d = true
-min_distance = 1.0
-max_distance = 20.0
-parameters = {
-"{3af12872-65c7-4b4b-b428-37536b1ac9aa}": SubResource("ParameterAsset_r0bb6")
-}
-path = "event:/Music/Music"
-guid = "{e59cb033-d553-4494-ac47-0116f9d65bdd}"
-name = "Music"
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_t5y6s"]
 size = Vector3(60, 2, 60)
@@ -43,7 +14,6 @@ size = Vector3(60, 2, 60)
 
 [node name="Main" type="Node3D"]
 script = ExtResource("1_1ygro")
-FMODEvent = SubResource("EventAsset_arqgv")
 
 [node name="StaticBody3D" type="StaticBody3D" parent="."]
 transform = Transform3D(0.707107, 0, 0.707107, 0, 1, 0, -0.707107, 0, 0.707107, 0, -1, 0)
@@ -58,25 +28,10 @@ mesh = SubResource("BoxMesh_sc2gv")
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 0, 11, 0)
 
-[node name="Player" parent="." instance=ExtResource("2_uy44t")]
-
-[node name="The Camera" type="Camera3D" parent="Player"]
-transform = Transform3D(1, 0, 0, 0, 0.707107, 0.707107, 0, -0.707107, 0.707107, 0, 30, 30)
-projection = 1
-current = true
-size = 70.0
-script = ExtResource("7_okfvl")
-
 [node name="NPC" parent="." instance=ExtResource("3_a5knq")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 5)
-
-[node name="StudioBankLoader" type="StudioBankLoader" parent="."]
-load_on = 1
-unload_on = 3
-preload_sample_data = true
-num_banks = 2
-bank_0 = ExtResource("4_hdh7m")
-bank_1 = ExtResource("5_7pt1u")
+timeline = ExtResource("5_7ndrm")
+FMODEvent = 1
 
 [node name="Transition" parent="." instance=ExtResource("6_w4pot")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 40.72, 1, 0)
@@ -92,3 +47,11 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 38, 0, 0)
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -16)
 
 [node name="Origin" type="Marker3D" parent="."]
+
+[node name="Camera3D" type="Camera3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 0.707107, 0.707107, 0, -0.707107, 0.707107, 0, 25, 25)
+projection = 1
+current = true
+size = 50.0
+
+[node name="player" parent="." instance=ExtResource("5_62vt8")]

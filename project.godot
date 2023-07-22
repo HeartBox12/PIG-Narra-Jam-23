@@ -17,9 +17,9 @@ config/icon="res://icon.svg"
 
 [autoload]
 
-Singleton="*res://scripts/singleton.gd"
 RuntimeManager="*res://addons/FMOD/runtime/runtime_manager.gd"
 Dialogic="*res://addons/dialogic/Other/DialogicGameHandler.gd"
+Singleton="*res://scripts/singleton.gd"
 
 [dialogic]
 
@@ -40,17 +40,16 @@ text/autoadvance_delay=1.0
 text/hide_empty_textbox=true
 text/autopauses={}
 glossary/default_case_sensitive=true
-layout/layout_scene="res://addons/dialogic/Modules/DefaultStyles/Default/DialogicDefaultLayout.tscn"
+layout/layout_scene="res://Dialogue/Assets/Cus2mLayout.tscn"
 
 [display]
 
 window/size/viewport_width=1920
 window/size/viewport_height=1080
-window/size/mode=3
 
 [editor_plugins]
 
-enabled=PackedStringArray("res://addons/FMOD/plugin.cfg", "res://addons/dialogic/plugin.cfg")
+enabled=PackedStringArray("res://addons/dialogic/plugin.cfg", "res://addons/FMOD/plugin.cfg")
 
 [fmod]
 
@@ -58,7 +57,7 @@ settings/banks_path="res://FMODBanks"
 settings/fmod_output_type=0
 settings/fmod_debug_flags=0
 settings/fmod_debug_mode=1
-settings/banks_to_load_at_startup=Array[String]([])
+settings/banks_to_load_at_startup=Array[String](["res://FMODBanks/Master.bank", "res://FMODBanks/Master.strings.bank", "res://FMODBanks/Music Bank.bank"])
 settings/banks_preload_samples=false
 settings/banks_flags=0
 settings/sample_rate=48000
