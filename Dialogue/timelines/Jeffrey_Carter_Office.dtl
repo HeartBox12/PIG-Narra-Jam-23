@@ -1,13 +1,13 @@
 Join Carter_Bartender 0 [ mirrored="true"]
 Join Jeffrey_Exec 4
-Jeffrey_Exec (Placeholder): Look, I don't think that'll go down very well-
+Jeffrey_Exec (Placeholder): I just don't think that'll go down very well-
 Carter_Bartender (Placeholder): I don't care. It's the right thing. Everyone else can deal.
 Jeffrey_Exec: But what if he remains upset about Katrina not recognising him at-
 Leave Carter_Bartender [animation="Instant In Or Out" length="0"]
 Join PC 0 [ mirrored="true"]
 PC (Placeholder): Hey, what's going on here?!
 [wait]
-Jeffrey_Exec: Your barman here was just explaining why his employment should be terminated instead of yours.
+Jeffrey_Exec: Your barman here was just explaining why his employment should be terminated in place of yours.
 PC: What the hell, Carter?
 Leave Jeffrey_Exec [animation="Instant In Or Out" length="0"]
 Join Carter_Bartender 4 [animation="Instant In Or Out" length="0"]
@@ -28,7 +28,7 @@ Carter_Bartender: It's not about the damn cashflows, man!
 PC: Carter, quiet, let me handle this.
 Carter_Bartender: Oh, come on. You want to be some big martyr, huh?[pause] Is that what this is about?[pause] You want to be the hero?
 PC: Of course not. This place means the world to me.
-Carter_Bartender: I'm just a bartender, man. I've only been here a month. I can-
+Carter_Bartender: I'm just a bartender. I've only been here a month. I can-
 PC: Exactly. You don't know what you'd be losing.
 Carter_Bartender: Why do you even care?
 PC: I saw your resume, remember?[pause] I saw that you have nothing.[pause] No qualifications, no experience,[pause] [i]nothing[/i].
@@ -48,7 +48,7 @@ Carter_Bartender: I want to know one thing, sir.
 Jeffrey_Exec: What's that?
 Carter_Bartender: You got this incredible leader, incredible [i]person[/i] standing right in front of you and you're just gonna let 'em go?
 Jeffrey_Exec: Look, I'm distraught about it. But it's my job to consider the holistic impact of Mr Smith's-
-Carter_Bartender: You know what? Fine.[pause] It's my job to mix gin with tonic for old people.[pause] I'm gonna go do that now.
+Carter_Bartender: You know what? Fine.[pause] It's my job to mix gin with tonic for old people. So I'm gonna go do that.
 Jeffrey_Exec: Thanks for coming to speak with me, Carter.
 Carter_Bartender: Sure. Asshole.
 Leave Carter_Bartender
