@@ -1,19 +1,29 @@
 Hana_Lighting (Placeholder): STOP RIGHT THERE!
-Join Hana_Lighting 0 [animation="Bounce In" length="1" wait="true"]
-Hana_Lighting: Where do you think you're going?[pause] Huh?
-Join PC 4 [animation="Bounce In" length="1" wait="true"]
+Join Hana_Lighting 4
+Hana_Lighting: Where do [i]you[/i] think you're sneaking off to?[pause] Huh?
+Join PC 0 [ mirrored="true"]
 PC (Placeholder): Uh...[pause] I was just gonna slip out while-
-Hana_Lighting: While nobody was paying attention?
-PC: Well...[pause] yeah, I guess so.
-Hana_Lighting: What about all your stuff?
-PC: It's already in the car.
-Hana_Lighting: And you weren't even gonna say goodbye to me?[pause] I'll be crying over my controls all night.
+Hana_Lighting: While everybody was distracted? While you could get away without saying goodbye?
+PC: Well...[pause] it's not like that, I just-
+Hana_Lighting: What about all your other stuff?
+PC: The rest is already in the car. This is the last of it.
+Hana_Lighting: And you didn't even seek me out for a special farewell? A knife, right in my back. I'll be crying over my controls all night.
 [wait]
-PC: We're[pause] literally hanging out this weekend.
-Hana_Lighting: Look.[pause] You walk out that door and it's over.[pause] This whole insane ride.
-PC: I don't want to get in anyone's way. You all have work to do. It's a big day.
-Hana_Lighting: I know how much this place means to you.[pause] Don't let it end like this.
+PC: Hana, we're literally hanging out this weekend.
+Hana_Lighting: That's sooooo not the point!
+Hana_Lighting: Look.[pause] You step out that door and this whole phase of your life is over.[pause] All the laughter, all the late nights, all the drama.
+PC: Pun not intended.
+Hana_Lighting: I know how much this place means to you.[pause] Please don't let it end like this.
+PC: I don't want to get in anyone's way. You all have work to do, it's a big day!
+Hana_Lighting: You're making excuses. I know it's hard. But wouldn't it be nice to have some closure?
+PC: You'll still be here! And you overhear everything from the lighting box. I can get second-hand closure through you.
 [wait]
-Hana_Lighting: I need to go up to the box and adjust a few levels. I'll see you on Sunday.
+Hana_Lighting: Kat's right over there. She's been mumbling to herself ever since she clocked in. Seems real stressed.
+PC: Yeah, I should probably go over and wish her the best.
+Hana_Lighting: And I haven't seen Carter in ages. He's probably searching the whooooole theatre for you.
+PC: Okay, okay, I get it.
+[wait time="1.5"]
+Hana_Lighting: I need to go up to the box and adjust a few levels. Bring snacks on Sunday.
 Leave Hana_Lighting
 [wait time="1.5"]
+

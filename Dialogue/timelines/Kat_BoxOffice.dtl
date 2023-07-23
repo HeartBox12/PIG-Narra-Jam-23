@@ -1,20 +1,31 @@
-Join PC 0
-PC: Hey Kat.
+Join PC 0 [ mirrored="true"]
+PC (Placeholder): Hey Kat.
 Join Kat_BoxOffice 4
-Kat_BoxOffice: Hey.
+Kat_BoxOffice (Placeholder): Hey.
 [wait]
-Kat_BoxOffice: I'm so sorry I-
-PC: Please don't apologise. It's a ridiculous situation and nobody here is to blame.
-Kat_BoxOffice: I swear I didn't recognise him, he must have had a haircut.[pause] Did he put on some weight?[pause] Get a nose job?
+Kat_BoxOffice: I'm so sorry that I-
+PC: Please don't apologise. This whole situation is ridiculous, and everyone knows it. Nobody here is to blame.
+Kat_BoxOffice: I swear I just didn't recognise him, he must have had a haircut. Did he put on some weight?[pause] Get a nose job?
 PC: Uh, I think he's always looked like that.
-Kat_BoxOffice: And I didn't even twig when he said the name the booking was under! How could I be so dense?
-PC: Well, Smith is a very common name.
-Kat_BoxOffice: I just haven't been in the zone recently...[pause] Charlie's got an ear infection so I haven't been sleeping well.[pause] And Anya's been away at camp so there's been nobody to look after Sam and...
-Kat_BoxOffice: Sorry, I'm making excuses. I should have-
-PC: Kat, please. You treated him exactly the same as any other customer.[pause] You did what I hired you to do.[pause] To the letter.
+Kat_BoxOffice: And I can't [i]believe[/i] I didn't catch on when he told me the name the booking was under! How could I be so utterly dense?
+PC: You know Smith is the most common name in the country, right? We probably had five other Smiths in that very crowd.
+Kat_BoxOffice: I just haven't been in the zone recently... Charlie's got an ear infection so I haven't been sleeping well.[pause] And Anya's been away at camp so there's nobody to look after Sam, and...
+Kat_BoxOffice: Sorry, I'll stop trying to defend my actions. I should have-
+PC: Kat, please. You treated him exactly the same as any other customer. You did what I hired you to do.[pause] To the letter.
 Kat_BoxOffice: Let me talk to Jeffrey. I can tell him it was my fault and-
-PC: No. I'm not risking it. You need this job more than I do.
+PC: No. I'm not risking it. You need this job way more than I do.
 PC: That's final.
 [wait time="1.5"]
-Kat_BoxOffice: Thank you.[pause] I won't let this be for nothing.
+Kat_BoxOffice: Thank you.[pause] So much. I promise I won't let this be for nothing. I'll never make another mistake-
+PC: Woah there, let's not make promises we can't keep.
+Kat_BoxOffice: Heh, I guess you're right.
+PC: Hey... would you let me look after Sam while his sister's at camp?
+Kat_BoxOffice: Oh, that's really kind, but I'm sorry, I can't afford a babysitter.
+PC: No charge. I'll just be sitting at home for a while anyway.
 [wait]
+Kat_BoxOffice: I'm going to cry.[pause] Don't make me cry at work.
+PC: That's either a yes, or an extremely emphatic no.
+Kat_BoxOffice: You're a hero. Thank you, thank you, thank you.
+PC: You've got my number, right? Text me the details when you get a quiet moment.
+Kat_BoxOffice: I will. Have a wonderful night.
+PC: You too.

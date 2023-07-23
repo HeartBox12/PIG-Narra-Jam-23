@@ -1,0 +1,76 @@
+Join Carter_Bartender 0 [ mirrored="true"]
+Join Jeffrey_Exec 4
+Jeffrey_Exec (Placeholder): I just don't think that'll go down very well-
+Carter_Bartender (Placeholder): I don't care. It's the right thing. Everyone else can deal.
+Jeffrey_Exec: But what if he remains upset about Katrina not recognising him at-
+Leave Carter_Bartender [animation="Instant In Or Out" length="0"]
+Join PC 0 [ mirrored="true"]
+PC (Placeholder): Hey, what's going on here?!
+[wait]
+Jeffrey_Exec: Your barman here was just explaining why his employment should be terminated in place of yours.
+PC: What the hell, Carter?
+Leave Jeffrey_Exec [animation="Instant In Or Out" length="0"]
+Join Carter_Bartender 4 [animation="Instant In Or Out" length="0"]
+Carter_Bartender: I was the one that made him the wrong drink. It's not your fault!
+PC: I was quite clear with you. This is not your battle.
+Carter_Bartender: You didn't even do anything wrong!
+PC: No, and neither did you.
+Leave Carter_Bartender [animation="Instant In Or Out" length="0"]
+Join Jeffrey_Exec 4 [animation="Instant In Or Out" length="0"]
+Jeffrey_Exec: Well...
+PC: Shut up, Jeffrey. You are not going to defend that narcissist right now.
+Jeffrey_Exec: Oh come now, I don't think we need to talk like-
+PC: If you had a backbone, we wouldn't be having this conversation at all.
+Jeffrey_Exec: Excuse me, you haven't seen the accounts. The cashflows-
+Leave Jeffrey_Exec [animation="Instant In Or Out" length="0"]
+Join Carter_Bartender 4 [animation="Instant In Or Out" length="0"]
+Carter_Bartender: It's not about the damn cashflows, man!
+PC: Carter, quiet, let me handle this.
+Carter_Bartender: Oh, come on. You want to be some big martyr, huh?[pause] Is that what this is about?[pause] You want to be the hero?
+PC: Of course not. This place means the world to me.
+Carter_Bartender: I'm just a bartender. I've only been here a month. I can-
+PC: Exactly. You don't know what you'd be losing.
+Carter_Bartender: Why do you even care?
+PC: I saw your resume, remember?[pause] I saw that you have nothing.[pause] No qualifications, no experience,[pause] [i]nothing[/i].
+PC: I gave you a shot because you needed someone to believe in you.[pause] And you repaid me, man.[pause] I've never had anyone better on the bar.
+Carter_Bartender: Wait, really? But I-
+PC: Now, you add getting fired after one month to that resume?[pause] Even I wouldn't touch you.
+[wait]
+PC: I could never live with that, Carter.
+[wait time="1.5"]
+Leave Carter_Bartender [animation="Instant In Or Out" length="0"]
+Join Jeffrey_Exec 4 [animation="Instant In Or Out" length="0"]
+Jeffrey_Exec: But, we won't be forgetting Mr Smith's favourite drink again, will we?
+[wait]
+Leave PC [animation="Instant In Or Out" length="0"]
+Join Carter_Bartender 0 [animation="Instant In Or Out" length="0" mirrored="true"]
+Carter_Bartender: I want to know one thing, sir.
+Jeffrey_Exec: What's that?
+Carter_Bartender: You got this incredible leader, incredible [i]person[/i] standing right in front of you and you're just gonna let 'em go?
+Jeffrey_Exec: Look, I'm distraught about it. But it's my job to consider the holistic impact of Mr Smith's-
+Carter_Bartender: You know what? Fine.[pause] It's my job to mix gin with tonic for old people. So I'm gonna go do that.
+Jeffrey_Exec: Thanks for coming to speak with me, Carter.
+Carter_Bartender: Sure. Asshole.
+Leave Carter_Bartender
+[wait time="1.5"]
+Join PC 0 [ mirrored="true"]
+PC: He's angry. Please just give him time. He's a good kid.
+Jeffrey_Exec: I know. He'll calm down.
+[wait time="1.5"]
+PC: Did Smith really say he wouldn't give us another cent until someone was fired?
+Jeffrey_Exec: He did.
+PC: He's a real piece of shit.
+[wait time="1.5"]
+Jeffrey_Exec: Yeah.
+[wait]
+PC: The crowd must be shuffling in about now. I should slip out the front before the lights go down.
+Jeffrey_Exec: Oh, darn. I got so caught up in here I forgot about the show.[pause] Ah well, I'll see it tomorrow.
+PC: Goodbye, Jeffrey.
+Jeffrey_Exec: Yes. And good luck to you.
+[wait time="1.5"]
+Jeffrey_Exec: Hey, one last thing.
+PC: Yeah?
+Jeffrey_Exec: I'm sorry.
+[wait]
+Leave PC
+[wait time="1.5"]

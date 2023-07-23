@@ -1,17 +1,17 @@
-Join PC
+Join PC 0 [ mirrored="true"]
 Join Leigh_Actor3 4
 PC (Placeholder): Hi, Leigh, can I-
-Leigh_Actor3 (Placeholder): What is't, knave??
+Leigh_Actor3 (Placeholder): What is't, knave?!
 [wait time="1.5"]
-PC: I'm just gonna...[pause] give you a second.
+PC: I'm just gonna... give you a second.
 [wait time="1.5"]
-Leigh_Actor3: Aye, sorry about yond. I has't to get out of character.
+Leigh_Actor3: Aye, sorry about that. I has't to get out of character.
 PC: It's okay, take your time.
 [wait time="2.0"]
 Leigh_Actor3: Metaverse, gaslight, selfie, mansplain.
 Leigh_Actor3: Okay, I'm back. Hi!
-PC: Hello! Sorry, I know I shouldn't pull you out of the zone.
-Leigh_Actor3: I have to use Chekhov's techniques for this show.[pause] Because, like,[pause] I don't have that much experience as a 19th century land baron.
+PC: Hello! Sorry, I shouldn't pull you out of the zone.
+Leigh_Actor3: I have to use Chekhov's techniques for this show.[pause] Because, like, I don't have that much experience as a 19th century land baron.
 PC: That's a shame, you're missing out.
 Leigh_Actor3: But Caroline has us acting so dramatically that it's kind of a whole thing to get in and out of that mindspace.
 PC: Hence the piratey talk.
@@ -19,21 +19,21 @@ Leigh_Actor3: I mean, there are no pirates in the play.[pause] But I can't promi
 PC: You're not as bad as the time you played the school bully.
 Leigh_Actor3: You can blame Strasberg for that. I tried to identify personally with that character. Ended up just being a dick to everyone for three weeks.
 PC: You went full Jared Leto.
-Leigh_Actor3: I went full Jared Leto. I locked Hana in the lighting box once because she was a nerd.
+Leigh_Actor3: I went full Jared Leto. I locked Hana in the lighting box for over an hour for the crime of being a nerd.
 PC: We should cast you as a nice person for once. You might bring us all ice cream.
 Leigh_Actor3: How's your drama study going? It's been a while since you asked to run a repetition exercise with me.
 PC: Um, I guess I was pretty disheartened that I didn't land a role in this show.[pause] So I'm taking a break.
-Leigh_Actor3: Oh, that sucks.[pause] Well, you know, there are companies other than Doomsday. You can audition with them too.
-PC: Well, yeah.[pause] But I knew you all already so it felt way less scary.
+Leigh_Actor3: Oh, that blows.[pause] Well, you know, there are theatre companies other than Doomsday. You can audition with them too.
+PC: Well, yeah. But I knew you all already so it felt way less scary.
 Leigh_Actor3: I get that. Auditions are hard.
 PC: I guess I don't really have an option now. I have to look at other companies.
 Leigh_Actor3: Crosswalk Productions operates out of Centaur Theatre downtown. They do big casts so you can get in as an extra pretty easily.
 Leigh_Actor3: Wooden Spoon Theatre is a little collective just down the road. They're really nice people if you can break in, but also great actors, so it's tough competition for roles.
 PC: Thanks, Leigh. I'll look them up.
-Leigh_Actor3: And we're auditioning for Waiting for Godot very soon. There are five parts, so even with Eduardo guaranteed to get one, you have a decent chance of being the slave or the boy.
-PC: I don't think I'll be setting foot in this theatre for...[pause] quite a long time.
+Leigh_Actor3: And we're auditioning for Waiting for Godot very soon. There are five parts, so even with Eduardo guaranteed to get one of the leads, you have a decent chance of being the slave or the boy.
+PC: I don't think I'll be setting foot in this theatre for... quite a long time.
 [wait]
 Leigh_Actor3: Maybe that's for the best.
-Leigh_Actor3: Look, it's been lovely to talk to you and I wish you success with all my heart,[pause] but I really need to start channelling a nasty old English guy again.
+Leigh_Actor3: Look, it's been lovely to talk to you and I wish you success with all of my heart, but I really need to start channelling a nasty old English guy again.
 PC: Absolutely! Break a leg.
 Leigh_Actor3: Forsooth, I shall. And haply thine!

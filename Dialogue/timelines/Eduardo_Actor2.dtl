@@ -1,36 +1,36 @@
-Join PC
+Join PC 0 [ mirrored="true"]
 PC: Hey, Eduardo.
 Join Eduardo_Actor2 4
-Eduardo_Actor2: Hey.[pause] Sorry you're going.
+Eduardo_Actor2: Hey. Sorry you're going.
 PC: Yeah, me too.
-Eduardo_Actor2: Carrie told me this morning she wouldn't have fired you.
-PC: Uh...[pause] cool.[pause] That's[pause] nice.
+Eduardo_Actor2: Carrie told me when we woke up this morning that she wouldn't have fired you.
+PC: Uh... cool. That's[pause] nice.
 Eduardo_Actor2: Yeah, you're welcome.
 [wait]
-PC: How did dress rehearsal go last night?
-Eduardo_Actor2: It was pretty cool. There were some famous people in the first few rows.[pause] I saw my ex-girlfriend, apparently she's CEO for some shoe company that's doing quite well.[pause] And my other ex's dad is Mayor Williams, he was here too.
+PC: How did dress rehearsal go?
+Eduardo_Actor2: It was pretty cool. There were some famous people in the first few rows. I saw my ex-girlfriend, apparently she's CEO for some shoe company that's doing well.[pause] And my other ex's dad is Mayor Williams, he was here too.
 PC: The Mayor was here? Wow.
-Eduardo_Actor2: Oh and my friend Anna came backstage after the show too.[pause] I used to play drums in her band but her record label wanted me gone.[pause] We kinda dated too, actually.
+Eduardo_Actor2: Oh, and my friend Anna came backstage after the show too. I used to play drums in her band but her record label wanted me gone.[pause=0.2] We kinda dated too, actually. I hope Carrie wasn't jealous.
 PC: Sounds like you know some very important people.
-Eduardo_Actor2: I don't really get why we do the VIP night at the start.[pause] Shouldn't we invite the important people later in the run?[pause] Once we've figured out our lines and stuff?
-PC: Eduardo, you...[pause] it's opening night.[pause] Tonight.[pause] I really hope you know your lines by now.
-Eduardo_Actor2: Um, yeah.[pause] Of course.
-PC: I guess the dress rehearsal just feels exclusive.[pause] Means they can see the show before the public can.
+Eduardo_Actor2: I don't get why we do the VIP night at the start. Shouldn't we invite the important people at the end of the run?[pause] Once we've figured out our lines and stuff?
+PC: Eduardo, you... it's opening night. Tonight. I really hope you know your lines by now.
+Eduardo_Actor2: Um, yeah. Of course.
+PC: I guess the dress rehearsal just feels exclusive. Means they can see the show before the public can.
 Eduardo_Actor2: Also means they can see me rip my costume in half.
-Join Adnan_Costume 0
-Adnan_Costume: What's one more time stitching a jacket?[pause] Made from premium fabric.[pause] On a very short time frame.[pause] 
-Eduardo_Actor2: You're right, what else would you be doing on opening night anyway? 
+Join Adnan_Costume 0 [ mirrored="true"]
+Adnan_Costume: What's one more time stitching a jacket? Made from premium fabric. On a very short time frame.
+Eduardo_Actor2: You're right, what else would you be doing on opening night anyway?
 [wait]
 Adnan_Costume: Mm-hmm.
 Leave Adnan_Costume
-Eduardo_Actor2: Do you think Clyde Smith would have noticed my wardrobe malfunction?
-PC: That's...[pause] just...[pause] the absolute last thing that I've wondered about Clyde Smith in the last 24 hours.
-Eduardo_Actor2: It's just, he's a really big deal in theatre around here, right?[pause] I don't want him to think any less of me.[pause] It might restrict my opportunities in the future.
+Eduardo_Actor2: Do you think Clyde Smith will have noticed my wardrobe malfunction?
+PC: That's... just... the absolute last thing I've wondered about Clyde Smith in the past 24 hours.
+Eduardo_Actor2: It's just, he's a really big deal in theatre around here, right? I don't want him to think any less of me.[pause] It might restrict my opportunities in the future.
 [wait]
-PC: Yep.[pause] Imagine that.
-Eduardo_Actor2: I won't always be able to rely on Carrie to...[pause] uh,[pause] you know what,[pause] never mind.
+PC: Yep. Imagine that.
+Eduardo_Actor2: I won't always be able to rely on Carrie to get me... uh,[pause] you know what, never mind.
 PC: I never heard a thing.
 Eduardo_Actor2: Hey, I need to go and get in character by thinking heaps of gay stuff about Marcel.
-PC: Um,[pause] I think that might have been too much information,[pause] but okay, sure.
-Eduardo_Actor2: Sorry,[pause] this just doesn't come naturally to me, you know?
+PC: Um, I think that might have been too much information, but okay, sure.
+Eduardo_Actor2: Sorry, this just doesn't come naturally to me, you know?
 PC: Yes, Ed, I understand your predicament. I'll leave you to your gay stuff.
