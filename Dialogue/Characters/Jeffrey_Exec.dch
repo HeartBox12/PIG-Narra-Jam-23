@@ -1,17 +1,18 @@
 {
 "@path": "res://addons/dialogic/Resources/character.gd",
 "@subpath": NodePath(""),
-"color": Color(0, 0.121569, 0.254902, 1),
+"color": Color(0.192157, 0.192157, 0.192157, 1),
 "custom_info": {
 "sound_mood_default": "",
 "sound_moods": {},
 "style": ""
 },
 "default_portrait": "Placeholder",
-"description": "Lighting operator. Your best friend at work. Big nerd.",
-"display_name": "Hana",
+"description": "Executive director i.e. big boss. Perpetually stressed about finances. Responsible for firing you but feels terrible.
+",
+"display_name": "Jeffrey",
 "mirror": false,
-"nicknames": [""],
+"nicknames": ["Jeff"],
 "offset": Vector2(0, 0),
 "portraits": {
 "Placeholder": {

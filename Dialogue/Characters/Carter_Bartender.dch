@@ -1,15 +1,15 @@
 {
 "@path": "res://addons/dialogic/Resources/character.gd",
 "@subpath": NodePath(""),
-"color": Color(0, 0.121569, 0.254902, 1),
+"color": Color(0.709804, 0.239216, 0.00392157, 1),
 "custom_info": {
 "sound_mood_default": "",
 "sound_moods": {},
 "style": ""
 },
 "default_portrait": "Placeholder",
-"description": "Lighting operator. Your best friend at work. Big nerd.",
-"display_name": "Hana",
+"description": "Underprivileged kid. Reported to you.  Brand new hire, still learning the job. Planning to take the fall for you.",
+"display_name": "Carter",
 "mirror": false,
 "nicknames": [""],
 "offset": Vector2(0, 0),

@@ -1,0 +1,36 @@
+Join Caroline_Director 4
+Caroline_Director (Placeholder): Oh, you're here.
+Join PC 0 [ mirrored="true"]
+PC (Placeholder): Yeah, sorry. I know you don't like people back here distracting the actors.
+Caroline_Director: I think, given the circumstances, an exception can be made.
+PC: And what is it that a director does, minutes before opening night?
+Caroline_Director: Uh, the work never stops! I'm... um... thinking about lighting states and uh... stage blocking?
+PC: Shouldn't that all have been done in rehearsals?[pause] Like, weeks ago?
+Caroline_Director: Of course but, er, there's always room for improvement. Tomorrow is another night!
+PC: But... okay, sure.
+[wait]
+Caroline_Director: Me and Dad are... sorry, me and [i]Jeffrey[/i] are really sad to see you go.
+PC: Yeah, I'm not happy about it either.
+Caroline_Director: It's really made me think less of Mr Smith. He's always been a bit conceited, and maybe we indulge that a little-
+PC: Carrie, we treat him like the Pope. I'm surprised we don't chauffeur him to the theatre.
+Caroline_Director: ... Dad did make me pick him up from his chateau once.[pause] But that was before I worked here.
+PC: I... don't think that makes it better.
+Caroline_Director: Okay, so he's an important man and we tend to flatter him.
+PC: A [i]rich[/i] man. I don't know about important.
+Caroline_Director: But I've never seen him like he was at dress. He flew right off the handle!
+PC: Yeah. I noticed.
+Caroline_Director: He just wouldn't take no for an answer. Jeffrey had no choice but-
+PC: Look, Carrie, I'm just about to go and speak to your father. I can hear all this straight from the boss's mouth.
+PC: Believe it or not, that's not why I'm here. I came to say goodbye to you.
+Caroline_Director: Oh, well, that's nice! I know I haven't been here long, but thank you for helping me find my feet and learn a bit about the theatre. You've been a lifesaver!
+PC: Me? I just work with the tickets and the wine.
+Caroline_Director: Everyone else looks to me for... well, direction, I suppose.[pause] But you just... know things. You would've been another good candidate for director when the position opened up.
+PC: Thanks, that's nice to say. I guess some people like you and Eduardo just get all the luck!
+Caroline_Director: Oh, isn't he a wonderful actor? My heart just melts when he picks up Marcel in Act 3. It's so romantic!
+PC: And to think, that wasn't even in the script.
+Caroline_Director: Sometimes, a director must treat the script as mere suggestion. I strive to look at each of my actors and think, what strength can you bring to elevate the show?
+PC: And Eduardo brings the strength to elevate Marcel.
+Caroline_Director: Oh, that's funny!
+PC: Well, I'd better get in to see Jeffrey before the show starts. See you around, Caroline.
+Caroline_Director: Au revoir!
+Leave PC

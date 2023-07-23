@@ -34,13 +34,17 @@ animations/join_default_wait=true
 choices/autofocus_first=true
 choices/delay=0.2
 save/autosave_delay=60.0
-text/speed=0.01
+text/speed=0.015
 text/skippable=true
 text/autoadvance_delay=1.0
 text/hide_empty_textbox=true
-text/autopauses={}
+text/autopauses={
+",": 0.1,
+".?!": 0.15
+}
 glossary/default_case_sensitive=true
 layout/layout_scene="res://Dialogue/Assets/Cus2mLayout.tscn"
+text/autocolor_names=true
 
 [display]
 

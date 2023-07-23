@@ -1,17 +1,18 @@
 {
 "@path": "res://addons/dialogic/Resources/character.gd",
 "@subpath": NodePath(""),
-"color": Color(0, 0.121569, 0.254902, 1),
+"color": Color(0.662745, 0, 0, 1),
 "custom_info": {
 "sound_mood_default": "",
 "sound_moods": {},
 "style": ""
 },
 "default_portrait": "Placeholder",
-"description": "Lighting operator. Your best friend at work. Big nerd.",
-"display_name": "Hana",
+"description": "Daughter of the boss. Hired through nepotism. 
+Completely out of her depth but trying to hide it.",
+"display_name": "Caroline",
 "mirror": false,
-"nicknames": [""],
+"nicknames": ["Carrie"],
 "offset": Vector2(0, 0),
 "portraits": {
 "Placeholder": {

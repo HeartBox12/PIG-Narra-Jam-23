@@ -1,38 +1,39 @@
 Join Adnan_Costume 4
 Adnan_Costume (Placeholder): Oh my, hello beautiful! This waistcoat is super cute on you!
-Join PC
-PC (Placeholder): It's...[pause] the same one I always wear on performance nights.
-Adnan_Costume: Well...[pause] you always look super cute, so that checks out.
+Join PC 0 [ mirrored="true"]
+PC (Placeholder): It's... the same one I always wear on performance nights.
+Adnan_Costume: Well... you always look super cute, so that checks out.
 PC: Uh, thanks.
 Adnan_Costume: Giving the people something to look at before the show even starts. We love to see it.
-PC: Speaking of, why are you still working? Doors open in like...[pause] half an hour.
-Adnan_Costume: Well, Eduardo here ripped his jacket when he swept Marcel off his feet at the dress rehearsal.[pause] The first 6 rows must have heard it.
-Join Eduardo_Actor2 0
+PC: Speaking of, why are you still working? Doors open in like... half an hour.
+Adnan_Costume: Well, Eduardo here ripped his jacket when he swept Marcel off his feet at the dress rehearsal. The first 6 rows must have heard it.
+Join Eduardo_Actor2 0 [ mirrored="true"]
 Eduardo_Actor2 (Placeholder): Dudes are really heavy! I'm used to picking up girls!
 Adnan_Costume: You sure are, Ed.
 Leave Eduardo_Actor2
-Adnan_Costume: If only Caroline had cast a twink for one of our leads.[pause] We could have avoided this whole situation.
-Adnan_Costume: But then, we all know her casting decisions are...[pause] not completely impartial.
+Adnan_Costume: If only Caroline had cast a twink for one of our leads. We could have avoided this whole situation.
+Adnan_Costume: But then, we all know her casting decisions are... not completely impartial.
 Join Eduardo_Actor2 0
 Eduardo_Actor2: What'd you say?
 Adnan_Costume: I said[pause] your hot obliques are a marvel.
-Eduardo_Actor2: Dude, thanks![pause] I've been doing heaps of side planks recently.[pause] I was really targeting my shoulders because Carrie likes big shoulders,[pause] but then one day I looked down and I was just like,[pause] woah!
+Eduardo_Actor2: Dude, thanks! I've been doing heaps of side planks recently. I was really targeting my shoulders because Carrie likes big shoulders, but then one day I looked down and I was just like,[pause] woah!
 [wait]
 Adnan_Costume: You're welcome, sweetie.
 Leave Eduardo_Actor2
 PC: The only thing quicker than your scissors...
 Adnan_Costume: Is my tongue? I know, darling.
-PC: So...[pause] did you hear?
-Adnan_Costume: I'm sorry?[pause] I thought I heard you ask if I,[pause] Adnan Mirza,[pause] had heard...[pause] some gossip?
+PC: So... did you hear?
+Adnan_Costume: I'm sorry? I thought I heard you ask if I, Adnan Mirza, had heard... some gossip?
 PC: Of course.
-Adnan_Costume: Here's what's going to happen once you're gone, love.[pause] I'm going to take Clyde Smith down.[pause] I don't know how.[pause] Or how long it'll take.[pause]But he'll pay for what he did to you.
+Adnan_Costume: Here's what's going to happen once you're gone, love. I'm going to take Clyde Smith down.[pause] I don't know how.[pause] Or how long it'll take.[pause] But he'll pay for what he did to you.
 PC: Uh huh. And what about all the money?
-Adnan_Costume: We don't need his god damn money![pause] We are creatives![pause] We are fighters![pause] We can change the world!
+Adnan_Costume: We don't need his goddamn money! We are creatives! We are [i]fighters[/i]! We can change the world!
 PC: Try telling that to Jeffrey.
 Adnan_Costume: Jeffrey will do anything for a dollar. He's just as crooked as his daughter.[pause] No, worse!
-PC: Listen, Adnan.[pause] This crusade against Mr Smith seems fun.[pause]  But you need to lie low for a while.[pause]  I don't want you getting in trouble too.
+PC: Listen, Adnan. This crusade against Mr Smith seems fun. But you need to lay low for a while. I don't want you getting in trouble too.
 [wait time="1.2"]
-Adnan_Costume: Okay.
+Adnan_Costume: Okay. I'll scheme for a bit first.
 [wait]
 PC: I need to go talk-
 Adnan_Costume: Of course you do, beautiful. You have so many people to see! I'll call you sometime!
+
