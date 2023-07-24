@@ -2,7 +2,7 @@ Join Carter_Bartender 0 [ mirrored="true"]
 Join Jeffrey_Exec 4
 Jeffrey_Exec (Placeholder): I just don't think that'll go down very well-
 Carter_Bartender (Placeholder): I don't care. It's the right thing. Everyone else can deal.
-Jeffrey_Exec: But what if he remains upset about Katrina not recognising him at-
+Jeffrey_Exec: But what if he remains upset about Katrina not recognizing him at-
 Leave Carter_Bartender [animation="Instant In Or Out" length="0"]
 Join PC 0 [ mirrored="true"]
 PC (Placeholder): Hey, what's going on here?!
@@ -10,20 +10,20 @@ PC (Placeholder): Hey, what's going on here?!
 Jeffrey_Exec: Your barman here was just explaining why his employment should be terminated in place of yours.
 PC: What the hell, Carter?
 Leave Jeffrey_Exec [animation="Instant In Or Out" length="0"]
-Join Carter_Bartender 4 [animation="Instant In Or Out" length="0"]
+Join Carter_Bartender 4 [animation="Fade In Up" length="0.3" wait="true"]
 Carter_Bartender: I was the one that made him the wrong drink. It's not your fault!
 PC: I was quite clear with you. This is not your battle.
 Carter_Bartender: You didn't even do anything wrong!
 PC: No, and neither did you.
 Leave Carter_Bartender [animation="Instant In Or Out" length="0"]
-Join Jeffrey_Exec 4 [animation="Instant In Or Out" length="0"]
+Join Jeffrey_Exec 4 [animation="Fade In Up" length="0.3"]
 Jeffrey_Exec: Well...
 PC: Shut up, Jeffrey. You are not going to defend that narcissist right now.
 Jeffrey_Exec: Oh come now, I don't think we need to talk like-
 PC: If you had a backbone, we wouldn't be having this conversation at all.
 Jeffrey_Exec: Excuse me, you haven't seen the accounts. The cashflows-
 Leave Jeffrey_Exec [animation="Instant In Or Out" length="0"]
-Join Carter_Bartender 4 [animation="Instant In Or Out" length="0"]
+Join Carter_Bartender 4 [animation="Fade In Up" length="0.3"]
 Carter_Bartender: It's not about the damn cashflows, man!
 PC: Carter, quiet, let me handle this.
 Carter_Bartender: Oh, come on. You want to be some big martyr, huh?[pause] Is that what this is about?[pause] You want to be the hero?
@@ -32,18 +32,19 @@ Carter_Bartender: I'm just a bartender. I've only been here a month. I can-
 PC: Exactly. You don't know what you'd be losing.
 Carter_Bartender: Why do you even care?
 PC: I saw your resume, remember?[pause] I saw that you have nothing.[pause] No qualifications, no experience,[pause] [i]nothing[/i].
-PC: I gave you a shot because you needed someone to believe in you.[pause] And you repaid me, man.[pause] I've never had anyone better on the bar.
+PC: I gave you a shot because you needed someone to believe in you.[pause] And you repaid me, man.
+PC: I've never had anyone better on the bar. You're way more talented than I was when I started.
 Carter_Bartender: Wait, really? But I-
 PC: Now, you add getting fired after one month to that resume?[pause] Even I wouldn't touch you.
 [wait]
 PC: I could never live with that, Carter.
 [wait time="1.5"]
 Leave Carter_Bartender [animation="Instant In Or Out" length="0"]
-Join Jeffrey_Exec 4 [animation="Instant In Or Out" length="0"]
+Join Jeffrey_Exec 4 [animation="Fade In Up" length="0.3" wait="true"]
 Jeffrey_Exec: But, we won't be forgetting Mr Smith's favourite drink again, will we?
 [wait]
 Leave PC [animation="Instant In Or Out" length="0"]
-Join Carter_Bartender 0 [animation="Instant In Or Out" length="0" mirrored="true"]
+Join Carter_Bartender 0 [animation="Fade In Up" length="0.3" wait="true" mirrored="true"]
 Carter_Bartender: I want to know one thing, sir.
 Jeffrey_Exec: What's that?
 Carter_Bartender: You got this incredible leader, incredible [i]person[/i] standing right in front of you and you're just gonna let 'em go?
@@ -63,8 +64,8 @@ PC: He's a real piece of shit.
 [wait time="1.5"]
 Jeffrey_Exec: Yeah.
 [wait]
-PC: The crowd must be shuffling in about now. I should slip out the front before the lights go down.
-Jeffrey_Exec: Oh, darn. I got so caught up in here I forgot about the show.[pause] Ah well, I'll see it tomorrow.
+PC: It's time for the doors to open. I should slip out before the foyer fills up.
+Jeffrey_Exec: Oh, darn. I was going to make some calls before the show.[pause] Ah well, I'll see it tomorrow.
 PC: Goodbye, Jeffrey.
 Jeffrey_Exec: Yes. And good luck to you.
 [wait time="1.5"]
@@ -74,3 +75,4 @@ Jeffrey_Exec: I'm sorry.
 [wait]
 Leave PC
 [wait time="1.5"]
+Leave Jeffrey_Exec

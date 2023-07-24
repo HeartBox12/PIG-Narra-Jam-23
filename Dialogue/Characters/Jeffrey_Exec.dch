@@ -1,15 +1,14 @@
 {
 "@path": "res://addons/dialogic/Resources/character.gd",
 "@subpath": NodePath(""),
-"color": Color(0.192157, 0.192157, 0.192157, 1),
+"color": Color(0.709804, 0.239216, 0.00392157, 1),
 "custom_info": {
 "sound_mood_default": "",
 "sound_moods": {},
 "style": ""
 },
 "default_portrait": "Placeholder",
-"description": "Executive director i.e. big boss. Perpetually stressed about finances. Responsible for firing you but feels terrible.
-",
+"description": "Executive director i.e. big boss. Perpetually stressed about finances. Responsible for firing you but feels terrible.",
 "display_name": "Jeffrey",
 "mirror": false,
 "nicknames": ["Jeff"],

@@ -4,14 +4,16 @@ Join Kat_BoxOffice 4
 Kat_BoxOffice (Placeholder): Hey.
 [wait]
 Kat_BoxOffice: I'm so sorry that I-
-PC: Please don't apologise. This whole situation is ridiculous, and everyone knows it. Nobody here is to blame.
-Kat_BoxOffice: I swear I just didn't recognise him, he must have had a haircut. Did he put on some weight?[pause] Get a nose job?
+PC: Please don't apologize. This whole situation is ridiculous, and everyone knows it. Nobody here is to blame.
+Kat_BoxOffice: I swear I just didn't recognize him, he must have had a haircut. Did he put on some weight?[pause] Get a nose job?
 PC: Uh, I think he's always looked like that.
-Kat_BoxOffice: And I can't [i]believe[/i] I didn't catch on when he told me the name the booking was under! How could I be so utterly dense?
+Kat_BoxOffice: And I can't [i]believe[/i] I didn't catch on when he told me the name the booking was under! At the [i]VIP[/i] dress rehearsal! How could I be so dense?
 PC: You know Smith is the most common name in the country, right? We probably had five other Smiths in that very crowd.
 Kat_BoxOffice: I just haven't been in the zone recently... Charlie's got an ear infection so I haven't been sleeping well.[pause] And Anya's been away at camp so there's nobody to look after Sam, and...
 Kat_BoxOffice: Sorry, I'll stop trying to defend my actions. I should have-
 PC: Kat, please. You treated him exactly the same as any other customer. You did what I hired you to do.[pause] To the letter.
+Kat_BoxOffice: I didn't know there was so much at stake. We all get told to flatter and indulge him... but I didn't expect him to fly off the handle-
+PC: Nobody did. He's never acted up quite like this before.
 Kat_BoxOffice: Let me talk to Jeffrey. I can tell him it was my fault and-
 PC: No. I'm not risking it. You need this job way more than I do.
 PC: That's final.
@@ -29,3 +31,4 @@ Kat_BoxOffice: You're a hero. Thank you, thank you, thank you.
 PC: You've got my number, right? Text me the details when you get a quiet moment.
 Kat_BoxOffice: I will. Have a wonderful night.
 PC: You too.
+Leave --All--
