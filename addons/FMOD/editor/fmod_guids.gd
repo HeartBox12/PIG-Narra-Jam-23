@@ -26,5 +26,8 @@ class Banks:
 
 class Parameters:
 	const CHARACTER = "{b4576f9b-2c73-4f1d-b215-21a3ff8c13d9}"
+	const LOCATION = "{e02e1b10-8024-47ba-ada7-5ac61ad1ba27}"
+	const PARAMETER_1 = "{e5d4897d-6711-467d-ac45-6500491866c5}"
 	const PAUSED = "{ffb36504-280d-48c6-a28b-050e313198d7}"
+	const TENSION = "{266daac8-2bd0-4d2c-a418-3103f5588ec0}"
 
