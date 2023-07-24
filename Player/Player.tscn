@@ -779,7 +779,7 @@ transform = Transform3D(1.8, 0, 0, 0, 1.8, 0, 0, 0, 1.8, 0, 4.31346, 0)
 billboard = 1
 sprite_frames = SubResource("SpriteFrames_88qdq")
 animation = &"appear"
-frame_progress = 0.981975
+frame_progress = 0.931646
 
 [connection signal="frame_changed" from="AnimatedSprite3D" to="." method="_on_frame_changed"]
 [connection signal="animation_finished" from="Bubble" to="." method="_on_bubble_animation_finished"]
