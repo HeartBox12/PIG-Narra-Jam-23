@@ -1,0 +1,13 @@
+[gd_scene load_steps=3 format=3 uid="uid://difja3jec4vtd"]
+
+[ext_resource type="PackedScene" uid="uid://rxrei1k6h0gp" path="res://scenes/foyerdress.gltf" id="1_j4vb2"]
+
+[sub_resource type="CylinderShape3D" id="CylinderShape3D_l3rd0"]
+height = 1.33118
+radius = 0.373925
+
+[node name="foyerdress" instance=ExtResource("1_j4vb2")]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="ROOT/trash -col" index="1"]
+transform = Transform3D(3.14705, 0, 0, 0, 3.14705, 0, 0, 0, 3.14705, 5.44357, 4.68947e-08, -30.7411)
+shape = SubResource("CylinderShape3D_l3rd0")

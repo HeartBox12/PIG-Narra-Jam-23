@@ -144,6 +144,16 @@ animations = [{
 "name": &"idle1",
 "speed": 8.0
 }, {
+"frames": [],
+"loop": true,
+"name": &"idle2",
+"speed": 5.0
+}, {
+"frames": [],
+"loop": true,
+"name": &"idle3",
+"speed": 5.0
+}, {
 "frames": [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_vcg5w")
@@ -157,6 +167,21 @@ animations = [{
 "loop": true,
 "name": &"idle4",
 "speed": 8.0
+}, {
+"frames": [],
+"loop": true,
+"name": &"idle5",
+"speed": 5.0
+}, {
+"frames": [],
+"loop": true,
+"name": &"idle6",
+"speed": 5.0
+}, {
+"frames": [],
+"loop": true,
+"name": &"idle7",
+"speed": 5.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -187,6 +212,16 @@ animations = [{
 "name": &"move1",
 "speed": 8.0
 }, {
+"frames": [],
+"loop": true,
+"name": &"move2",
+"speed": 5.0
+}, {
+"frames": [],
+"loop": true,
+"name": &"move3",
+"speed": 5.0
+}, {
 "frames": [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_n2o2n")
@@ -215,6 +250,21 @@ animations = [{
 "loop": true,
 "name": &"move4",
 "speed": 8.0
+}, {
+"frames": [],
+"loop": true,
+"name": &"move5",
+"speed": 5.0
+}, {
+"frames": [],
+"loop": true,
+"name": &"move6",
+"speed": 5.0
+}, {
+"frames": [],
+"loop": true,
+"name": &"move7",
+"speed": 5.0
 }]
 
 [node name="player" type="CharacterBody3D"]

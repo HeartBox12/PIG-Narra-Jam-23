@@ -2,7 +2,7 @@
 
 [ext_resource type="Texture2D" uid="uid://bnhtllnwt1qnf" path="res://icon.svg" id="1_7k81c"]
 [ext_resource type="Script" path="res://scripts/NPC.gd" id="1_i23iu"]
-[ext_resource type="Resource" path="res://Dialogue/timelines/TEST.dtl" id="3_qkbfk"]
+[ext_resource type="Resource" path="res://Dialogue/timelines/Hana_Lighting.dtl" id="3_x4bwk"]
 [ext_resource type="SpriteFrames" uid="uid://1wimk2745xwf" path="res://Dialogue/Characters/Hana/Hana_idle_anim.tres" id="4_wmri2"]
 
 [sub_resource type="CylinderShape3D" id="CylinderShape3D_2o6co"]
@@ -13,8 +13,7 @@ collision_layer = 2
 collision_mask = 0
 script = ExtResource("1_i23iu")
 Sprite = ExtResource("1_7k81c")
-timeline = ExtResource("3_qkbfk")
-FMODEvent = null
+timeline = ExtResource("3_x4bwk")
 
 [node name="AnimatedSprite3D" type="AnimatedSprite3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.99832, 0)
