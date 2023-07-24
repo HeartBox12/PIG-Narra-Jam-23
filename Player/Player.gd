@@ -4,7 +4,7 @@ extends CharacterBody3D
 @export var fall_acceleration = 75
 
 @onready var animation_player = get_node("AnimatedSprite3D")
-@onready var origin = get_node("/root/Main/Origin")
+@onready var origin = get_node("../Origin")
 
 var target_velocity = Vector3.ZERO
 var fall_timer = 0

@@ -1,10 +1,12 @@
-[gd_scene load_steps=8 format=3 uid="uid://d0fatpj1xblfe"]
+[gd_scene load_steps=10 format=3 uid="uid://d0fatpj1xblfe"]
 
 [ext_resource type="Script" path="res://scripts/Main.gd" id="1_1ygro"]
 [ext_resource type="PackedScene" uid="uid://mpydbc355a5" path="res://scenes/NPC.tscn" id="3_a5knq"]
+[ext_resource type="Texture2D" uid="uid://ldcd6s2nvhek" path="res://Dialogue/Characters/Hana/Hana_idle.png" id="3_cvkxa"]
 [ext_resource type="Resource" path="res://Dialogue/timelines/Hana_Lighting.dtl" id="5_7ndrm"]
-[ext_resource type="PackedScene" uid="uid://cgdnc42xanwqm" path="res://Player/player.tscn" id="5_62vt8"]
+[ext_resource type="PackedScene" uid="uid://cgdnc42xanwqm" path="res://Player/Player.tscn" id="5_62vt8"]
 [ext_resource type="PackedScene" uid="uid://ckny7hpmgtnci" path="res://scenes/transition.tscn" id="6_w4pot"]
+[ext_resource type="PackedScene" uid="uid://rxrei1k6h0gp" path="res://scenes/foyerdress.gltf" id="7_wjiuj"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_t5y6s"]
 size = Vector3(60, 2, 60)
@@ -12,11 +14,12 @@ size = Vector3(60, 2, 60)
 [sub_resource type="BoxMesh" id="BoxMesh_sc2gv"]
 size = Vector3(60, 2, 60)
 
-[node name="Main" type="Node3D"]
+[node name="Main2" type="Node3D"]
 script = ExtResource("1_1ygro")
 
 [node name="StaticBody3D" type="StaticBody3D" parent="."]
 transform = Transform3D(0.707107, 0, 0.707107, 0, 1, 0, -0.707107, 0, 0.707107, 0, -1, 0)
+visible = false
 collision_mask = 7
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D"]
@@ -26,15 +29,16 @@ shape = SubResource("BoxShape3D_t5y6s")
 mesh = SubResource("BoxMesh_sc2gv")
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 0, 11, 0)
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 0, 11.6395, 0)
 
 [node name="NPC" parent="." instance=ExtResource("3_a5knq")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 5)
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, -4.92, 4.858, 12.228)
+Sprite = ExtResource("3_cvkxa")
 timeline = ExtResource("5_7ndrm")
 FMODEvent = 1
 
 [node name="Transition" parent="." instance=ExtResource("6_w4pot")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 40.72, 1, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -15.1618, 1, 0)
 dest = "res://scenes/TEST.tscn"
 
 [node name="dest0" type="Marker3D" parent="."]
@@ -55,3 +59,7 @@ current = true
 size = 50.0
 
 [node name="player" parent="." instance=ExtResource("5_62vt8")]
+transform = Transform3D(2.5, 0, 0, 0, 2.5, 0, 0, 0, 2.5, -8.017, -3.017, -4.954)
+
+[node name="foyerdress" parent="." instance=ExtResource("7_wjiuj")]
+transform = Transform3D(-2.86138, -0.00141807, 4.10031, -1.16026, 4.79593, -0.808019, -3.93273, -1.41389, -2.74492, 0, 0, 0)

@@ -1,0 +1,32 @@
+[gd_resource type="SpriteFrames" load_steps=5 format=3 uid="uid://1wimk2745xwf"]
+
+[ext_resource type="Texture2D" uid="uid://ldcd6s2nvhek" path="res://Dialogue/Characters/Hana/Hana_idle.png" id="1_l63tt"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_er0d6"]
+atlas = ExtResource("1_l63tt")
+region = Rect2(0, 0, 217, 400)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_wx8lh"]
+atlas = ExtResource("1_l63tt")
+region = Rect2(217, 0, 217, 400)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_he414"]
+atlas = ExtResource("1_l63tt")
+region = Rect2(434, 0, 217, 400)
+
+[resource]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_er0d6")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_wx8lh")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_he414")
+}],
+"loop": true,
+"name": &"default",
+"speed": 8.0
+}]
