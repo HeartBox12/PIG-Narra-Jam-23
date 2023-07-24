@@ -5,9 +5,9 @@
 [ext_resource type="Texture2D" uid="uid://ldcd6s2nvhek" path="res://Dialogue/Characters/Hana/Hana_idle.png" id="3_cvkxa"]
 [ext_resource type="PackedScene" uid="uid://cgdnc42xanwqm" path="res://Player/Player.tscn" id="5_62vt8"]
 [ext_resource type="PackedScene" uid="uid://ckny7hpmgtnci" path="res://scenes/transition.tscn" id="6_w4pot"]
-[ext_resource type="Script" path="res://scenes/blurRect.gd" id="7_r68r0"]
-[ext_resource type="Material" uid="uid://stb81wca4y0s" path="res://blur.tres" id="7_w6i6r"]
+[ext_resource type="Texture2D" uid="uid://bsv0rhvofofdq" path="res://sprites/title_test/title/test_title0000.png" id="7_1ms0i"]
 [ext_resource type="PackedScene" uid="uid://rxrei1k6h0gp" path="res://scenes/foyerdress.gltf" id="7_wjiuj"]
+[ext_resource type="Script" path="res://scenes/titleCard.gd" id="8_ts1bv"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_t5y6s"]
 size = Vector3(60, 2, 60)
@@ -27,7 +27,6 @@ script = ExtResource("1_1ygro")
 transform = Transform3D(0.707107, 0, 0.707107, 0, 1, 0, -0.707107, 0, 0.707107, 0, -1, 0)
 visible = false
 collision_layer = 7
-collision_mask = 7
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D"]
 shape = SubResource("BoxShape3D_t5y6s")
@@ -61,17 +60,10 @@ projection = 1
 current = true
 size = 50.0
 
-[node name="Blur" type="ColorRect" parent="Camera3D"]
-material = ExtResource("7_w6i6r")
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-offset_right = 2.0
-offset_bottom = 3.0
-grow_horizontal = 2
-grow_vertical = 2
-color = Color(0.262745, 0.262745, 0.262745, 0)
-script = ExtResource("7_r68r0")
+[node name="Title" type="Sprite3D" parent="Camera3D"]
+transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, 0, -0.0248861, -5.22431)
+texture = ExtResource("7_1ms0i")
+script = ExtResource("8_ts1bv")
 
 [node name="player" parent="." instance=ExtResource("5_62vt8")]
 transform = Transform3D(2.5, 0, 0, 0, 2.5, 0, 0, 0, 2.5, 2.05219, -1.1163, -2.97707)

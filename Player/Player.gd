@@ -10,33 +10,34 @@ var target_velocity = Vector3.ZERO
 var fall_timer = 0
 var current_animation = "idle"
 var a = 0
+var canMove = false
 
 func _physics_process(delta):
 	
-
 	animation_player.play()
-	current_animation = "idle"
-	var input_dir = Vector2.ZERO
-	if Input.is_action_pressed("move_right"):
-		input_dir.x += 1
-	if Input.is_action_pressed("move_left"):
-		input_dir.x -= 1
-	if Input.is_action_pressed("move_down"):
-		input_dir.y += 1
-	if Input.is_action_pressed("move_up"):
-		input_dir.y -= 1
-	input_dir = input_dir.normalized()
-	if input_dir.length() != 0:
-		a = input_dir.angle() / (PI/4)
-		a = wrapi(int(a), 0, 8)
-		current_animation = "move"
-	target_velocity.x = input_dir.x * speed
-	target_velocity.z = input_dir.y * speed
-	
-	if target_velocity.length() != 0:
-		$NPCDetector.look_at(position - target_velocity, Vector3.UP)#pivot the detector to face as player does.
-	velocity = target_velocity
-	move_and_slide()
+	if (Dialogic.current_timeline == null && canMove == true):
+		current_animation = "idle"
+		var input_dir = Vector2.ZERO
+		if Input.is_action_pressed("move_right"):
+			input_dir.x += 1
+		if Input.is_action_pressed("move_left"):
+			input_dir.x -= 1
+		if Input.is_action_pressed("move_down"):
+			input_dir.y += 1
+		if Input.is_action_pressed("move_up"):
+			input_dir.y -= 1
+		input_dir = input_dir.normalized()
+		if input_dir.length() != 0:
+			a = input_dir.angle() / (PI/4)
+			a = wrapi(int(a), 0, 8)
+			current_animation = "move"
+		target_velocity.x = input_dir.x * speed
+		target_velocity.z = input_dir.y * speed
+		
+		if target_velocity.length() != 0:
+			$NPCDetector.look_at(position - target_velocity, Vector3.UP)#pivot the detector to face as player does.
+		velocity = target_velocity
+		move_and_slide()
 	
 	animation_player.animation = current_animation + str(a) #FOR LATER
 	
