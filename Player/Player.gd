@@ -12,7 +12,7 @@ var current_animation = "idle"
 var a = 0
 
 func _physics_process(delta):
-	
+
 
 	animation_player.play()
 	current_animation = "idle"
@@ -50,10 +50,10 @@ func _physics_process(delta):
 	
 	if Input.is_action_just_pressed("ui_accept"):
 		if $NPCDetector.get_collision_count() != 0:
+			print($NPCDetector.get_collider(0))
 			var speaker = $NPCDetector.get_collider(0)
 			FMODStudioModule.get_studio_system().set_parameter_by_name("character", 2, false)
 			Dialogic.start(speaker.timeline) # Reference target's timeline
-			
 
 
 func _on_frame_changed():
