@@ -1,40 +1,43 @@
-[gd_scene load_steps=5 format=3 uid="uid://b1eoew802maqi"]
+[gd_scene load_steps=6 format=3 uid="uid://b1eoew802maqi"]
 
 [ext_resource type="Texture2D" uid="uid://cykftoeod5idh" path="res://sprites/credits.png" id="1_e2tvb"]
-[ext_resource type="Texture2D" uid="uid://bnhtllnwt1qnf" path="res://icon.svg" id="1_he6sn"]
+[ext_resource type="Texture2D" uid="uid://f1mjsntpp4nw" path="res://sprites/exit_button.png" id="2_2wpfc"]
 [ext_resource type="Script" path="res://scenes/Quit.gd" id="2_33yo3"]
 [ext_resource type="Script" path="res://scenes/Restart.gd" id="3_ka1ps"]
+[ext_resource type="Texture2D" uid="uid://4gv4yx4c3cke" path="res://sprites/restart_button.png" id="4_524vn"]
 
 [node name="Node2D" type="Node2D"]
-
-[node name="Sprite2D" type="Sprite2D" parent="."]
-position = Vector2(959, 547)
-texture = ExtResource("1_e2tvb")
 
 [node name="Camera2D" type="Camera2D" parent="."]
 anchor_mode = 0
 
-[node name="Quit" type="Button" parent="."]
-offset_left = 1398.0
-offset_top = 923.0
-offset_right = 1881.0
-offset_bottom = 1018.0
-action_mode = 0
-text = "Quit"
-icon = ExtResource("1_he6sn")
-script = ExtResource("2_33yo3")
-
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Quit"]
-position = Vector2(-1398, -923)
+[node name="Sprite2D" type="Sprite2D" parent="Camera2D"]
+position = Vector2(959, 547)
+texture = ExtResource("1_e2tvb")
 
 [node name="Restart" type="Button" parent="."]
-offset_left = 43.0
-offset_top = 913.0
-offset_right = 571.0
-offset_bottom = 1000.0
+offset_left = 96.0
+offset_top = 868.0
+offset_right = 544.0
+offset_bottom = 1024.0
 action_mode = 0
-text = "Restart"
+icon = ExtResource("4_524vn")
+flat = true
+icon_alignment = 1
+expand_icon = true
 script = ExtResource("3_ka1ps")
 
-[node name="AnimatedSprite2D2" type="AnimatedSprite2D" parent="Restart"]
-position = Vector2(-43, -913)
+[node name="Quit" type="Button" parent="."]
+anchors_preset = -1
+anchor_right = 11.304
+anchor_bottom = 4.525
+offset_left = 1330.0
+offset_top = 868.0
+offset_right = 1840.0
+offset_bottom = 1027.0
+action_mode = 0
+icon = ExtResource("2_2wpfc")
+flat = true
+icon_alignment = 1
+expand_icon = true
+script = ExtResource("2_33yo3")

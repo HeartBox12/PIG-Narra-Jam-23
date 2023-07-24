@@ -60,10 +60,12 @@ func _physics_process(delta):
 	if $NPCDetector.get_collision_count() != 0:
 		bubble.visible = true
 		bubble.play()
-		
+		if bubble.animation == "appear":
+			if bubble.animation_finished:
+				bubble.animation = "loop"
 	else:
 		bubble.visible = false
-		bubble.set_frame_and_progress(0,0)
+		bubble.animation = "appear"
 		bubble.stop()
 		
 	if Input.is_action_just_pressed("title"):

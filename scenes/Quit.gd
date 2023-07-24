@@ -8,7 +8,10 @@ func _ready():
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
-	pass
+	if self.is_hovered():
+		self_modulate.v = .9
+	else:
+		self_modulate.v = 1
 	
 func _pressed():
 	get_tree().quit()

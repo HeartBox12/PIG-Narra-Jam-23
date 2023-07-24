@@ -1,4 +1,4 @@
-[gd_scene load_steps=102 format=3 uid="uid://cgdnc42xanwqm"]
+[gd_scene load_steps=103 format=3 uid="uid://cgdnc42xanwqm"]
 
 [ext_resource type="Script" path="res://Player/Player.gd" id="1_vuqkh"]
 [ext_resource type="Texture2D" uid="uid://bqqish2o16ptk" path="res://sprites/PC_idle_front.png" id="2_0176y"]
@@ -7,6 +7,8 @@
 [ext_resource type="Texture2D" uid="uid://3pyqhxf0os7h" path="res://sprites/PC_walk_right.png" id="4_q06m7"]
 [ext_resource type="Texture2D" uid="uid://dge1bgahe7ajb" path="res://sprites/PC_idle_left.png" id="5_xoxkb"]
 [ext_resource type="Texture2D" uid="uid://dp46u1nfj0b5k" path="res://sprites/PC_walk_left.png" id="7_aioft"]
+[ext_resource type="Texture2D" uid="uid://b7wxsx3m4axef" path="res://sprites/interact_appear_anim.png" id="8_xlj5d"]
+[ext_resource type="Texture2D" uid="uid://cmrm8kehcfyq7" path="res://sprites/interact_loop.png" id="9_4koqq"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_yanpq"]
 radius = 0.511551
@@ -684,73 +686,66 @@ animations = [{
 "speed": 5.0
 }]
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_lsq8x"]
-atlas = ExtResource("7_aioft")
-region = Rect2(0, 0, 250, 400)
+[sub_resource type="AtlasTexture" id="AtlasTexture_jr724"]
+atlas = ExtResource("8_xlj5d")
+region = Rect2(0, 0, 50, 50)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_4w80l"]
-atlas = ExtResource("7_aioft")
-region = Rect2(250, 0, 250, 400)
+[sub_resource type="AtlasTexture" id="AtlasTexture_o0cxq"]
+atlas = ExtResource("8_xlj5d")
+region = Rect2(50, 0, 50, 50)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_qe3cy"]
-atlas = ExtResource("7_aioft")
-region = Rect2(500, 0, 250, 400)
+[sub_resource type="AtlasTexture" id="AtlasTexture_n2ouk"]
+atlas = ExtResource("8_xlj5d")
+region = Rect2(100, 0, 50, 50)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_hewcb"]
-atlas = ExtResource("7_aioft")
-region = Rect2(750, 0, 250, 400)
+[sub_resource type="AtlasTexture" id="AtlasTexture_byn0c"]
+atlas = ExtResource("8_xlj5d")
+region = Rect2(150, 0, 50, 50)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_mq1bs"]
-atlas = ExtResource("7_aioft")
-region = Rect2(1000, 0, 250, 400)
+[sub_resource type="AtlasTexture" id="AtlasTexture_lqouq"]
+atlas = ExtResource("9_4koqq")
+region = Rect2(0, 0, 50, 50)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_8wupk"]
-atlas = ExtResource("7_aioft")
-region = Rect2(1250, 0, 250, 400)
+[sub_resource type="AtlasTexture" id="AtlasTexture_6llbc"]
+atlas = ExtResource("9_4koqq")
+region = Rect2(50, 0, 50, 50)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_fm815"]
-atlas = ExtResource("7_aioft")
-region = Rect2(1500, 0, 250, 400)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_eblte"]
-atlas = ExtResource("7_aioft")
-region = Rect2(1750, 0, 250, 400)
+[sub_resource type="AtlasTexture" id="AtlasTexture_pmgna"]
+atlas = ExtResource("9_4koqq")
+region = Rect2(100, 0, 50, 50)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_88qdq"]
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_lsq8x")
+"texture": SubResource("AtlasTexture_jr724")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_4w80l")
+"texture": SubResource("AtlasTexture_o0cxq")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_qe3cy")
+"texture": SubResource("AtlasTexture_n2ouk")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_hewcb")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_mq1bs")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_8wupk")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_fm815")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_eblte")
+"texture": SubResource("AtlasTexture_byn0c")
 }],
 "loop": true,
-"name": &"default",
-"speed": 5.0
+"name": &"appear",
+"speed": 10.0
 }, {
-"frames": [],
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_lqouq")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_6llbc")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_pmgna")
+}],
 "loop": true,
-"name": &"new_animation",
-"speed": 5.0
+"name": &"loop",
+"speed": 8.0
 }]
 
 [node name="player" type="CharacterBody3D"]
@@ -762,7 +757,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.5394, 0)
 shape = SubResource("CapsuleShape3D_yanpq")
 
 [node name="NPCDetector" type="ShapeCast3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.5, 0)
+transform = Transform3D(1, 0, 0, 0, 3, 0, 0, 0, 0.906, 0, 3, 0)
 shape = SubResource("BoxShape3D_ekore")
 target_position = Vector3(0, 0, 2)
 collision_mask = 2
@@ -779,8 +774,9 @@ sprite_frames = SubResource("SpriteFrames_b0l80")
 animation = &"idle0"
 
 [node name="Bubble" type="AnimatedSprite3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 5.21864, 0)
+transform = Transform3D(1.8, 0, 0, 0, 1.8, 0, 0, 0, 1.8, 0, 4.31346, 0)
 billboard = 1
 sprite_frames = SubResource("SpriteFrames_88qdq")
+animation = &"appear"
 
 [connection signal="frame_changed" from="AnimatedSprite3D" to="." method="_on_frame_changed"]
