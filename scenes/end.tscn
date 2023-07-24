@@ -1,0 +1,40 @@
+[gd_scene load_steps=5 format=3 uid="uid://b1eoew802maqi"]
+
+[ext_resource type="Texture2D" uid="uid://cykftoeod5idh" path="res://sprites/credits.png" id="1_e2tvb"]
+[ext_resource type="Texture2D" uid="uid://bnhtllnwt1qnf" path="res://icon.svg" id="1_he6sn"]
+[ext_resource type="Script" path="res://scenes/Quit.gd" id="2_33yo3"]
+[ext_resource type="Script" path="res://scenes/Restart.gd" id="3_ka1ps"]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(959, 547)
+texture = ExtResource("1_e2tvb")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+anchor_mode = 0
+
+[node name="Quit" type="Button" parent="."]
+offset_left = 1398.0
+offset_top = 923.0
+offset_right = 1881.0
+offset_bottom = 1018.0
+action_mode = 0
+text = "Quit"
+icon = ExtResource("1_he6sn")
+script = ExtResource("2_33yo3")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Quit"]
+position = Vector2(-1398, -923)
+
+[node name="Restart" type="Button" parent="."]
+offset_left = 43.0
+offset_top = 913.0
+offset_right = 571.0
+offset_bottom = 1000.0
+action_mode = 0
+text = "Restart"
+script = ExtResource("3_ka1ps")
+
+[node name="AnimatedSprite2D2" type="AnimatedSprite2D" parent="Restart"]
+position = Vector2(-43, -913)

@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=3 uid="uid://d0fatpj1xblfe"]
+[gd_scene load_steps=13 format=3 uid="uid://d0fatpj1xblfe"]
 
 [ext_resource type="Script" path="res://scripts/Main.gd" id="1_1ygro"]
 [ext_resource type="PackedScene" uid="uid://mpydbc355a5" path="res://scenes/NPC.tscn" id="3_a5knq"]
@@ -8,6 +8,7 @@
 [ext_resource type="Texture2D" uid="uid://bsv0rhvofofdq" path="res://sprites/title_test/title/test_title0000.png" id="7_1ms0i"]
 [ext_resource type="PackedScene" uid="uid://rxrei1k6h0gp" path="res://scenes/foyerdress.gltf" id="7_wjiuj"]
 [ext_resource type="Script" path="res://scenes/titleCard.gd" id="8_ts1bv"]
+[ext_resource type="PackedScene" uid="uid://cx224vhy5ntcw" path="res://scenes/Foyer/foyerdress(withCollisions.tscn" id="9_57sth"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_t5y6s"]
 size = Vector3(60, 2, 60)
@@ -26,7 +27,7 @@ script = ExtResource("1_1ygro")
 [node name="StaticBody3D" type="StaticBody3D" parent="."]
 transform = Transform3D(0.707107, 0, 0.707107, 0, 1, 0, -0.707107, 0, 0.707107, 0, -1, 0)
 visible = false
-collision_layer = 7
+collision_layer = 0
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D"]
 shape = SubResource("BoxShape3D_t5y6s")
@@ -40,7 +41,7 @@ Sprite = ExtResource("3_cvkxa")
 FMODEvent = 1
 
 [node name="Transition" parent="." instance=ExtResource("6_w4pot")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 22.8382, 1, -6)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 19.7696, 1, -3.01198)
 dest = "res://scenes/TEST.tscn"
 
 [node name="dest0" type="Marker3D" parent="."]
@@ -66,10 +67,11 @@ texture = ExtResource("7_1ms0i")
 script = ExtResource("8_ts1bv")
 
 [node name="player" parent="." instance=ExtResource("5_62vt8")]
-transform = Transform3D(2.5, 0, 0, 0, 2.5, 0, 0, 0, 2.5, 2.05219, -1.1163, -2.97707)
+transform = Transform3D(2.5, 0, 0, 0, 2.5, 0, 0, 0, 2.5, 2.052, -1, -2.977)
 
 [node name="foyerdress" parent="." instance=ExtResource("7_wjiuj")]
 transform = Transform3D(-2.7232, 0, 4.19335, 0, 5, 0, -4.19335, 0, -2.7232, 0, 0, 0)
+visible = false
 
 [node name="OmniLight3D" type="OmniLight3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.52716, 23, 2.23462)
@@ -79,3 +81,6 @@ omni_range = 130.517
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
 environment = SubResource("Environment_6umgv")
+
+[node name="foyerdress2" parent="." instance=ExtResource("9_57sth")]
+transform = Transform3D(-2.7232, 0, 4.19335, 0, 5, 0, -4.19335, 0, -2.7232, 0, 0, 0)

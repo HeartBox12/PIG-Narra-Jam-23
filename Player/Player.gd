@@ -5,6 +5,7 @@ extends CharacterBody3D
 
 @onready var animation_player = get_node("AnimatedSprite3D")
 @onready var origin = get_node("../Origin")
+@onready var bubble = $Bubble
 
 var target_velocity = Vector3.ZERO
 var fall_timer = 0
@@ -36,6 +37,7 @@ func _physics_process(delta):
 		
 		if target_velocity.length() != 0:
 			$NPCDetector.look_at(position - target_velocity, Vector3.UP)#pivot the detector to face as player does.
+			
 		velocity = target_velocity
 		move_and_slide()
 	
@@ -55,6 +57,17 @@ func _physics_process(delta):
 			FMODStudioModule.get_studio_system().set_parameter_by_name("character", 2, false)
 			Dialogic.start(speaker.timeline) # Reference target's timeline
 			
+	if $NPCDetector.get_collision_count() != 0:
+		bubble.visible = true
+		bubble.play()
+		
+	else:
+		bubble.visible = false
+		bubble.set_frame_and_progress(0,0)
+		bubble.stop()
+		
+	if Input.is_action_just_pressed("title"):
+		get_tree().change_scene_to_file("res://scenes/end.tscn")
 
 
 func _on_frame_changed():

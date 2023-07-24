@@ -8,4 +8,5 @@ extends StaticBody3D
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	$Sprite3D.texture = Sprite # Apply sprite
+	$AnimatedSprite3D.play()
 
