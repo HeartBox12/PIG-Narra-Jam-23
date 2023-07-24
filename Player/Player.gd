@@ -73,12 +73,11 @@ func _physics_process(delta):
 
 
 func _on_frame_changed():
-	if (($AnimatedSprite3D.frame == 4 || $AnimatedSprite3D.frame == 7) && $AnimatedSprite3D.animation.find("move")):
-		print("Step")
+	if ($AnimatedSprite3D.frame == 3 || $AnimatedSprite3D.frame == 7):
+		print("step")
 		RuntimeManager.play_one_shot_id(FMODGuids.Events.SOUNDS_FOOTSTEP)
-		#Still not working
+		#Still not working (?)
 
 
 func _on_bubble_animation_finished():
-	print("switch")
 	bubble.animation = "loop"
