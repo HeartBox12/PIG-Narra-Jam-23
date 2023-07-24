@@ -1,0 +1,19 @@
+[gd_resource type="ParameterAsset" load_steps=3 format=3 uid="uid://ceokpqr3wl1ps"]
+
+[sub_resource type="FMOD_STUDIO_PARAMETER_ID" id="FMOD_STUDIO_PARAMETER_ID_4pvs8"]
+data1 = 2524664772
+data2 = 3401535641
+
+[sub_resource type="FMOD_STUDIO_PARAMETER_DESCRIPTION" id="FMOD_STUDIO_PARAMETER_DESCRIPTION_1la8o"]
+name = "Location"
+id = SubResource("FMOD_STUDIO_PARAMETER_ID_4pvs8")
+maximum = 1.0
+flags = 28
+guid = "{a5a333c6-c336-4324-aa52-41599fc1505d}"
+
+[resource]
+parameter_description = SubResource("FMOD_STUDIO_PARAMETER_DESCRIPTION_1la8o")
+labels = ["Not Office", "Office"]
+path = "parameter:/Location"
+guid = "{a5a333c6-c336-4324-aa52-41599fc1505d}"
+name = "Location"

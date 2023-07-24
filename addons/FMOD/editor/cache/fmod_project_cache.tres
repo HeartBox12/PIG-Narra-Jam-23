@@ -1,4 +1,4 @@
-[gd_resource type="ProjectCache" load_steps=16 format=3 uid="uid://3r6iu54tqhj4"]
+[gd_resource type="ProjectCache" load_steps=22 format=3 uid="uid://3r6iu54tqhj4"]
 
 [ext_resource type="BankAsset" uid="uid://clwojs20djyrm" path="res://addons/FMOD/editor/resources/banks/{91d6e2dc-7a18-43ba-ac47-0d48b26e86de}.tres" id="1_p2sq7"]
 [ext_resource type="BankAsset" uid="uid://c2geuw58pniln" path="res://addons/FMOD/editor/resources/banks/{09cbc208-0b63-0ff8-2a0e-87b6439d8046}.tres" id="2_5ossd"]
@@ -15,6 +15,41 @@
 [ext_resource type="EventAsset" uid="uid://bf7ic50418ubv" path="res://addons/FMOD/editor/resources/events/{a487f7af-bd88-494b-a857-2876c3c10ef6}.tres" id="11_304oa"]
 [ext_resource type="EventAsset" uid="uid://b2wtiua8s4urb" path="res://addons/FMOD/editor/resources/events/{628c977a-f06c-4d96-b40c-10b51bf99aa7}.tres" id="12_mje20"]
 [ext_resource type="EventAsset" uid="uid://vqft41fbd8jb" path="res://addons/FMOD/editor/resources/events/{d0000d6d-3c88-4969-bd73-782fd8d68200}.tres" id="13_7uriw"]
+
+[sub_resource type="FMOD_STUDIO_PARAMETER_ID" id="FMOD_STUDIO_PARAMETER_ID_4pvs8"]
+data1 = 2524664772
+data2 = 3401535641
+
+[sub_resource type="FMOD_STUDIO_PARAMETER_DESCRIPTION" id="FMOD_STUDIO_PARAMETER_DESCRIPTION_1la8o"]
+name = "Location"
+id = SubResource("FMOD_STUDIO_PARAMETER_ID_4pvs8")
+maximum = 1.0
+flags = 28
+guid = "{a5a333c6-c336-4324-aa52-41599fc1505d}"
+
+[sub_resource type="ParameterAsset" id="ParameterAsset_83yrm"]
+parameter_description = SubResource("FMOD_STUDIO_PARAMETER_DESCRIPTION_1la8o")
+labels = ["Not Office", "Office"]
+path = "parameter:/Location"
+guid = "{a5a333c6-c336-4324-aa52-41599fc1505d}"
+name = "Location"
+
+[sub_resource type="FMOD_STUDIO_PARAMETER_ID" id="FMOD_STUDIO_PARAMETER_ID_ljyxx"]
+data1 = 82295469
+data2 = 3528325627
+
+[sub_resource type="FMOD_STUDIO_PARAMETER_DESCRIPTION" id="FMOD_STUDIO_PARAMETER_DESCRIPTION_safyj"]
+name = "Tension"
+id = SubResource("FMOD_STUDIO_PARAMETER_ID_ljyxx")
+maximum = 1.0
+flags = 4
+guid = "{de0399aa-834a-4eb7-a428-f92cd1aa7c15}"
+
+[sub_resource type="ParameterAsset" id="ParameterAsset_nsjtv"]
+parameter_description = SubResource("FMOD_STUDIO_PARAMETER_DESCRIPTION_safyj")
+path = "parameter:/Tension"
+guid = "{de0399aa-834a-4eb7-a428-f92cd1aa7c15}"
+name = "Tension"
 
 [resource]
 banks = {
@@ -38,7 +73,9 @@ busses = {
 }
 parameters = {
 "{2c6df641-ee4c-459d-87a7-cd0f35951a18}": ExtResource("8_pcrk2"),
-"{6f83db57-d86d-4e47-80c4-dd993a06aefa}": ExtResource("7_mqub1")
+"{6f83db57-d86d-4e47-80c4-dd993a06aefa}": ExtResource("7_mqub1"),
+"{a5a333c6-c336-4324-aa52-41599fc1505d}": SubResource("ParameterAsset_83yrm"),
+"{de0399aa-834a-4eb7-a428-f92cd1aa7c15}": SubResource("ParameterAsset_nsjtv")
 }
 bank_tree = [{
 "children": [],
@@ -142,7 +179,19 @@ parameter_tree = [{
 }, {
 "children": [],
 "item_type": 6,
+"node_name": "Location",
+"path": "parameter:/Location",
+"resource": SubResource("ParameterAsset_83yrm")
+}, {
+"children": [],
+"item_type": 6,
 "node_name": "Paused",
 "path": "parameter:/Paused",
 "resource": ExtResource("8_pcrk2")
+}, {
+"children": [],
+"item_type": 6,
+"node_name": "Tension",
+"path": "parameter:/Tension",
+"resource": SubResource("ParameterAsset_nsjtv")
 }]
