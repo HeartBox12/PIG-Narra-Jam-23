@@ -1,0 +1,64 @@
+[gd_scene load_steps=10 format=3 uid="uid://cx224vhy5ntcw"]
+
+[ext_resource type="PackedScene" uid="uid://rxrei1k6h0gp" path="res://scenes/foyerdress.gltf" id="1_4tk7e"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_p1wqu"]
+size = Vector3(4.95264, 0.203637, 9.36784)
+
+[sub_resource type="CylinderShape3D" id="CylinderShape3D_u3ffp"]
+radius = 1.41808
+
+[sub_resource type="CylinderShape3D" id="CylinderShape3D_ofqsa"]
+height = 0.864131
+radius = 0.334574
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_6d7h8"]
+size = Vector3(2.37232, 1.86988, 3.22653)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_tbbib"]
+size = Vector3(4.9792, 3.27368, 0.207453)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_jxnu6"]
+size = Vector3(0.173394, 2.91428, 9.39916)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_ks4o5"]
+size = Vector3(5.08533, 2.40889, 0.235712)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_8wyv2"]
+size = Vector3(0.248542, 2.76603, 9.50698)
+
+[node name="foyerdress" instance=ExtResource("1_4tk7e")]
+
+[node name="StaticBody3D" type="StaticBody3D" parent="ROOT/foyer_base -col" index="1"]
+
+[node name="Floor" type="CollisionShape3D" parent="ROOT/foyer_base -col/StaticBody3D" index="0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.189354, -0.343948, 0)
+shape = SubResource("BoxShape3D_p1wqu")
+
+[node name="TableAndChairs" type="CollisionShape3D" parent="ROOT/foyer_base -col/StaticBody3D" index="1"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.44998, 0.578079, -2.92663)
+shape = SubResource("CylinderShape3D_u3ffp")
+
+[node name="TrashCan" type="CollisionShape3D" parent="ROOT/foyer_base -col/StaticBody3D" index="2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.75486, 0.209469, -1.4728)
+shape = SubResource("CylinderShape3D_ofqsa")
+
+[node name="TicketBooth" type="CollisionShape3D" parent="ROOT/foyer_base -col/StaticBody3D" index="3"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.06866, 0.729767, 3.19151)
+shape = SubResource("BoxShape3D_6d7h8")
+
+[node name="wall" type="CollisionShape3D" parent="ROOT/foyer_base -col/StaticBody3D" index="4"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.170555, 1.20557, 4.71808)
+shape = SubResource("BoxShape3D_tbbib")
+
+[node name="wall2" type="CollisionShape3D" parent="ROOT/foyer_base -col/StaticBody3D" index="5"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.56678, 1.01852, 0.0510712)
+shape = SubResource("BoxShape3D_jxnu6")
+
+[node name="wall3" type="CollisionShape3D" parent="ROOT/foyer_base -col/StaticBody3D" index="6"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.11953, 0.777199, -4.51963)
+shape = SubResource("BoxShape3D_ks4o5")
+
+[node name="wall4" type="CollisionShape3D" parent="ROOT/foyer_base -col/StaticBody3D" index="7"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.26013, 0.955627, 0.0767746)
+shape = SubResource("BoxShape3D_8wyv2")

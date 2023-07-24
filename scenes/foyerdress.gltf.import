@@ -13,7 +13,7 @@ dest_files=["res://.godot/imported/foyerdress.gltf-7d0bf17beef48fbdbe8fac789618b
 
 [params]
 
-nodes/root_type="Node3D"
+nodes/root_type="StaticBody3D"
 nodes/root_name="Scene Root"
 nodes/apply_root_scale=true
 nodes/root_scale=1.0
