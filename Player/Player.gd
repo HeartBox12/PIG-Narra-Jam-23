@@ -12,6 +12,7 @@ var fall_timer = 0
 var current_animation = "idle"
 var a = 0
 var canMove = false
+var prevColCount = 0
 
 func _physics_process(delta):
 	
@@ -35,7 +36,7 @@ func _physics_process(delta):
 		target_velocity.x = input_dir.x * speed
 		target_velocity.z = input_dir.y * speed
 		
-		if target_velocity.length() != 0:
+		if input_dir.length() != 0:
 			$NPCDetector.look_at(position - target_velocity, Vector3.UP)#pivot the detector to face as player does.
 			
 		velocity = target_velocity
@@ -52,7 +53,7 @@ func _physics_process(delta):
 			target_velocity.y = 0
 	
 	if Input.is_action_just_pressed("ui_accept"):
-		if $NPCDetector.get_collision_count() != 0:
+		if $NPCDetector.get_collision_count() != 0 && prevColCount == 0:
 			var speaker = $NPCDetector.get_collider(0)
 			FMODStudioModule.get_studio_system().set_parameter_by_name("character", 2, false)
 			Dialogic.start(speaker.timeline) # Reference target's timeline
@@ -60,18 +61,24 @@ func _physics_process(delta):
 	if $NPCDetector.get_collision_count() != 0:
 		bubble.visible = true
 		bubble.play()
-		if bubble.animation == "appear":
-			if bubble.animation_finished:
-				bubble.animation = "loop"
 	else:
 		bubble.visible = false
 		bubble.animation = "appear"
 		bubble.stop()
-		
+	
 	if Input.is_action_just_pressed("title"):
 		get_tree().change_scene_to_file("res://scenes/end.tscn")
+		
+	prevColCount = $NPCDetector.get_collision_count()
 
 
 func _on_frame_changed():
-	if (($AnimatedSprite3D.frame == 4 || $AnimatedSprite3D.frame == 7) && $AnimatedSprite3D.animation.find("Move")):
+	if (($AnimatedSprite3D.frame == 4 || $AnimatedSprite3D.frame == 7) && $AnimatedSprite3D.animation.find("move")):
 		print("Step")
+		RuntimeManager.play_one_shot_id(FMODGuids.Events.SOUNDS_FOOTSTEP)
+		#Still not working
+
+
+func _on_bubble_animation_finished():
+	print("switch")
+	bubble.animation = "loop"

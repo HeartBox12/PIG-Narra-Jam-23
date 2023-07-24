@@ -764,6 +764,7 @@ collision_mask = 2
 
 [node name="Sprite3D" type="Sprite3D" parent="NPCDetector"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.0472376, 2)
+visible = false
 billboard = 1
 texture = ExtResource("2_gvc4v")
 
@@ -778,5 +779,8 @@ transform = Transform3D(1.8, 0, 0, 0, 1.8, 0, 0, 0, 1.8, 0, 4.31346, 0)
 billboard = 1
 sprite_frames = SubResource("SpriteFrames_88qdq")
 animation = &"appear"
+frame_progress = 0.240147
 
 [connection signal="frame_changed" from="AnimatedSprite3D" to="." method="_on_frame_changed"]
+[connection signal="animation_finished" from="Bubble" to="." method="_on_bubble_animation_finished"]
+[connection signal="animation_looped" from="Bubble" to="." method="_on_bubble_animation_finished"]
