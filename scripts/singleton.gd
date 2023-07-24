@@ -5,4 +5,6 @@ var FMODInstance
 
 func _ready():
 	
-	RuntimeManager.play_one_shot_id(FMODGuids.Events.MUSIC_MUSIC)
+	FMODInstance = FMODStudioModule.get_studio_system().get_event_by_id(FMODGuids.Events.MUSIC_MUSIC).create_instance()
+	FMODInstance.start()
+	FMODInstance.release() #Move to the exit sequence
