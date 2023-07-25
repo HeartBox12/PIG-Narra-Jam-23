@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=3 uid="uid://d0fatpj1xblfe"]
+[gd_scene load_steps=16 format=3 uid="uid://d0fatpj1xblfe"]
 
 [ext_resource type="Script" path="res://scripts/Main.gd" id="1_1ygro"]
 [ext_resource type="PackedScene" uid="uid://cgdnc42xanwqm" path="res://Player/Player.tscn" id="5_62vt8"]
@@ -9,6 +9,7 @@
 [ext_resource type="Script" path="res://scenes/titleCard.gd" id="8_ts1bv"]
 [ext_resource type="PackedScene" uid="uid://cx224vhy5ntcw" path="res://scenes/Foyer/foyerdress(withCollisions.tscn" id="9_57sth"]
 [ext_resource type="PackedScene" uid="uid://mpydbc355a5" path="res://scenes/Hana.tscn" id="9_ibg75"]
+[ext_resource type="PackedScene" uid="uid://be7r8d8kox8uk" path="res://scenes/Kat.tscn" id="10_4djec"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_t5y6s"]
 size = Vector3(60, 2, 60)
@@ -134,5 +135,8 @@ transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, -15, 0, 4)
 
 [node name="Hana" parent="." instance=ExtResource("9_ibg75")]
 transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, -5, 1, 14)
+
+[node name="Kat" parent="." instance=ExtResource("10_4djec")]
+transform = Transform3D(1.5, 0, 0, 0, 1.5, 0, 0, 0, 1.5, 11.7013, 1, -16.1821)
 
 [connection signal="timeout" from="ShapeCast3D/Timer" to="ShapeCast3D" method="_on_timeout"]
