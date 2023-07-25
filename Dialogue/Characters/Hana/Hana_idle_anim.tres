@@ -2,15 +2,15 @@
 
 [ext_resource type="Texture2D" uid="uid://ldcd6s2nvhek" path="res://Dialogue/Characters/Hana/Hana_idle.png" id="1_l63tt"]
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_er0d6"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_yas4p"]
 atlas = ExtResource("1_l63tt")
 region = Rect2(0, 0, 217, 400)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_wx8lh"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_r56ms"]
 atlas = ExtResource("1_l63tt")
 region = Rect2(217, 0, 217, 400)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_he414"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_1r4ye"]
 atlas = ExtResource("1_l63tt")
 region = Rect2(434, 0, 217, 400)
 
@@ -18,13 +18,13 @@ region = Rect2(434, 0, 217, 400)
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_er0d6")
+"texture": SubResource("AtlasTexture_yas4p")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_wx8lh")
+"texture": SubResource("AtlasTexture_r56ms")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_he414")
+"texture": SubResource("AtlasTexture_1r4ye")
 }],
 "loop": true,
 "name": &"default",

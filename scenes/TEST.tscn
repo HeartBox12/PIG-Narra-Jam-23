@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" path="res://scripts/Main.gd" id="1_wlk2w"]
 [ext_resource type="PackedScene" uid="uid://cgdnc42xanwqm" path="res://Player/Player.tscn" id="2_c5385"]
-[ext_resource type="PackedScene" uid="uid://mpydbc355a5" path="res://scenes/NPC.tscn" id="3_6w068"]
+[ext_resource type="PackedScene" uid="uid://mpydbc355a5" path="res://scenes/Hana.tscn" id="3_6w068"]
 [ext_resource type="PackedScene" uid="uid://ckny7hpmgtnci" path="res://scenes/transition.tscn" id="6_3juna"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_t5y6s"]

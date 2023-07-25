@@ -67,15 +67,11 @@ func _physics_process(delta):
 		bubble.visible = false
 		bubble.animation = "appear"
 		bubble.stop()
-	
-	if Input.is_action_just_pressed("title"):
-		get_tree().change_scene_to_file("res://scenes/end.tscn")
 
 
 func _on_frame_changed():
 	if ($AnimatedSprite3D.frame == 3 || $AnimatedSprite3D.frame == 7) && canMove:
 		RuntimeManager.play_one_shot_id(FMODGuids.Events.SOUNDS_FOOTSTEP)
-		#Still not working (?)
 
 
 func _on_bubble_animation_finished():

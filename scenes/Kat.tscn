@@ -1,0 +1,67 @@
+[gd_scene load_steps=10 format=3 uid="uid://be7r8d8kox8uk"]
+
+[ext_resource type="Script" path="res://scripts/NPC.gd" id="1_pk58d"]
+[ext_resource type="Resource" path="res://Dialogue/timelines/Kat_BoxOffice.dtl" id="2_l5lff"]
+[ext_resource type="Texture2D" uid="uid://do6efshjrvhml" path="res://Dialogue/Characters/Kat/Kat_idle.png" id="3_aurrv"]
+[ext_resource type="Texture2D" uid="uid://bnhtllnwt1qnf" path="res://icon.svg" id="4_2nf5g"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_t4wjf"]
+atlas = ExtResource("3_aurrv")
+region = Rect2(0, 0, 207, 400)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_tkogm"]
+atlas = ExtResource("3_aurrv")
+region = Rect2(207, 0, 207, 400)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_itsux"]
+atlas = ExtResource("3_aurrv")
+region = Rect2(414, 0, 207, 400)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_lrkcp"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_t4wjf")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_tkogm")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_itsux")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="CylinderShape3D" id="CylinderShape3D_2o6co"]
+radius = 1.0
+
+[node name="NPC" type="StaticBody3D"]
+collision_layer = 2
+collision_mask = 0
+script = ExtResource("1_pk58d")
+timeline = ExtResource("2_l5lff")
+
+[node name="AnimatedSprite3D" type="AnimatedSprite3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.99832, 0)
+billboard = 1
+sprite_frames = SubResource("SpriteFrames_lrkcp")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
+shape = SubResource("CylinderShape3D_2o6co")
+
+[node name="Sprite3D" type="Sprite3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
+visible = false
+billboard = 1
+texture = ExtResource("4_2nf5g")
+
+[node name="Area3D" type="Area3D" parent="."]
+collision_layer = 2
+collision_mask = 0
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
+shape = SubResource("CylinderShape3D_2o6co")
