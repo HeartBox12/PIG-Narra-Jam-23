@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=3 uid="uid://d0fatpj1xblfe"]
+[gd_scene load_steps=17 format=3 uid="uid://cj10gfcyo5hhb"]
 
 [ext_resource type="Script" path="res://scripts/Main.gd" id="1_1ygro"]
 [ext_resource type="PackedScene" uid="uid://mpydbc355a5" path="res://scenes/NPC.tscn" id="3_a5knq"]
@@ -24,6 +24,34 @@ adjustment_enabled = true
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_tqyk6"]
 size = Vector3(1.5, 2, 0.5)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_5adjg"]
+
+[sub_resource type="GDScript" id="GDScript_pntle"]
+script/source = "extends ShapeCast3D
+
+var openCall:Callable = Callable(self, \"open_done\")
+
+var openInst
+var closeInst
+
+func _process(delta):
+	if is_colliding() == true:
+		print(\"col\")
+		openInst = FMODStudioModule.get_studio_system().get_event_by_id(FMODGuids.Events.SOUNDS_DOOR_OPEN).create_instance()
+		#variable definition from hell
+		openInst.start()
+		
+		openInst.set_callback(openCall, FMODStudioModule.FMOD_STUDIO_EVENT_CALLBACK_TIMELINE_MARKER)
+		
+		self.enabled = false
+
+func open_done():
+	openInst.release()
+	closeInst = FMODStudioModule.get_studio_system().get_event_by_id(FMODGuids.Events.SOUNDS_DOOR_CLOSE).create_instance()
+	closeInst.start()
+	closeInst.release()
+"
 
 [node name="Main2" type="Node3D"]
 script = ExtResource("1_1ygro")
@@ -100,6 +128,13 @@ shape = SubResource("BoxShape3D_tqyk6")
 
 [node name="Timer" type="Timer" parent="foyerdress2/Exit"]
 wait_time = 10.0
+
+[node name="ShapeCast3D" type="ShapeCast3D" parent="."]
+transform = Transform3D(4, 0, 0, 0, 4, 0, 0, 0, 4, 21.8235, 1.98187, -6.69456)
+shape = SubResource("BoxShape3D_5adjg")
+target_position = Vector3(0, 0, 0)
+collision_mask = 6
+script = SubResource("GDScript_pntle")
 
 [connection signal="body_entered" from="foyerdress2/Exit" to="." method="_on_body_entered"]
 [connection signal="body_shape_entered" from="foyerdress2/Exit" to="foyerdress2/Exit" method="_on_body_shape_entered"]
