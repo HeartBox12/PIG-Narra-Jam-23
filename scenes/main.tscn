@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=3 uid="uid://d0fatpj1xblfe"]
+[gd_scene load_steps=15 format=3 uid="uid://d0fatpj1xblfe"]
 
 [ext_resource type="Script" path="res://scripts/Main.gd" id="1_1ygro"]
 [ext_resource type="PackedScene" uid="uid://mpydbc355a5" path="res://scenes/NPC.tscn" id="3_a5knq"]
@@ -8,6 +8,7 @@
 [ext_resource type="Texture2D" uid="uid://bsv0rhvofofdq" path="res://sprites/title_test/title/test_title0000.png" id="7_1ms0i"]
 [ext_resource type="PackedScene" uid="uid://rxrei1k6h0gp" path="res://scenes/foyerdress.gltf" id="7_wjiuj"]
 [ext_resource type="Script" path="res://scenes/titleCard.gd" id="8_ts1bv"]
+[ext_resource type="PackedScene" uid="uid://cx224vhy5ntcw" path="res://scenes/Foyer/foyerdress(withCollisions.tscn" id="9_57sth"]
 [ext_resource type="Script" path="res://scripts/ExitStageLeft.gd" id="9_b2gcd"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_t5y6s"]
@@ -16,13 +17,13 @@ size = Vector3(60, 2, 60)
 [sub_resource type="BoxMesh" id="BoxMesh_sc2gv"]
 size = Vector3(60, 2, 60)
 
-[sub_resource type="BoxShape3D" id="BoxShape3D_tqyk6"]
-size = Vector3(1.5, 2, 0.5)
-
 [sub_resource type="Environment" id="Environment_6umgv"]
 background_mode = 1
 background_color = Color(0.1512, 0.18684, 0.27, 1)
 adjustment_enabled = true
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_tqyk6"]
+size = Vector3(1.5, 2, 0.5)
 
 [node name="Main2" type="Node3D"]
 script = ExtResource("1_1ygro")
@@ -77,12 +78,6 @@ transform = Transform3D(2.5, 0, 0, 0, 2.5, 0, 0, 0, 2.5, 2.052, -1, -2.977)
 [node name="foyerdress" parent="." instance=ExtResource("7_wjiuj")]
 transform = Transform3D(-2.7232, 0, 4.19335, 0, 5, 0, -4.19335, 0, -2.7232, 0, 0, 0)
 
-[node name="Exit" type="Area3D" parent="foyerdress"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.2, 1, 4.5)
-collision_mask = 5
-script = ExtResource("9_b2gcd")
-shape = SubResource("BoxShape3D_tqyk6")
-
 [node name="OmniLight3D" type="OmniLight3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.52716, 23, 2.23462)
 light_color = Color(0.611765, 0.537255, 0.537255, 1)
@@ -92,7 +87,20 @@ omni_range = 130.517
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
 environment = SubResource("Environment_6umgv")
 
-[node name="Timer" type="Timer" parent="."]
+[node name="foyerdress2" parent="." instance=ExtResource("9_57sth")]
+transform = Transform3D(-2.7232, 0, 4.19335, 0, 5, 0, -4.19335, 0, -2.7232, 0, 0, 0)
+
+[node name="Exit" type="Area3D" parent="foyerdress2"]
+transform = Transform3D(-2.7232, 0, 4.19335, 0, 5, 0, -4.19335, 0, -2.7232, 22.1379, 5, -7.22238)
+collision_mask = 5
+script = ExtResource("9_b2gcd")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="foyerdress2/Exit"]
+shape = SubResource("BoxShape3D_tqyk6")
+
+[node name="Timer" type="Timer" parent="foyerdress2/Exit"]
 wait_time = 10.0
 
-[connection signal="body_entered" from="foyerdress/Exit" to="." method="_on_body_entered"]
+[connection signal="body_entered" from="foyerdress2/Exit" to="." method="_on_body_entered"]
+[connection signal="body_shape_entered" from="foyerdress2/Exit" to="foyerdress2/Exit" method="_on_body_shape_entered"]
+[connection signal="timeout" from="foyerdress2/Exit/Timer" to="foyerdress2/Exit" method="_on_timeout"]
