@@ -87,9 +87,6 @@ omni_range = 130.517
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
 environment = SubResource("Environment_6umgv")
 
-[node name="Timer" type="Timer" parent="."]
-wait_time = 10.0
-
 [node name="foyerdress2" parent="." instance=ExtResource("9_57sth")]
 transform = Transform3D(-2.7232, 0, 4.19335, 0, 5, 0, -4.19335, 0, -2.7232, 0, 0, 0)
 
@@ -101,5 +98,9 @@ script = ExtResource("9_b2gcd")
 [node name="CollisionShape3D" type="CollisionShape3D" parent="foyerdress2/Exit"]
 shape = SubResource("BoxShape3D_tqyk6")
 
+[node name="Timer" type="Timer" parent="foyerdress2/Exit"]
+wait_time = 10.0
+
 [connection signal="body_entered" from="foyerdress2/Exit" to="." method="_on_body_entered"]
 [connection signal="body_shape_entered" from="foyerdress2/Exit" to="foyerdress2/Exit" method="_on_body_shape_entered"]
+[connection signal="timeout" from="foyerdress2/Exit/Timer" to="foyerdress2/Exit" method="_on_timeout"]
