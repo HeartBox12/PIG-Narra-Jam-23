@@ -1,4 +1,4 @@
-[gd_scene load_steps=105 format=3 uid="uid://cgdnc42xanwqm"]
+[gd_scene load_steps=106 format=3 uid="uid://cgdnc42xanwqm"]
 
 [ext_resource type="Script" path="res://Player/Player.gd" id="1_vuqkh"]
 [ext_resource type="Texture2D" uid="uid://bqqish2o16ptk" path="res://sprites/PC_idle_front.png" id="2_0176y"]
@@ -6,6 +6,7 @@
 [ext_resource type="Texture2D" uid="uid://byh34mbg4wts" path="res://sprites/PC_idle_right.png" id="3_355dx"]
 [ext_resource type="Texture2D" uid="uid://3pyqhxf0os7h" path="res://sprites/PC_walk_right.png" id="4_q06m7"]
 [ext_resource type="Texture2D" uid="uid://dge1bgahe7ajb" path="res://sprites/PC_idle_left.png" id="5_xoxkb"]
+[ext_resource type="Texture2D" uid="uid://b0fjko3xa17wb" path="res://sprites/npc_back_idle.png" id="6_0wxd7"]
 [ext_resource type="Texture2D" uid="uid://dp46u1nfj0b5k" path="res://sprites/PC_walk_left.png" id="7_aioft"]
 [ext_resource type="Texture2D" uid="uid://luwmojsnld7i" path="res://sprites/Pc_walk_front.png" id="7_mjg5j"]
 [ext_resource type="Texture2D" uid="uid://b7wxsx3m4axef" path="res://sprites/interact_appear_anim.png" id="8_xlj5d"]
@@ -67,16 +68,16 @@ region = Rect2(250, 0, 250, 400)
 atlas = ExtResource("5_xoxkb")
 region = Rect2(500, 0, 250, 400)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_1ddm4"]
-atlas = ExtResource("2_0176y")
+[sub_resource type="AtlasTexture" id="AtlasTexture_0kvh5"]
+atlas = ExtResource("6_0wxd7")
 region = Rect2(0, 0, 250, 400)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_wgtj3"]
-atlas = ExtResource("2_0176y")
+[sub_resource type="AtlasTexture" id="AtlasTexture_f152s"]
+atlas = ExtResource("6_0wxd7")
 region = Rect2(250, 0, 250, 400)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_n70c0"]
-atlas = ExtResource("2_0176y")
+[sub_resource type="AtlasTexture" id="AtlasTexture_ee1ot"]
+atlas = ExtResource("6_0wxd7")
 region = Rect2(500, 0, 250, 400)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_7wedi"]
@@ -435,13 +436,13 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_1ddm4")
+"texture": SubResource("AtlasTexture_0kvh5")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_wgtj3")
+"texture": SubResource("AtlasTexture_f152s")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_n70c0")
+"texture": SubResource("AtlasTexture_ee1ot")
 }],
 "loop": true,
 "name": &"idle6",
@@ -781,7 +782,7 @@ texture = ExtResource("2_gvc4v")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.7016, 0)
 billboard = 1
 sprite_frames = SubResource("SpriteFrames_b0l80")
-animation = &"idle2"
+animation = &"idle6"
 
 [node name="Bubble" type="AnimatedSprite3D" parent="."]
 transform = Transform3D(1.8, 0, 0, 0, 1.8, 0, 0, 0, 1.8, 0, 4.31346, 0)
