@@ -2,7 +2,7 @@
 
 [resource]
 file_path = "res://FMODBanks/Sounds Bank.bank"
-modified_time = 1689998204
+modified_time = 1690246324
 path = "bank:/Sounds Bank"
 guid = "{9c4cf937-3557-4b33-abb4-8e300f3b14e8}"
 name = "Sounds Bank"

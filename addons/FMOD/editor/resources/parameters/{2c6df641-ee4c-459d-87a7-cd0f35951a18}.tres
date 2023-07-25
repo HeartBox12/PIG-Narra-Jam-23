@@ -1,18 +1,18 @@
 [gd_resource type="ParameterAsset" load_steps=3 format=3 uid="uid://c30bn7ftnj2co"]
 
-[sub_resource type="FMOD_STUDIO_PARAMETER_ID" id="FMOD_STUDIO_PARAMETER_ID_nhy04"]
+[sub_resource type="FMOD_STUDIO_PARAMETER_ID" id="FMOD_STUDIO_PARAMETER_ID_xu1t0"]
 data1 = 2985287018
 data2 = 3309176953
 
-[sub_resource type="FMOD_STUDIO_PARAMETER_DESCRIPTION" id="FMOD_STUDIO_PARAMETER_DESCRIPTION_5gl3n"]
+[sub_resource type="FMOD_STUDIO_PARAMETER_DESCRIPTION" id="FMOD_STUDIO_PARAMETER_DESCRIPTION_88oim"]
 name = "Paused"
-id = SubResource("FMOD_STUDIO_PARAMETER_ID_nhy04")
+id = SubResource("FMOD_STUDIO_PARAMETER_ID_xu1t0")
 maximum = 1.0
 flags = 4
 guid = "{2c6df641-ee4c-459d-87a7-cd0f35951a18}"
 
 [resource]
-parameter_description = SubResource("FMOD_STUDIO_PARAMETER_DESCRIPTION_5gl3n")
+parameter_description = SubResource("FMOD_STUDIO_PARAMETER_DESCRIPTION_88oim")
 path = "parameter:/Paused"
 guid = "{2c6df641-ee4c-459d-87a7-cd0f35951a18}"
 name = "Paused"

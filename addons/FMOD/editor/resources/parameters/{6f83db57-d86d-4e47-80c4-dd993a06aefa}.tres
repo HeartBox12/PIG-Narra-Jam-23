@@ -1,18 +1,18 @@
 [gd_resource type="ParameterAsset" load_steps=3 format=3 uid="uid://dhlnl36dwerjq"]
 
-[sub_resource type="FMOD_STUDIO_PARAMETER_ID" id="FMOD_STUDIO_PARAMETER_ID_883yl"]
+[sub_resource type="FMOD_STUDIO_PARAMETER_ID" id="FMOD_STUDIO_PARAMETER_ID_mvokl"]
 data1 = 1495653246
 data2 = 3697042335
 
-[sub_resource type="FMOD_STUDIO_PARAMETER_DESCRIPTION" id="FMOD_STUDIO_PARAMETER_DESCRIPTION_hqgb3"]
-name = "Character"
-id = SubResource("FMOD_STUDIO_PARAMETER_ID_883yl")
+[sub_resource type="FMOD_STUDIO_PARAMETER_DESCRIPTION" id="FMOD_STUDIO_PARAMETER_DESCRIPTION_6m74a"]
+name = "?Ôqû"
+id = SubResource("FMOD_STUDIO_PARAMETER_ID_mvokl")
 maximum = 8.0
 flags = 28
 guid = "{6f83db57-d86d-4e47-80c4-dd993a06aefa}"
 
 [resource]
-parameter_description = SubResource("FMOD_STUDIO_PARAMETER_DESCRIPTION_hqgb3")
+parameter_description = SubResource("FMOD_STUDIO_PARAMETER_DESCRIPTION_6m74a")
 labels = ["None", "Hana (Chip)", "Kat (Flute)", "Marcel", "Adnan (Bassoon)", "Eduardo (Drumset)", "Toni (Clarinet)", "Leigh (Guitar)", "Caroline (Cello)"]
 path = "parameter:/Character"
 guid = "{6f83db57-d86d-4e47-80c4-dd993a06aefa}"

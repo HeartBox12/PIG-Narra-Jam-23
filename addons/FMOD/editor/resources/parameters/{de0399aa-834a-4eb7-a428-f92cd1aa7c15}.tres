@@ -1,18 +1,18 @@
 [gd_resource type="ParameterAsset" load_steps=3 format=3 uid="uid://b0v08u114lmcv"]
 
-[sub_resource type="FMOD_STUDIO_PARAMETER_ID" id="FMOD_STUDIO_PARAMETER_ID_ljyxx"]
+[sub_resource type="FMOD_STUDIO_PARAMETER_ID" id="FMOD_STUDIO_PARAMETER_ID_iidg4"]
 data1 = 82295469
 data2 = 3528325627
 
-[sub_resource type="FMOD_STUDIO_PARAMETER_DESCRIPTION" id="FMOD_STUDIO_PARAMETER_DESCRIPTION_safyj"]
+[sub_resource type="FMOD_STUDIO_PARAMETER_DESCRIPTION" id="FMOD_STUDIO_PARAMETER_DESCRIPTION_ghy5m"]
 name = "Tension"
-id = SubResource("FMOD_STUDIO_PARAMETER_ID_ljyxx")
+id = SubResource("FMOD_STUDIO_PARAMETER_ID_iidg4")
 maximum = 1.0
 flags = 4
 guid = "{de0399aa-834a-4eb7-a428-f92cd1aa7c15}"
 
 [resource]
-parameter_description = SubResource("FMOD_STUDIO_PARAMETER_DESCRIPTION_safyj")
+parameter_description = SubResource("FMOD_STUDIO_PARAMETER_DESCRIPTION_ghy5m")
 path = "parameter:/Tension"
 guid = "{de0399aa-834a-4eb7-a428-f92cd1aa7c15}"
 name = "Tension"
