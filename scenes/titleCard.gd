@@ -6,7 +6,7 @@ func _ready():
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta):
+func _process(_delta):
 	if Input.is_anything_pressed():
 		var tween = get_tree().create_tween()
 		tween.tween_property(self, "modulate", Color(1,1,1,0), 1)

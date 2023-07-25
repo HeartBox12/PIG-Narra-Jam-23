@@ -1,4 +1,4 @@
-[gd_scene load_steps=17 format=3 uid="uid://cj10gfcyo5hhb"]
+[gd_scene load_steps=17 format=3 uid="uid://d0fatpj1xblfe"]
 
 [ext_resource type="Script" path="res://scripts/Main.gd" id="1_1ygro"]
 [ext_resource type="PackedScene" uid="uid://mpydbc355a5" path="res://scenes/NPC.tscn" id="3_a5knq"]
@@ -35,7 +35,7 @@ var openCall:Callable = Callable(self, \"open_done\")
 var openInst
 var closeInst
 
-func _process(delta):
+func _process(_delta):
 	if is_colliding() == true:
 		print(\"col\")
 		openInst = FMODStudioModule.get_studio_system().get_event_by_id(FMODGuids.Events.SOUNDS_DOOR_OPEN).create_instance()
@@ -46,11 +46,13 @@ func _process(delta):
 		
 		self.enabled = false
 
-func open_done():
+func open_done(_args):
 	openInst.release()
 	closeInst = FMODStudioModule.get_studio_system().get_event_by_id(FMODGuids.Events.SOUNDS_DOOR_CLOSE).create_instance()
 	closeInst.start()
 	closeInst.release()
+	Singleton.FMODInstance.stop()
+	
 "
 
 [node name="Main2" type="Node3D"]
@@ -127,7 +129,7 @@ script = ExtResource("9_b2gcd")
 shape = SubResource("BoxShape3D_tqyk6")
 
 [node name="Timer" type="Timer" parent="foyerdress2/Exit"]
-wait_time = 10.0
+wait_time = 20.0
 
 [node name="ShapeCast3D" type="ShapeCast3D" parent="."]
 transform = Transform3D(4, 0, 0, 0, 4, 0, 0, 0, 4, 21.8235, 1.98187, -6.69456)

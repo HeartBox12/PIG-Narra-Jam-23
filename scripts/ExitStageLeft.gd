@@ -5,12 +5,7 @@ var openCall:Callable = Callable(self, "open_done")
 var openInst
 var closeInst
 
-
-
-func _on_body_entered(body):
-	pass
-
-func _on_body_shape_entered(body_rid, body, body_shape_index, local_shape_index):
+func _on_body_shape_entered(_body_rid, _body, _body_shape_index, _local_shape_index):
 	print("Detection") #Not detecting
 	get_node("../../player").canMove = false #The player should "look gone"
 	get_node("../../player").visible = false
@@ -24,8 +19,8 @@ func _on_body_shape_entered(body_rid, body, body_shape_index, local_shape_index)
 func open_done():
 	openInst.release()
 	closeInst = FMODStudioModule.get_studio_system().get_event_by_id(FMODGuids.Events.SOUNDS_DOOR_CLOSE).create_instance()
-	closeInst.start()
-	closeInst.release()
+	#closeInst.start()
+	#closeInst.release()
 
 
 func _on_timeout():
