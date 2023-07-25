@@ -1,18 +1,18 @@
 [gd_resource type="ParameterAsset" load_steps=3 format=3 uid="uid://ceokpqr3wl1ps"]
 
-[sub_resource type="FMOD_STUDIO_PARAMETER_ID" id="FMOD_STUDIO_PARAMETER_ID_nolqd"]
+[sub_resource type="FMOD_STUDIO_PARAMETER_ID" id="FMOD_STUDIO_PARAMETER_ID_70wt0"]
 data1 = 2524664772
 data2 = 3401535641
 
-[sub_resource type="FMOD_STUDIO_PARAMETER_DESCRIPTION" id="FMOD_STUDIO_PARAMETER_DESCRIPTION_hie46"]
-name = "Location"
-id = SubResource("FMOD_STUDIO_PARAMETER_ID_nolqd")
+[sub_resource type="FMOD_STUDIO_PARAMETER_DESCRIPTION" id="FMOD_STUDIO_PARAMETER_DESCRIPTION_s61di"]
+name = "?³©ø"
+id = SubResource("FMOD_STUDIO_PARAMETER_ID_70wt0")
 maximum = 1.0
 flags = 28
 guid = "{a5a333c6-c336-4324-aa52-41599fc1505d}"
 
 [resource]
-parameter_description = SubResource("FMOD_STUDIO_PARAMETER_DESCRIPTION_hie46")
+parameter_description = SubResource("FMOD_STUDIO_PARAMETER_DESCRIPTION_s61di")
 labels = ["Not Office", "Office"]
 path = "parameter:/Location"
 guid = "{a5a333c6-c336-4324-aa52-41599fc1505d}"

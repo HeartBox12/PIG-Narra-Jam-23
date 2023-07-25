@@ -2,7 +2,7 @@
 
 [resource]
 file_path = "res://FMODBanks/Master.strings.bank"
-modified_time = 1690172936
+modified_time = 1690265740
 path = "bank:/Master.strings"
 guid = "{09cbc208-0b63-0ff8-2a0e-87b6439d8046}"
 name = "Master.strings"

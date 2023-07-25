@@ -1,4 +1,4 @@
-[gd_scene load_steps=17 format=3 uid="uid://d0fatpj1xblfe"]
+[gd_scene load_steps=15 format=3 uid="uid://d0fatpj1xblfe"]
 
 [ext_resource type="Script" path="res://scripts/Main.gd" id="1_1ygro"]
 [ext_resource type="PackedScene" uid="uid://mpydbc355a5" path="res://scenes/NPC.tscn" id="3_a5knq"]
@@ -9,7 +9,6 @@
 [ext_resource type="PackedScene" uid="uid://rxrei1k6h0gp" path="res://scenes/foyerdress.gltf" id="7_wjiuj"]
 [ext_resource type="Script" path="res://scenes/titleCard.gd" id="8_ts1bv"]
 [ext_resource type="PackedScene" uid="uid://cx224vhy5ntcw" path="res://scenes/Foyer/foyerdress(withCollisions.tscn" id="9_57sth"]
-[ext_resource type="Script" path="res://scripts/ExitStageLeft.gd" id="9_b2gcd"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_t5y6s"]
 size = Vector3(60, 2, 60)
@@ -21,9 +20,6 @@ size = Vector3(60, 2, 60)
 background_mode = 1
 background_color = Color(0.1512, 0.18684, 0.27, 1)
 adjustment_enabled = true
-
-[sub_resource type="BoxShape3D" id="BoxShape3D_tqyk6"]
-size = Vector3(1.5, 2, 0.5)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_5adjg"]
 
@@ -41,18 +37,25 @@ func _process(_delta):
 		openInst = FMODStudioModule.get_studio_system().get_event_by_id(FMODGuids.Events.SOUNDS_DOOR_OPEN).create_instance()
 		#variable definition from hell
 		openInst.start()
-		
 		openInst.set_callback(openCall, FMODStudioModule.FMOD_STUDIO_EVENT_CALLBACK_TIMELINE_MARKER)
+		
+		get_node(\"../player\").canMove = false
+		get_node(\"../player\").visible = false
 		
 		self.enabled = false
 
 func open_done(_args):
-	openInst.release()
-	closeInst = FMODStudioModule.get_studio_system().get_event_by_id(FMODGuids.Events.SOUNDS_DOOR_CLOSE).create_instance()
+#	openInst.release()
+	closeInst = FMODStudioModule.get_studio_system().get_event_by_id(FMODGuids.Events.SOUNDS_STREET).create_instance()
 	closeInst.start()
 	closeInst.release()
-	Singleton.FMODInstance.stop()
-	
+	Singleton.FMODInstance.stop(FMODStudioModule.FMOD_STUDIO_STOP_ALLOWFADEOUT)
+	Singleton.FMODInstance.release()
+	$Timer.start()
+
+
+func _on_timeout():
+	get_tree().quit()
 "
 
 [node name="Main2" type="Node3D"]
@@ -120,17 +123,6 @@ environment = SubResource("Environment_6umgv")
 [node name="foyerdress2" parent="." instance=ExtResource("9_57sth")]
 transform = Transform3D(-2.7232, 0, 4.19335, 0, 5, 0, -4.19335, 0, -2.7232, 0, 0, 0)
 
-[node name="Exit" type="Area3D" parent="foyerdress2"]
-transform = Transform3D(-2.7232, 0, 4.19335, 0, 5, 0, -4.19335, 0, -2.7232, 22.1379, 5, -7.22238)
-collision_mask = 5
-script = ExtResource("9_b2gcd")
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="foyerdress2/Exit"]
-shape = SubResource("BoxShape3D_tqyk6")
-
-[node name="Timer" type="Timer" parent="foyerdress2/Exit"]
-wait_time = 20.0
-
 [node name="ShapeCast3D" type="ShapeCast3D" parent="."]
 transform = Transform3D(4, 0, 0, 0, 4, 0, 0, 0, 4, 21.8235, 1.98187, -6.69456)
 shape = SubResource("BoxShape3D_5adjg")
@@ -138,6 +130,7 @@ target_position = Vector3(0, 0, 0)
 collision_mask = 6
 script = SubResource("GDScript_pntle")
 
-[connection signal="body_entered" from="foyerdress2/Exit" to="." method="_on_body_entered"]
-[connection signal="body_shape_entered" from="foyerdress2/Exit" to="foyerdress2/Exit" method="_on_body_shape_entered"]
-[connection signal="timeout" from="foyerdress2/Exit/Timer" to="foyerdress2/Exit" method="_on_timeout"]
+[node name="Timer" type="Timer" parent="ShapeCast3D"]
+wait_time = 20.0
+
+[connection signal="timeout" from="ShapeCast3D/Timer" to="ShapeCast3D" method="_on_timeout"]
