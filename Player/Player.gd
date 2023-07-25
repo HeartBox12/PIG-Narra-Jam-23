@@ -14,7 +14,11 @@ var a = 0
 var canMove = false
 
 func _ready():
+	if Singleton.FMODInstance != null:
+		Singleton.FMODInstnace.stop(FMODStudioModule.FMOD_STUDIO_STOP_IMMEDIATE)
 	animation_player.play()
+	Singleton.FMODInstance = FMODStudioModule.get_studio_system().get_event_by_id(FMODGuids.Events.MUSIC_MUSIC).create_instance()
+	Singleton.FMODInstance.start()
 
 func _physics_process(delta):
 	if canMove && Dialogic.current_timeline == null:

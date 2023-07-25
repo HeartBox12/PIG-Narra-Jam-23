@@ -30,11 +30,10 @@ script/source = "extends ShapeCast3D
 var openCall:Callable = Callable(self, \"open_done\")
 
 var openInst
-var closeInst
+var streetInst
 
 func _process(_delta):
 	if is_colliding() == true:
-		print(\"col\")
 		openInst = FMODStudioModule.get_studio_system().get_event_by_id(FMODGuids.Events.SOUNDS_DOOR_OPEN).create_instance()
 		#variable definition from hell
 		openInst.start()
@@ -46,10 +45,9 @@ func _process(_delta):
 		self.enabled = false
 
 func open_done(_args):
-#	openInst.release()
-	closeInst = FMODStudioModule.get_studio_system().get_event_by_id(FMODGuids.Events.SOUNDS_STREET).create_instance()
-	closeInst.start()
-	closeInst.release()
+	openInst.release()
+	Singleton.streetInst = FMODStudioModule.get_studio_system().get_event_by_id(FMODGuids.Events.SOUNDS_STREET).create_instance()
+	Singleton.streetInst.start()
 	Singleton.FMODInstance.stop(FMODStudioModule.FMOD_STUDIO_STOP_ALLOWFADEOUT)
 	Singleton.FMODInstance.release()
 	$Timer.start()
@@ -98,7 +96,6 @@ size = 50.0
 
 [node name="Title" type="Sprite3D" parent="Camera3D"]
 transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, 0, -0.0248861, -5.22431)
-visible = false
 texture = ExtResource("7_1ms0i")
 script = ExtResource("8_ts1bv")
 
