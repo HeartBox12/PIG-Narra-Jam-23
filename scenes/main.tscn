@@ -45,6 +45,7 @@ func _process(_delta):
 		self.enabled = false
 
 func open_done(_args):
+	print(\"open_done() started\")
 	openInst.release()
 	Singleton.streetInst = FMODStudioModule.get_studio_system().get_event_by_id(FMODGuids.Events.SOUNDS_STREET).create_instance()
 	Singleton.streetInst.start()
@@ -54,6 +55,7 @@ func open_done(_args):
 
 
 func _on_timeout():
+	print(\"on_timeout() started\")
 	get_tree().change_scene_to_file(\"res://scenes/end.tscn\")
 "
 
