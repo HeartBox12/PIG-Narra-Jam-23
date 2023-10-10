@@ -28,6 +28,7 @@ size = Vector3(5.08533, 2.40889, 0.235712)
 size = Vector3(0.248542, 2.76603, 9.50698)
 
 [node name="foyerdress" instance=ExtResource("1_4tk7e")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.1, 0)
 
 [node name="StaticBody3D" type="StaticBody3D" parent="ROOT/foyer_base -col" index="1"]
 
