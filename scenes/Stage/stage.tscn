@@ -1,0 +1,104 @@
+[gd_scene load_steps=11 format=3 uid="uid://dnteltje3xbgh"]
+
+[ext_resource type="PackedScene" uid="uid://ct7o0vwlgnxhg" path="res://scenes/Stage/stage_working.gltf" id="1_hbblt"]
+[ext_resource type="Script" path="res://scripts/Main.gd" id="1_oxlyn"]
+[ext_resource type="PackedScene" uid="uid://cgdnc42xanwqm" path="res://Player/Player.tscn" id="2_4653o"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_0kko7"]
+size = Vector3(23, 1, 17)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_y53ql"]
+size = Vector3(0.561605, 9.53395, 14.8783)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_heh4b"]
+size = Vector3(22.4479, 9.47224, 1)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_c8u41"]
+size = Vector3(0.855356, 9.70188, 15.7069)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_b0pto"]
+size = Vector3(4.89533, 9.06687, 1)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_7m00x"]
+size = Vector3(7.97362, 7.40963, 1)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_xkb2g"]
+size = Vector3(3.01405, 7.10499, 1)
+
+[node name="Stage" type="Node3D"]
+script = ExtResource("1_oxlyn")
+
+[node name="stage_working" parent="." instance=ExtResource("1_hbblt")]
+transform = Transform3D(0.707107, 0, -0.707107, 0, 1, 0, 0.707107, 0, 0.707107, 0, 0, 0)
+
+[node name="Level Collision" type="Node3D" parent="stage_working"]
+
+[node name="Floor" type="StaticBody3D" parent="stage_working/Level Collision"]
+collision_mask = 5
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="stage_working/Level Collision/Floor"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.5, 0)
+shape = SubResource("BoxShape3D_0kko7")
+
+[node name="EastWall" type="StaticBody3D" parent="stage_working/Level Collision"]
+collision_mask = 5
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="stage_working/Level Collision/EastWall"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -11.3748, 4.26285, 1.05793)
+shape = SubResource("BoxShape3D_y53ql")
+
+[node name="SouthWall" type="StaticBody3D" parent="stage_working/Level Collision"]
+collision_mask = 5
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="stage_working/Level Collision/SouthWall"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 4.55683, 8.1648)
+shape = SubResource("BoxShape3D_heh4b")
+
+[node name="WestWall" type="StaticBody3D" parent="stage_working/Level Collision"]
+collision_mask = 5
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="stage_working/Level Collision/WestWall"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11.4311, 4.21828, 0.532806)
+shape = SubResource("BoxShape3D_c8u41")
+
+[node name="NorthFace1" type="StaticBody3D" parent="stage_working/Level Collision"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="stage_working/Level Collision/NorthFace1"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8.89024, 4.66629, -6.36567)
+shape = SubResource("BoxShape3D_b0pto")
+
+[node name="NorthFace2" type="StaticBody3D" parent="stage_working/Level Collision"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="stage_working/Level Collision/NorthFace2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.89, 4.666, -6.366)
+shape = SubResource("BoxShape3D_b0pto")
+
+[node name="NorthFace3" type="StaticBody3D" parent="stage_working/Level Collision"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="stage_working/Level Collision/NorthFace3"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0694604, 3.65385, -8.6863)
+shape = SubResource("BoxShape3D_7m00x")
+
+[node name="NorthFace4" type="StaticBody3D" parent="stage_working/Level Collision"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="stage_working/Level Collision/NorthFace4"]
+transform = Transform3D(0.816682, 0, 0.577088, 0, 1, 0, -0.577088, 0, 0.816682, -5.56686, 3.56804, -7.84757)
+shape = SubResource("BoxShape3D_xkb2g")
+
+[node name="NorthFace5" type="StaticBody3D" parent="stage_working/Level Collision"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="stage_working/Level Collision/NorthFace5"]
+transform = Transform3D(0.850067, 0, -0.526674, 0, 1, 0, 0.526674, 0, 0.850067, 5.44588, 3.568, -7.848)
+shape = SubResource("BoxShape3D_xkb2g")
+
+[node name="player" parent="." instance=ExtResource("2_4653o")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9, 0, -5)
+
+[node name="dest0" type="Marker3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9, 0, -5)
+
+[node name="Camera3D" type="Camera3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 0.866025, 0.5, 0, -0.5, 0.866025, 0, 13, 15)
+projection = 1
+current = true
+size = 23.0

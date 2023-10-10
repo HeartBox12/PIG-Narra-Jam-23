@@ -1,4 +1,4 @@
-[gd_scene load_steps=16 format=3 uid="uid://d0fatpj1xblfe"]
+[gd_scene load_steps=15 format=3 uid="uid://d0fatpj1xblfe"]
 
 [ext_resource type="Script" path="res://scripts/Main.gd" id="1_1ygro"]
 [ext_resource type="PackedScene" uid="uid://cgdnc42xanwqm" path="res://Player/Player.tscn" id="5_62vt8"]
@@ -7,7 +7,6 @@
 [ext_resource type="PackedScene" uid="uid://rxrei1k6h0gp" path="res://scenes/foyerdress.gltf" id="7_wjiuj"]
 [ext_resource type="PackedScene" uid="uid://c4l2djhoptxra" path="res://scenes/Jeff.tscn" id="8_5lad6"]
 [ext_resource type="Script" path="res://scenes/titleCard.gd" id="8_ts1bv"]
-[ext_resource type="PackedScene" uid="uid://cx224vhy5ntcw" path="res://scenes/Foyer/foyerdress(withCollisions.tscn" id="9_57sth"]
 [ext_resource type="PackedScene" uid="uid://mpydbc355a5" path="res://scenes/Hana.tscn" id="9_ibg75"]
 [ext_resource type="PackedScene" uid="uid://be7r8d8kox8uk" path="res://scenes/Kat.tscn" id="10_4djec"]
 
@@ -116,17 +115,14 @@ omni_range = 130.517
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
 environment = SubResource("Environment_6umgv")
 
-[node name="foyerdress2" parent="." instance=ExtResource("9_57sth")]
-transform = Transform3D(-2.7232, 0, 4.19335, 0, 5, 0, -4.19335, 0, -2.7232, 0, 0, 0)
-
-[node name="ShapeCast3D" type="ShapeCast3D" parent="."]
+[node name="Exit" type="ShapeCast3D" parent="."]
 transform = Transform3D(4, 0, 0, 0, 4, 0, 0, 0, 4, 21.8235, 1.98187, -6.69456)
 shape = SubResource("BoxShape3D_5adjg")
 target_position = Vector3(0, 0, 0)
 collision_mask = 6
 script = SubResource("GDScript_pntle")
 
-[node name="Timer" type="Timer" parent="ShapeCast3D"]
+[node name="Timer" type="Timer" parent="Exit"]
 wait_time = 20.0
 
 [node name="Jeff" parent="." instance=ExtResource("8_5lad6")]
@@ -138,4 +134,4 @@ transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, -5, 1, 14)
 [node name="Kat" parent="." instance=ExtResource("10_4djec")]
 transform = Transform3D(1.5, 0, 0, 0, 1.5, 0, 0, 0, 1.5, 11.7013, 1, -16.1821)
 
-[connection signal="timeout" from="ShapeCast3D/Timer" to="ShapeCast3D" method="_on_timeout"]
+[connection signal="timeout" from="Exit/Timer" to="Exit" method="_on_timeout"]

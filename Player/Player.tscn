@@ -1,8 +1,7 @@
-[gd_scene load_steps=106 format=3 uid="uid://cgdnc42xanwqm"]
+[gd_scene load_steps=105 format=3 uid="uid://cgdnc42xanwqm"]
 
 [ext_resource type="Script" path="res://Player/Player.gd" id="1_vuqkh"]
 [ext_resource type="Texture2D" uid="uid://bqqish2o16ptk" path="res://sprites/PC_idle_front.png" id="2_0176y"]
-[ext_resource type="Texture2D" uid="uid://bnhtllnwt1qnf" path="res://icon.svg" id="2_gvc4v"]
 [ext_resource type="Texture2D" uid="uid://byh34mbg4wts" path="res://sprites/PC_idle_right.png" id="3_355dx"]
 [ext_resource type="Texture2D" uid="uid://3pyqhxf0os7h" path="res://sprites/PC_walk_right.png" id="4_q06m7"]
 [ext_resource type="Texture2D" uid="uid://dge1bgahe7ajb" path="res://sprites/PC_idle_left.png" id="5_xoxkb"]
@@ -755,6 +754,7 @@ animations = [{
 collision_layer = 2
 wall_min_slide_angle = 0.523599
 script = ExtResource("1_vuqkh")
+canMove = true
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.5394, 0)
@@ -766,20 +766,15 @@ shape = SubResource("BoxShape3D_ekore")
 target_position = Vector3(0, 0, 2)
 collision_mask = 2
 
-[node name="Sprite3D" type="Sprite3D" parent="NPCDetector"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.0472376, 2)
-visible = false
-billboard = 1
-texture = ExtResource("2_gvc4v")
-
 [node name="AnimatedSprite3D" type="AnimatedSprite3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.7016, 0)
 billboard = 1
 sprite_frames = SubResource("SpriteFrames_b0l80")
-animation = &"move7"
+animation = &"idle2"
 
 [node name="Bubble" type="AnimatedSprite3D" parent="."]
 transform = Transform3D(1.8, 0, 0, 0, 1.8, 0, 0, 0, 1.8, 0, 4.31346, 0)
+visible = false
 billboard = 1
 sprite_frames = SubResource("SpriteFrames_88qdq")
 animation = &"appear"
